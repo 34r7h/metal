@@ -1,0 +1,26 @@
+<div class="page" >
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Media</strong></div>
+        <div class="panel-body">
+
+            <div deckgrid class="deckgrid" source="api.show.media">
+                <div class="a-card">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <div>{{card.mediaTitle}}</div>
+                        </div>
+                        <div class="panel-body">
+                            <a ng-href="#/media/{{card.mediaLink }}">
+                                <img src="" width="100%" data-ng-src="{{card.mediaURL}}">
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <div>URL:</div><pre><code>{{card.mediaURL}}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

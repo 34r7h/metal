@@ -1,0 +1,24 @@
+<div class="panel">Add Media</div>
+<div class="panel">
+    <uploader data-ng-model="myfile"></uploader>
+</div>
+<div >
+    <div ng-repeat="media in api.show.media">
+        <div class="panel col-sm-3">
+            <div class="panel-heading" ng-click="editTitle = true">
+                <div ng-hide="editTitle===true">{{media.mediaTitle}}</div>
+                <input ng-show="editTitle===true" ng-model="media.mediaTitle" ng-blur="saveMedia(media.$id,media.mediaTitle);editTitle=false;">
+            </div>
+            <a ng-href="#/media/{{media.mediaLink }}"><img class="" src="{{media.mediaURL}}" width="100%"></a>
+            <div class="panel-footer" ng-init="removeMedia = false;">
+                <a href ng-show="!removeMedia" ng-click="removeMedia = true">Remove Media</a>
+                <a href="javascript:;" ng-show="removeMedia" ng-click="api.removeMedia(media.mediaLink, media.$id)" class="btn btn-primary" role="button">Yes, remove this media.</a>
+                <a href="javascript:;" ng-show="removeMedia" ng-click="removeMedia = false"class="btn btn-default" role="button">Cancel</a>
+                <p><div>ID:</div><pre>{{media.$id}}</pre></p>
+                <div>URL:</div><pre><code>{{media.mediaURL}}</code></pre>
+            </div>
+        </div>
+        <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>
+    </div>
+
+</div>
