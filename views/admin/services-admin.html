@@ -14,6 +14,39 @@
                 </textarea>
             </div>
         </div>
+        <!-- NEW VARIATIONS -->
+        <div class="panel panel-default clearfix">
+            <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Service Variations</strong></div>
+            <div class="panel-body" ng-init="serviceVariations=['No Variations']" ng-show="showVariations === true">
+                <div class="col-xs-12 clearfix">
+                    <div class="form-group">Variation Title: <input class="form-control col-sm-12" data-ng-model="newServiceVariation.name"></div>
+                    <div class="form-group">Variation Description:<textarea class="form-control col-sm-12" data-ng-model="newServiceVariation.description"></textarea></div>
+                </div>
+                <div class="col-xs-12">
+                    <button class="btn" ng-click="api.addVariation(newServiceVariation,serviceVariations);newServiceVariation=[] ">Add Variation
+                    </button>
+                </div>
+                <div class="clearfix" >
+                    <table class="table table-bordered" ng-show="serviceVariations[0]!== 0 && serviceVariations[0]!=='No Variations'">
+                        <thead>
+                        <tr>
+                            <th>Remove</th>
+                            <th>Variation Name</th>
+                            <th>Variation Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="variation in serviceVariations track by $index">
+                            <td ng-click="api.removeVariation($index, $parent.serviceVariations)"><button>X</button></td>
+                            <td><input ng-model="variation.name" class="col-xs-8"></td>
+                            <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
         <div class="panel panel-default clearfix">
             <div class="panel-heading" ng-click="showMedia = !showMedia"><strong> <span class="fa fa-photo"></span> Choose Attachments</strong></div>
             <div class="panel-body" ng-show="showMedia === true">
@@ -21,11 +54,12 @@
             </div>
         </div>
         <div class="well clearfix">
-            <button class="btn btn-behance col-xs-12" ng-click="saveService(serviceTitle, serviceText, media)"><h3><span class="fa fa-cloud-upload"></span> Save New Service</h3></button>
+            <button class="btn btn-behance col-xs-12" ng-click="saveService(serviceTitle, serviceText, serviceVariations, media)"><h3><span class="fa fa-cloud-upload"></span> Save New Service</h3></button>
         </div>
     </section>
-    <h2 class="well"><span class="fa fa-rocket"></span> Services</h2>
-    <div class="panel-body">
+    <h2 ng-click="showNewService = !showNewService" class="well"><span class="fa fa-rocket"></span> Services</h2>
+
+    <section ng-show="showNewService !== true" class="panel-body">
         <div ng-repeat="service in api.show.services">
             <h3 class="panel-heading" ng-click="editTitle = true">
                 <div ng-hide="editTitle===true">{{service.title}}</div>
@@ -47,6 +81,35 @@
                         <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>
                     </div>
                 </div>
+                <!-- VARIATIONS -->
+                <div class="panel-body">
+                    <div class="panel panel-default clearfix">
+                        <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Variations</strong></div>
+                        <div class="panel-body" ng-show="showVariations === true">
+                            <div>Variation Title:</div><input class="col-sm-12" data-ng-model="newServiceVariation.name">
+                            <div>Variation Description:</div><textarea class="col-sm-12" data-ng-model="newServiceVariation.description"></textarea>
+                            <button ng-click="api.addVariation(newServiceVariation,service.variations);newServiceVariation=[] ">Add Service Variation</button>
+                        </div>
+                    </div>
+                    <div class="clearfix" >
+                        <table class="table table-bordered" ng-show="service.variations[0]!=='No Variations'">
+                            <thead>
+                            <tr>
+                                <th>Remove</th>
+                                <th>Variation Name</th>
+                                <th>Variation Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="variation in service.variations track by $index">
+                                <td ng-click="api.removeVariation($index, $parent.service.variations)"><button>X</button></td>
+                                <td><input ng-model="variation.name" class="col-xs-8"></td>
+                                <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <div class="panel panel-default clearfix">
                     <h3 class="panel-heading" ng-click="addMoreMedia = !addMoreMedia"><span class="fa fa-photo"></span> Add more media</h3>
                     <div class="col-xs-2 panel-body" ng-show="addMoreMedia===true" ng-repeat="image in api.show.media">
@@ -57,7 +120,7 @@
             </div>
             <div class="clearfix">
 
-                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateService(service.$id, service.description, service.media)"><h3><span class="fa fa-send"></span> Update Service</h3></button>
+                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateService(service.$id, service.description, service.variations, service.media)"><h3><span class="fa fa-send"></span> Update Service</h3></button>
                 <hr class="col-xs-12">
                 <div class="panel panel-default pull-right">
                     <div ng-show="!removeService" ng-click="removeService = !removeService" class="panel-heading"><span class="fa fa-remove"></span> Remove Service</div>
@@ -71,5 +134,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
