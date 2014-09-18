@@ -1,0 +1,144 @@
+<div class="panel panel-default">
+    <!-- NEW PRODUCT -->
+    <h2 ng-click="showNewProduct = !showNewProduct" class="well"> <span class="fa fa-rocket"></span> New Product</h2>
+    <section ng-show="showNewProduct === true">
+        <!-- NEW TITLE -->
+        <div class="panel-body ng-scope">
+            <h1><input type="text" ng-model="productTitle" placeholder="New Product Title"/></h1>
+        </div>
+        <!-- New Description -->
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong> <span class="fa fa-paint-brush"></span> Product Description</strong></div>
+            <div class="panel-body">
+                <div text-angular="" ng-model="productText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="productText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                </textarea>
+            </div>
+        </div>
+        <!-- NEW VARIATIONS -->
+        <div class="panel panel-default clearfix">
+            <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Product Variations</strong></div>
+            <div class="panel-body" ng-init="productVariations=['No Variations']" ng-show="showVariations === true">
+                <div class="col-xs-12 clearfix">
+                    <div class="form-group">Variation Title: <input class="form-control col-sm-12" data-ng-model="newProductVariation.name"></div>
+                    <div class="form-group">Variation Description:<textarea class="form-control col-sm-12" data-ng-model="newProductVariation.description"></textarea></div>
+                </div>
+                <div class="col-xs-12">
+                    <button class="btn" ng-click="api.addVariation(newProductVariation,productVariations);newProductVariation=[] ">Add Variation
+                    </button>
+                </div>
+                <div class="clearfix" >
+                    <table class="table table-bordered" ng-show="productVariations[0]!== 0 && productVariations[0]!=='No Variations'">
+                        <thead>
+                        <tr>
+                            <th>Remove</th>
+                            <th>Variation Name</th>
+                            <th>Variation Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="variation in productVariations track by $index">
+                            <td ng-click="api.removeVariation($index, $parent.productVariations)"><button>X</button></td>
+                            <td><input ng-model="variation.name" class="col-xs-8"></td>
+                            <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!-- NEW MEDIA -->
+        <div class="panel panel-default clearfix">
+            <div class="panel-heading" ng-click="showMedia = !showMedia"><strong> <span class="fa fa-photo"></span> Choose Attachments</strong></div>
+            <div class="panel-body" ng-show="showMedia === true">
+                <div class="col-xs-4 well" ng-repeat="image in api.show.media">{{image.mediaURL}} <img ng-click="addContentMedia($parent.api.show.media, image.$id, $parent.media)" ng-src="{{image.mediaURL}}" width="100%"> </div>
+            </div>
+        </div>
+        <!-- SAVE NEW PRODUCT -->
+        <div class="well clearfix">
+            <button class="btn btn-behance col-xs-12" ng-click="saveProduct(productTitle, productText, productVariations, media)"><h3><span class="fa fa-cloud-upload"></span> Save New Product</h3></button>
+        </div>
+    </section>
+    <!-- Products -->
+    <h2 class="well" ng-click="showNewProduct = !showNewProduct"><span class="fa fa-rocket"></span> Products</h2>
+    <section ng-show="showNewProduct !== true">
+
+        <div class="panel-body">
+        <div ng-repeat="product in api.show.products">
+            <!-- TITLE -->
+            <h3 class="panel-heading" ng-click="editTitle = true">
+                <div ng-hide="editTitle===true">{{product.title}}</div>
+                <input ng-show="editTitle===true" ng-model="product.title" ng-blur="updateProductTitle(product.$id,product.title);editTitle=false;">
+            </h3>
+            <!-- DESCRIPTIONS -->
+            <div class="panel-body">
+                <div text-angular="" ng-init="html = product.description;" ng-model="product.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                <textarea ng-init="html = product.description" ng-show="showHtml" ta-bind="ta-bind" ng-model="product.description" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                </textarea>
+            </div>
+            <!-- VARIATIONS -->
+            <div class="panel-body">
+                <div class="panel panel-default clearfix">
+                    <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Variations</strong></div>
+                    <div class="panel-body" ng-show="showVariations === true">
+                        <div>Variation Title:</div><input class="col-sm-12" data-ng-model="newProductVariation.name">
+                        <div>Variation Description:</div><textarea class="col-sm-12" data-ng-model="newProductVariation.description"></textarea>
+                        <button ng-click="api.addVariation(newProductVariation,product.variations);newProductVariation=[] ">Add Product Variation</button>
+                    </div>
+                </div>
+                <div class="clearfix" >
+                    <table class="table table-bordered" ng-show="product.variations[0]!=='No Variations'">
+                        <thead>
+                        <tr>
+                            <th>Remove</th>
+                            <th>Variation Name</th>
+                            <th>Variation Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="variation in product.variations track by $index">
+                            <td ng-click="api.removeVariation($index, $parent.product.variations)"><button>X</button></td>
+                            <td><input ng-model="variation.name" class="col-xs-8"></td>
+                            <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <p><div>ID:</div><pre>{{product.$id}}</pre></p>
+                <div>URL:</div><pre><code>{{product.productURL}}</code></pre>
+                <!-- Media -->
+                <div class="clearfix panel panel-default">
+                    <div class="col-xs-3 panel-body" ng-repeat="media in product.media" ng-click="showOptions = true">
+                        <div ng-show="showOptions" ng-click="$parent.removeContentMedia($parent.product.media, media);">Remove Image</div>
+                        <img ng-src="{{$parent.api.show.media.$getRecord(media).mediaURL}}" width="100%">
+                        <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default clearfix">
+                    <h3 class="panel-heading" ng-click="addMoreMedia = !addMoreMedia"><span class="fa fa-photo"></span> Add more media</h3>
+                    <div class="col-xs-2 panel-body" ng-show="addMoreMedia===true" ng-repeat="image in api.show.media">
+                        <img ng-click="$parent.addContentMedia($parent.api.show.media, image.$id, $parent.product.media)" ng-src="{{image.mediaURL}}" width="100%" style="float:left">
+                    </div>
+                    <div ng-if="($index+1) % 5 === 0" class="clearfix"></div>
+                </div>
+            </div>
+            <!-- Update Product -->
+            <div class="clearfix">
+                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateProduct(product.$id, product.description, product.variations, product.media)"><h3><span class="fa fa-send"></span> Update Product</h3></button>
+                <hr class="col-xs-12">
+                <div class="panel panel-default pull-right" ng-init="removeProduct = false;">
+                    <div ng-show="!removeProduct" ng-click="removeProduct = !removeProduct" class="panel-heading"><span class="fa fa-remove"></span> Remove Product</div>
+                    <div ng-show="removeProduct">
+                        <a href ng-show="!removeProduct" ng-click="removeProduct = true">Remove Product</a>
+                        <a ng-show="removeProduct" ng-click="api.removeProduct(product.productURL, product.$id)" class="btn btn-primary" role="button">Yes, remove this product.</a>
+                        <a ng-show="removeProduct" ng-click="removeProduct = false"class="btn btn-default" role="button">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
