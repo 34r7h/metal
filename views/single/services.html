@@ -11,6 +11,12 @@
 
         <p ng-bind-html="singleData.description"></p>
 
+        <div ng-repeat="variation in singleData.variations" ng-show="singleData.variations[0]!=='No Variations'">
+            <div>Variation: {{variation.name}}</div>
+            <div>Info: {{variation.description}}</div>
+
+        </div>
+
     </section>
 
 </div>

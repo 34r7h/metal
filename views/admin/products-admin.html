@@ -50,14 +50,21 @@
         </div>
         <!-- NEW MEDIA -->
         <div class="panel panel-default clearfix">
-            <div class="panel-heading" ng-click="showMedia = !showMedia"><strong> <span class="fa fa-photo"></span> Choose Attachments</strong></div>
+            <div class="panel-heading" ng-click="showMedia = !showMedia"><strong> <span class="fa fa-photo"></span> Media</strong></div>
             <div class="panel-body" ng-show="showMedia === true">
                 <div class="col-xs-4 well" ng-repeat="image in api.show.media">{{image.mediaURL}} <img ng-click="addContentMedia($parent.api.show.media, image.$id, $parent.media)" ng-src="{{image.mediaURL}}" width="100%"> </div>
             </div>
         </div>
+        <!-- Attach Articles -->
+        <div class="panel panel-default clearfix">
+            <div class="panel-heading" ng-click="showArticles = !showArticles"><strong> <span class="fa fa-book"></span> Attach Articles</strong></div>
+            <div class="panel-body" ng-show="showArticles === true">
+                <div class="col-xs-4 well" ng-repeat="article in api.show.articles">{{article}} <button ng-click="addContentArticles($parent.api.show.articles, article.$id, $parent.articles)">{{article.title}}</button> </div>
+            </div>
+        </div>
         <!-- SAVE NEW PRODUCT -->
         <div class="well clearfix">
-            <button class="btn btn-behance col-xs-12" ng-click="saveProduct(productTitle, productText, productVariations, media)"><h3><span class="fa fa-cloud-upload"></span> Save New Product</h3></button>
+            <button class="btn btn-behance col-xs-12" ng-click="saveProduct(productTitle, productText, productVariations, media, articles)"><h3><span class="fa fa-cloud-upload"></span> Save New Product</h3></button>
         </div>
     </section>
     <!-- Products -->
@@ -124,10 +131,26 @@
                     </div>
                     <div ng-if="($index+1) % 5 === 0" class="clearfix"></div>
                 </div>
+
+<!-- Articles -->
+                <div class="clearfix panel panel-default">
+                    <div class="col-xs-3 panel-body" ng-repeat="article in product.articles" ng-click="showOptions = true">
+                        <div ng-show="showOptions" ng-click="$parent.removeContentArticles($parent.product.articles, article);">Remove Article</div>
+                        {{$parent.api.show.articles.$getRecord(article).articleURL}}
+                        <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default clearfix">
+                    <h3 class="panel-heading" ng-click="addMoreArticles = !addMoreArticles"><span class="fa fa-photo"></span> Add more articles</h3>
+                    <div class="col-xs-2 panel-body" ng-show="addMoreArticles===true" ng-repeat="article in api.show.articles">
+                        <button ng-click="$parent.addContentArticles($parent.api.show.articles, article.$id, $parent.product.articles); selected = true;" ng-disabled="selected">{{article.articleURL}}</button>
+                    </div>
+                    <div ng-if="($index+1) % 5 === 0" class="clearfix"></div>
+                </div>
             </div>
             <!-- Update Product -->
             <div class="clearfix">
-                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateProduct(product.$id, product.description, product.variations, product.media)"><h3><span class="fa fa-send"></span> Update Product</h3></button>
+                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateProduct(product.$id, product.description, product.variations, product.media, product.articles)"><h3><span class="fa fa-send"></span> Update Product</h3></button>
                 <hr class="col-xs-12">
                 <div class="panel panel-default pull-right" ng-init="removeProduct = false;">
                     <div ng-show="!removeProduct" ng-click="removeProduct = !removeProduct" class="panel-heading"><span class="fa fa-remove"></span> Remove Product</div>
