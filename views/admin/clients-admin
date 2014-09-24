@@ -17,30 +17,30 @@
     </div>
     <!-- NEW VARIATIONS -->
     <div class="panel panel-default clearfix">
-        <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Client Variations</strong></div>
-        <div class="panel-body" ng-init="clientVariations=['No Variations']" ng-show="showVariations === true">
+        <div class="panel-heading" ng-click="showTestimonials = !showTestimonials"><strong> <span class="fa fa-search"></span> Add Client Testimonials</strong></div>
+        <div class="panel-body" ng-init="clientTestimonials=['No Testimonials']" ng-show="showTestimonials === true">
             <div class="col-xs-12 clearfix">
-                <div class="form-group">Variation Title: <input class="form-control col-sm-12" data-ng-model="newClientVariation.name"></div>
-                <div class="form-group">Variation Description:<textarea class="form-control col-sm-12" data-ng-model="newClientVariation.description"></textarea></div>
+                <div class="form-group">Testimonial Title: <input class="form-control col-sm-12" data-ng-model="newClientTestimonial.name"></div>
+                <div class="form-group">Testimonial Description:<textarea class="form-control col-sm-12" data-ng-model="newClientTestimonial.description"></textarea></div>
             </div>
             <div class="col-xs-12">
-                <button class="btn" ng-click="api.addVariation(newClientVariation,clientVariations);newClientVariation=[] ">Add Variation
+                <button class="btn" ng-click="api.addTestimonial(newClientTestimonial,clientTestimonials);newClientTestimonial=[] ">Add Testimonial
                 </button>
             </div>
             <div class="clearfix" >
-                <table class="table table-bordered" ng-show="clientVariations[0]!== 0 && clientVariations[0]!=='No Variations'">
+                <table class="table table-bordered" ng-show="clientTestimonials[0]!== 0 && clientTestimonials[0]!=='No Testimonials'">
                     <thead>
                     <tr>
                         <th>Remove</th>
-                        <th>Variation Name</th>
-                        <th>Variation Description</th>
+                        <th>Testimonial Name</th>
+                        <th>Testimonial Description</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="variation in clientVariations track by $index">
-                        <td ng-click="api.removeVariation($index, $parent.clientVariations)"><button>X</button></td>
-                        <td><input ng-model="variation.name" class="col-xs-8"></td>
-                        <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                    <tr ng-repeat="testimonial in clientTestimonials track by $index">
+                        <td ng-click="api.removeTestimonial($index, $parent.clientTestimonials)"><button>X</button></td>
+                        <td><input ng-model="testimonial.name" class="col-xs-8"></td>
+                        <td><textarea data-ng-model="testimonial.description" class="col-xs-12"></textarea></td>
                     </tr>
                     </tbody>
                 </table>
@@ -82,7 +82,7 @@
     </div>
     <!-- SAVE NEW PRODUCT -->
     <div class="well clearfix">
-        <button class="btn btn-behance col-xs-12" ng-click="saveClient(clientTitle, clientText, clientVariations, media, articles)"><h3><span class="fa fa-cloud-upload"></span> Save New Client</h3></button>
+        <button class="btn btn-behance col-xs-12" ng-click="saveClient(clientTitle, clientText, clientTestimonials, media, articles)"><h3><span class="fa fa-cloud-upload"></span> Save New Client</h3></button>
     </div>
 </section>
 <!-- Clients -->
@@ -105,27 +105,27 @@
             <!-- VARIATIONS -->
             <div class="panel-body">
                 <div class="panel panel-default clearfix">
-                    <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Variations</strong></div>
-                    <div class="panel-body" ng-show="showVariations === true">
-                        <div>Variation Title:</div><input class="col-sm-12" data-ng-model="newClientVariation.name">
-                        <div>Variation Description:</div><textarea class="col-sm-12" data-ng-model="newClientVariation.description"></textarea>
-                        <button ng-click="api.addVariation(newClientVariation,client.variations);newClientVariation=[] ">Add Client Variation</button>
+                    <div class="panel-heading" ng-click="showTestimonials = !showTestimonials"><strong> <span class="fa fa-search"></span> Add Testimonials</strong></div>
+                    <div class="panel-body" ng-show="showTestimonials === true">
+                        <div>Testimonial Title:</div><input class="col-sm-12" data-ng-model="newClientTestimonial.name">
+                        <div>Testimonial Description:</div><textarea class="col-sm-12" data-ng-model="newClientTestimonial.description"></textarea>
+                        <button ng-click="api.addTestimonial(newClientTestimonial,client.testimonials);newClientTestimonial=[] ">Add Client Testimonial</button>
                     </div>
                 </div>
                 <div class="clearfix" >
-                    <table class="table table-bordered" ng-show="client.variations[0]!=='No Variations'">
+                    <table class="table table-bordered" ng-show="client.testimonials[0]!=='No Testimonials'">
                         <thead>
                         <tr>
                             <th>Remove</th>
-                            <th>Variation Name</th>
-                            <th>Variation Description</th>
+                            <th>Testimonial Name</th>
+                            <th>Testimonial Description</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="variation in client.variations track by $index">
-                            <td ng-click="api.removeVariation($index, $parent.client.variations)"><button>X</button></td>
-                            <td><input ng-model="variation.name" class="col-xs-8"></td>
-                            <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
+                        <tr ng-repeat="testimonial in client.testimonials track by $index">
+                            <td ng-click="api.removeTestimonial($index, $parent.client.testimonials)"><button>X</button></td>
+                            <td><input ng-model="testimonial.name" class="col-xs-8"></td>
+                            <td><textarea data-ng-model="testimonial.description" class="col-xs-12"></textarea></td>
                         </tr>
                         </tbody>
                     </table>
@@ -186,7 +186,7 @@
                 <div ng-if="($index+1) % 5 === 0" class="clearfix"></div>
             </div>
             <div class="clearfix">
-                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateClient(client.$id, client.description, client.variations, client.media, client.articles)"><h3><span class="fa fa-send"></span> Update Client</h3></button>
+                <button class="btn btn-behance col-xs-12 clearfix" ng-click="api.updateClient(client.$id, client.description, client.testimonials, client.media, client.articles)"><h3><span class="fa fa-send"></span> Update Client</h3></button>
                 <hr class="col-xs-12">
                 <div class="panel panel-default pull-right" ng-init="removeClient = false;">
                     <div ng-show="!removeClient" ng-click="removeClient = !removeClient" class="panel-heading"><span class="fa fa-remove"></span> Remove Client</div>

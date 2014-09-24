@@ -62,9 +62,6 @@
     </div>
     <!-- Attach Articles -->
 
-    <!-- Articles -->
-
-
     <div class="clearfix panel panel-default">
         <div class="col-xs-3 panel-body" ng-repeat="article in articles track by $index" ng-click="showOptions = true">
             <div ng-show="showOptions" ng-click="$parent.removeContentArticles($parent.articles, article);">Remove Article</div>
@@ -80,9 +77,10 @@
             <div class="col-xs-4 well" ng-repeat="article in api.show.articles | filterOut:articles">{{article}} <button ng-click="addContentArticles($parent.api.show.articles, article.$id, $parent.articles)">{{article.title}}</button> </div>
         </div>
     </div>
-    <!-- SAVE NEW PRODUCT -->
+    <!-- SAVE NEW ARTICLE -->
+    <h4 ng-init="published = false" > <input type="checkbox" ng-model="published">Publish Article? <input type="checkbox" ng-model="published"></h4><p ng-if="published===true">Published!</p><p ng-if="published===false">Not published yet.</p>
     <div class="well clearfix">
-        <button class="btn btn-behance col-xs-12" ng-click="saveArticle(articleTitle, articleText, articleVariations, media, articles)"><h3><span class="fa fa-cloud-upload"></span> Save New Article</h3></button>
+        <button class="btn btn-behance col-xs-12" ng-click="saveArticle(articleTitle, articleText, articleVariations, media, articles, published)"><h3><span class="fa fa-cloud-upload"></span> Save New Article</h3></button>
     </div>
 </section>
 <!-- Articles -->
