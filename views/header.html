@@ -25,15 +25,13 @@
             </li>
 
 
-
-
         </ul>
 
         <ul class="nav-right pull-right list-unstyled col-xs-12">
 
             <li class="btn col-sm-6 col-xs-12">
                 <div class="btn-group col-xs-12" dropdown="" is-open="status.isopen4">
-                    <button type="button" class="btn btn-info btn-lg dropdown-toggle col-xs-12 fa fa-plug" aria-expanded="false"><i class="fa fa-plug"> Let's Connect</i> </button>
+                    <button type="button" class="btn btn-info btn-lg dropdown-toggle col-xs-12" aria-expanded="false"><i class="fa fa-plug"> Let's Connect</i> </button>
                     <ul ng-click="$parent.$parent.preventClose($event)" class="dropdown-menu col-xs-12" role="menu">
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Send an E-mail </strong></div>
@@ -78,11 +76,11 @@
                     </ul>
                 </div>
             </li>
-            <li class="well-sm line  col-sm-3 col-xs-6">
-                <div class="text-center"><a href="mailto:masukmetaldesign@gmail.com"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
+            <li class="well-sm line  col-sm-2 col-xs-6">
+                <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
             </li>
-            <li class="well-sm line col-sm-3 col-xs-6">
-                <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+17788980532">(778) 898-0532</a></div>
+            <li class="well-sm line col-sm-4 col-xs-6">
+                <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a></div>
             </li>
 
 

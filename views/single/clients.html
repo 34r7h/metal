@@ -3,13 +3,28 @@
     <section class="panel panel-default">
         <div class="panel-heading">
             <strong>
-                <h1 class="glyphicon glyphicon-th"> <span ng-bind-html="singleData.title"></span>
+                <h1><i class="fa fa-rocket"></i> <span ng-bind-html="singleData.title"></span>
                 </h1>
             </strong>
         </div>
-        <div><img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(clients.media[0]).mediaURL}}</div>
+        <div><img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(products.media[0]).mediaURL}}</div>
 
-        <p ng-bind-html="singleData.description"></p>
+        <hr class="col-xs-12">
+
+        <div ng-repeat="media in singleData">
+            <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}">
+        </div>
+        <hr class="col-xs-12">
+    
+        <p class="well col-xs-12" ng-bind-html="singleData.description"></p>
+        <h4 class=" col-xs-12" ng-show="singleData.testimonials[0]!=='No Testimonials'">Testimonials</h4>
+        <div class=" col-xs-12" ng-repeat="testimonial in singleData.testimonials" ng-show="singleData.testimonials[0]!=='No Testimonials'">
+            <div>Testimonial: {{testimonial.name}}</div>
+            <div>Info: {{testimonial.description}}</div>
+            <hr class=" col-xs-12">
+        </div>
+        
+
 
     </section>
 

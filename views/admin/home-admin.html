@@ -1,12 +1,51 @@
-<div class="panel">Home
-<ul>
-    <li>
-        Opening Media
-    </li>
-    <li>
-        Sorting of sections
-    </li>
-    <li>
-        Limiting size of sections
-    </li>
-</ul></div>
+<div class="panel" ng-controller="adminCtrl">
+
+<section class="panel panel-default">
+    <h2>General Settings</h2>
+    <button ng-click="contactInfo=!contactInfo">Edit Contact Info</button>
+        <p ng-show="contactInfo" ng-repeat="contact in api.show.contact">{{ contact.$id }}: <input ng-model="contact.$value"> <button ng-click="api.saveContact(contact.$id, contact.$value)">Save</button></p>
+
+    <!-- button ng-click="addNewContactInfo=!addNewContactInfo">Add New Contact</button>
+    <p ng-show="addNewContactInfo"><input ng-model="contact.type" placeholder="Contact Type">: <input ng-model="google.contact" placeholder="Contact Address"> <button ng-click="api.saveContact(contact.type, google.contact)">Save</button></p-->
+
+
+    <button ng-click="siteImages=!siteImages">Site Images</button>
+<div ng-show="siteImages">
+
+    <p class=" clearfix panel panel-default col-xs-12">
+    <h5>Footer Image URL: </h5>
+    <input class="col-xs-6" ng-model="api.show.site.$getRecord('footerImage').$value"/>
+    <button class="col-xs-1" ng-click="api.saveSite('footerImage',api.show.site.$getRecord('footerImage').$value)">
+        Save
+    </button>
+
+    <img class=" col-xs-5" ng-src="{{ api.show.site.$getRecord('footerImage').$value }}">
+    </p>
+
+    <p class=" clearfix panel panel-default col-xs-12">
+    <h5>Opening Image URL: </h5>
+    <input class="col-xs-6" ng-model="api.show.site.$getRecord('foldImage').$value"/>
+    <button class="col-xs-1" ng-click="api.saveSite('foldImage',api.show.site.$getRecord('foldImage').$value)">
+        Save
+    </button>
+
+    <img class="col-xs-5" ng-src="{{ api.show.site.$getRecord('foldImage').$value }}">
+    </p>
+
+</div>
+
+
+
+</section>
+
+<section class="panel panel-default">
+    <div>
+        <h5>Opening Text</h5>
+        <input class="col-xs-6" ng-model="api.show.site.$getRecord('foldText').$value"/>
+        <button class="col-xs-1" ng-click="api.saveSite('foldText',api.show.site.$getRecord('foldText').$value)">
+            Save
+        </button>
+    </div>
+</section>
+
+</div>

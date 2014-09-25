@@ -1,11 +1,12 @@
 <div class="" data-ng-controller="DashboardCtrl">
-    <img src="images/Hot_metalwork.jpg" width="100%" height="auto">
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/about.html'"></div>
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/services.html'"></div>
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/products.html'"></div>
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/clients.html'"></div>
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/articles.html'"></div>
-    <div style="max-height:100%; overflow-y:scroll" ng-include="'views/media.html'"></div>
+    <img ng-src="{{ api.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
+    <div class="text-center" style="position:relative; top:-78px; font-size: 56px; color:#fff; height:0;">{{ api.show.site.$getRecord('foldText').$value }}</div>
+    <div ng-include="'views/services.html'"></div>
+    <div ng-include="'views/products.html'"></div>
+    <div ng-include="'views/clients.html'"></div>
+    <!-- div style="max-height:600px; overflow-y:scroll" ng-include="'views/articles.html'"></div -->
+    <!--div style="max-height:600px; overflow-y:scroll" ng-include="'views/media.html'"></div-->
+    <div ng-include="'views/about.html'"></div>
 
 
 </div>

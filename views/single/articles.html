@@ -8,7 +8,10 @@
             </strong>
         </div>
         <img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
-        <p ng-bind-html="singleData.body"></p>
+        <hr class="col-xs-12">
+        <p class="col-xs-12" ng-bind-html="singleData.description"></p>
+        <hr class="col-xs-12">
+
     </section>
 
 </div>

@@ -1,20 +1,38 @@
 <div class="page">
 
         <section class="panel panel-default">
-            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Services</strong></div>
-            <div class="panel-body">
-                <div ng-repeat="service in api.show.services">
+            <div class="panel-heading"><strong><span class="fa fa-rocket"></span> Services</strong></div>
+                <div class="panel-body" ng-repeat="service in api.show.services">
+                        <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                            <a ng-href="#/services/{{service.serviceURL}}"><h2>{{service.title}}</h2></a>
+                            <em>From ${{ service.startingPrice }}</em>
+                            <p class="well" ng-bind-html="service.description"></p>
+                            <h3>Variations</h3>
+                            <div ng-repeat="variation in service.variations" ng-show="service.variations[0]!=='No Variations'">
+                                <div>Variation: {{variation.name}}</div>
+                                <div>Info: {{variation.description}}</div>
+                            </div>
+                            <h3>Articles</h3>
+                            <div ng-repeat="article in service.articles" ng-show="service.articles[0]!=='No Variations'">
+                                <a ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}">{{ api.show.articles.$getRecord(article).title }}</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                            <a ng-href="#/services/{{service.serviceURL}}">
+                                <img ng-src="{{api.show.media.$getRecord(service.media[0]).mediaURL}}" width="100%">
+                            </a>
+                            <hr>
+                            <div ng-repeat="media in service.media">
+                                <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(service.media[$index]).mediaURL }}">
+                            </div>
+                        </div>
                     <a ng-href="#/services/{{service.serviceURL}}">
-                        <h3>{{service.title}}</h3>
-                        <div><img ng-src="{{api.show.media.$getRecord(service.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(article.media[0]).mediaURL}}</div>
-                        <p ng-bind-html="service.description"></p>
+                        <button class="col-xs-12 btn btn-dark" >More about {{ service.title }}</button>
                     </a>
-                    <div ng-repeat="variation in service.variations" ng-show="service.variations[0]!=='No Variations'">
-                        <div>Variation: {{variation.name}}</div>
-                        <div>Info: {{variation.description}}</div>
-                    </div>
+
+
                 </div>
-            </div>
         </section>
 
 

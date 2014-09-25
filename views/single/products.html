@@ -3,19 +3,36 @@
     <section class="panel panel-default">
         <div class="panel-heading">
             <strong>
-                <h1 class="glyphicon glyphicon-th"> <span ng-bind-html="singleData.title"></span>
+                <h1><i class="fa fa-rocket"></i> <span ng-bind-html="singleData.title"></span>
                 </h1>
             </strong>
         </div>
         <div><img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(products.media[0]).mediaURL}}</div>
 
-        <p ng-bind-html="singleData.description"></p>
+        <hr class="col-xs-12">
 
-        <div ng-repeat="variation in singleData.variations" ng-show="singleData.variations[0]!=='No Variations'">
+        <div ng-repeat="media in singleData">
+            <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}">
+        </div>
+        <hr class="col-xs-12">
+        <p class=" col-xs-12">Starting from ${{ singleData.price }}</p>
+        <p class="well col-xs-12" ng-bind-html="singleData.description"></p>
+        <h4 class=" col-xs-12" ng-show="singleData.variations[0]!=='No Variations'">Variations</h4>
+        <div class=" col-xs-12" ng-repeat="variation in singleData.variations" ng-show="singleData.variations[0]!=='No Variations'">
             <div>Variation: {{variation.name}}</div>
             <div>Info: {{variation.description}}</div>
+            <hr class=" col-xs-12">
+        </div>
+        <h4 class="col-xs-12 " >Related Articles</h4>
+        <div class="col-xs-12" ng-repeat="article in singleData.articles" ng-show="singleData.articles[0]!=='No Variations'">
+            <a class="col-xs-4 well" ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}" ng-show="article.length > 0">
+                <img class="col-xs-12" ng-src="{{ api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaURL}}">
+                <b><em class="col-xs-12" >{{ api.show.articles.$getRecord(article).title }}</em></b></a>
+            <hr class="col-xs-12">
 
         </div>
+
+
     </section>
 
 </div>

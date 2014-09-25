@@ -1,96 +1,80 @@
 <div class="page" >
 
-    <section class="panel panel-default col-sm-6">
+    <section class="panel panel-default col-xs-12">
 
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> About</strong></div>
+        <div class="panel-heading"><strong><span class="fa fa-group"></span> About</strong></div>
         <div class="panel-body">
 
             <section class="panel panel-box">
                 <div class="panel-top bg-primary">
-                    <div class="text-center">
-                        <h3 class="ng-binding">Bryce Masuk</h3>
-                        <p>Principle</p>
-                    </div>
+
                     <div class="divider divider-lg"></div>
                     <div class="divider divider-lg"></div>
                 </div>
                 <div class="panel-img bg-primary">
                     <img alt="" src="images/b1.png" class="img-circle">
                 </div>
-                <div class="list-justified-container">
-                    <ul class="list-justified text-center">
-                        <li>
-                            <p class="size-h3">679</p>
-                            <p class="text-muted">Tweets</p>
-                        </li>
-                        <li>
-                            <p class="size-h3">575</p>
-                            <p class="text-muted">Followers</p>
-                        </li>
-                        <li>
-                            <p class="size-h3">23</p>
-                            <p class="text-muted">Following</p>
-                        </li>
-                    </ul>
-                </div>
+
             </section>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Profile Info</strong></div>
-            <div class="panel-body">
-                <div class="media">
-                    <div class="media-body">
-                        <ul class="list-unstyled list-info">
-                            <li>
-                                <span class="icon glyphicon glyphicon-user"></span>
-                                <label>Principle</label>
-                                {{main.name}}
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-envelope"></span>
-                                <label>Email</label>
-                                masukmetaldesign@gmail.com
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-earphone"></span>
-                                <label>Contact</label>
-                                (778) 898-0532
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-home"></span>
-                                <label>Street</label>
-                                14-20110 Stewart Cresent
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-home"></span>
-                                <label>City</label>
-                                Pitt Meadows
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-home"></span>
-                                <label>Province</label>
-                                British Columbia
-                            </li>
-                            <li>
-                                <span class="icon glyphicon glyphicon-home"></span>
-                                <label>Postal</label>
-                                V2X 0T4
-                            </li>
+
+    </section>
+    <section class="panel panel-default  col-xs-6">
+
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-body">
+                    <ul class="list-unstyled list-info">
+                        <li>
+                            <span class="icon glyphicon glyphicon-user"></span>
+                            <label>Principle</label>
+                            {{main.name}}
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-envelope"></span>
+                            <label>Email</label>
+                            {{ api.show.contact.$getRecord('Email').$value }}
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-earphone"></span>
+                            <label>Contact</label>
+                            {{ api.show.contact.$getRecord('Phone').$value }}
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-home"></span>
+                            <label>Street</label>
+                            14-20110 Stewart Cresent
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-home"></span>
+                            <label>City</label>
+                            {{ api.show.contact.$getRecord('City').$value }}
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-home"></span>
+                            <label>Province</label>
+                            {{ api.show.contact.$getRecord('Province').$value }}
+                        </li>
+                        <li>
+                            <span class="icon glyphicon glyphicon-home"></span>
+                            <label>Postal</label>
+                            {{ api.show.contact.$getRecord('Postal Code').$value }}
+                        </li>
 
 
-                        </ul>
+                    </ul>
 
-                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="panel panel-default col-sm-6">
+    <section class="panel panel-default col-xs-6">
         <div class="panel-body">
             <div ng-repeat="about in api.show.about">
                 <p ng-bind-html="about.description"></p>
             </div>
         </div>
     </section>
+
 
 </div>

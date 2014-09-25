@@ -100,38 +100,7 @@
                 <textarea ng-init="html = article.description" ng-show="showHtml" ta-bind="ta-bind" ng-model="article.description" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                 </textarea>
             </div>
-            <!-- VARIATIONS -->
-            <div class="panel-body">
-                <div class="panel panel-default clearfix">
-                    <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Variations</strong></div>
-                    <div class="panel-body" ng-show="showVariations === true">
-                        <div>Variation Title:</div><input class="col-sm-12" data-ng-model="newArticleVariation.name">
-                        <div>Variation Description:</div><textarea class="col-sm-12" data-ng-model="newArticleVariation.description"></textarea>
-                        <button ng-click="api.addVariation(newArticleVariation,article.variations);newArticleVariation=[] ">Add Article Variation</button>
-                    </div>
-                </div>
-                <div class="clearfix" >
-                    <table class="table table-bordered" ng-show="article.variations[0]!=='No Variations'">
-                        <thead>
-                        <tr>
-                            <th>Remove</th>
-                            <th>Variation Name</th>
-                            <th>Variation Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="variation in article.variations track by $index">
-                            <td ng-click="api.removeVariation($index, $parent.article.variations)"><button>X</button></td>
-                            <td><input ng-model="variation.name" class="col-xs-8"></td>
-                            <td><textarea data-ng-model="variation.description" class="col-xs-12"></textarea></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="panel-footer">
-                <p><div>ID:</div><pre>{{article.$id}}</pre></p>
-                <div>URL:</div><pre><code>{{article.articleURL}}</code></pre>
+
                 <!-- Media -->
                 <div class="clearfix panel panel-default">
                     <div class="col-xs-3 panel-body" ng-repeat="media in article.media" ng-click="showOptions = true">

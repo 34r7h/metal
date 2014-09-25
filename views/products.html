@@ -1,21 +1,37 @@
 <div class="page">
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Products</strong></div>
-        <div class="panel-body">
-            <div ng-repeat="product in api.show.products">
-                <a ng-href="#/products/{{product.productURL}}">
-                    <h3>{{product.title}}</h3>
-                    <div><img ng-src="{{api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%"></div>
-                    <p ng-bind-html="product.description"></p>
-                    <div ng-repeat="variation in product.variations" ng-show="product.variations[0]!=='No Variations'">
-                        <div>Variation: {{variation.name}}</div>
-                        <div>Info: {{variation.description}}</div>
-
-                    </div>
-
-                </a>
+        <div class="panel-heading"><strong><span class="fa fa-rocket"></span> Products</strong></div>
+        <div class="panel-body" ng-repeat="product in api.show.products">
+            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                <a ng-href="#/products/{{product.productURL}}"><h2>{{product.title}}</h2></a>
+                <em>From ${{ product.price }}</em>
+                <p class="well" ng-bind-html="product.description"></p>
+                <h3>Variations</h3>
+                <div ng-repeat="variation in product.variations" ng-show="product.variations[0]!=='No Variations'">
+                    <div>Variation: {{variation.name}}</div>
+                    <div>Info: {{variation.description}}</div>
+                </div>
+                <h3>Articles</h3>
+                <div ng-repeat="article in product.articles" ng-show="product.articles[0]!=='No Variations'">
+                    <a ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}">{{ api.show.articles.$getRecord(article).title }}</a>
+                </div>
             </div>
+
+            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                <a ng-href="#/products/{{product.productURL}}">
+                    <img ng-src="{{api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%">
+                </a>
+                <hr>
+                <div ng-repeat="media in product.media">
+                    <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(product.media[$index]).mediaURL }}">
+                </div>
+            </div>
+            <a ng-href="#/products/{{product.productURL}}">
+                <button class="col-xs-12 btn btn-dark" >More about {{ product.title }}</button>
+            </a>
+
+
         </div>
     </section>
 

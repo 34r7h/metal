@@ -1,17 +1,36 @@
 <div class="page">
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Clients</strong></div>
-        <div class="panel-body">
-            <div ng-repeat="client in api.show.clients">
-                <a ng-href="#/clients/{{client.clientURL}}">
-                    <h3>{{client.title}}</h3>
-                    <div><img ng-src="{{api.show.media.$getRecord(client.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(article.media[0]).mediaURL}}</div>
-                    <p ng-bind-html="client.description"></p>
-                </a>
+        <div class="panel-heading"><strong><span class="fa fa-rocket"></span> Clients</strong></div>
+        <div class="panel-body" ng-repeat="client in api.show.clients">
+            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                <a ng-href="#/clients/{{client.clientURL}}"><h2>{{client.title}}</h2></a>
+                <p class="well" ng-bind-html="client.description"></p>
+                <h3>Testimonials</h3>
+                <div ng-repeat="variation in client.variations" ng-show="client.variations[0]!=='No Variations'">
+                    <h5>Testimonial Title: {{testimonial.name}}</h5>
+                    <div>Testimonial: {{testimonial.description}}</div>
+                </div>
+
             </div>
+
+            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+                <a ng-href="#/clients/{{client.clientURL}}">
+                    <img ng-src="{{api.show.media.$getRecord(client.media[0]).mediaURL}}" width="100%">
+                </a>
+                <hr>
+                <div ng-repeat="media in client.media">
+                    <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(client.media[$index]).mediaURL }}">
+                </div>
+            </div>
+            <a ng-href="#/clients/{{client.clientURL}}">
+                <button class="col-xs-12 btn btn-dark" >More about {{ client.title }}</button>
+            </a>
+
+
         </div>
     </section>
+
 
 
 </div>
