@@ -1,5 +1,5 @@
 <div class="" data-ng-controller="DashboardCtrl">
-    <img ng-src="{{ api.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
+    <div style="max-height: 700px; overflow: hidden" ><img ng-src="{{ api.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto"></div>
     <div class="text-center" style="position:relative; top:-78px; font-size: 56px; color:#fff; height:0;">{{ api.show.site.$getRecord('foldText').$value }}</div>
     <div ng-include="'views/services.html'"></div>
     <div ng-include="'views/products.html'"></div>
