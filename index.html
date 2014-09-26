@@ -33,6 +33,17 @@
             <div style="height:400px; overflow: hidden">
                 <img src="{{api.show.site.$getRecord('footerImage').$value}}" width="100%" height="auto">
             </div>
+
+            <nav class="navbar navbar-default navbar-fixed-bottom visible-xs list-unstyled" role="navigation">
+                <div class="container">
+                    <li class="well-sm line col-xs-6">
+                        <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
+                    </li>
+                    <li class="well-sm line col-xs-6">
+                        <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a></div>
+                    </li>
+                </div>
+            </nav>
         </div>
 
 
