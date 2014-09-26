@@ -32,6 +32,16 @@
     <img class="col-xs-5" ng-src="{{ api.show.site.$getRecord('foldImage').$value }}">
     </p>
 
+    <p class=" clearfix panel panel-default col-xs-12">
+    <h5>Logo Image URL: </h5>
+    <input class="col-xs-6" ng-model="api.show.site.$getRecord('logo').$value"/>
+    <button class="col-xs-1" ng-click="api.saveSite('logo',api.show.site.$getRecord('logo').$value)">
+        Save
+    </button>
+
+    <img class="col-xs-5" ng-src="{{ api.show.site.$getRecord('logo').$value }}">
+    </p>
+
 </div>
 
 
