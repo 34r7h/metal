@@ -1,7 +1,11 @@
 (function() {
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
-    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', function($scope, $rootScope, $firebase, api, $http, AWSControl) {
+    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll) {
+		  $scope.scrollToTop = function(id){
+			  $location.hash();
+			  $anchorScroll();
+		  };
 		  $scope.preventClose = function(event) { event.stopPropagation(); };
 $scope.api = api;
 		  $scope.msg = '';

@@ -71,6 +71,7 @@
 			      return $scope;
 
 		      });
+
 		      $scope.state = $state;
 		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
