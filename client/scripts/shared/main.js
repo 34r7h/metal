@@ -2,6 +2,10 @@
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
     '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll) {
+		  console.log(api.sync.site.$asObject());
+		  var foldText = api.sync.site.$asArray();
+		  console.log(foldText);
+		  $scope.foldText = foldText;
 		  $scope.scrollToTop = function(id){
 			  $location.hash();
 			  $anchorScroll();

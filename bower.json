@@ -34,7 +34,8 @@
     "firebase": "~1.0.21",
     "angularfire": "~0.8.0",
     "angular-ui-router": "~0.2.11",
-    "angular-deckgrid": "~0.4.4"
+    "angular-deckgrid": "~0.4.4",
+    "ngFitText": "~3.0.0"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",
