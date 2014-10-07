@@ -75,3 +75,15 @@
     width: 100%;
   }
 }
+
+.footer-text {
+  bottom: 0px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.6em;
+  padding: 2.6em;
+  text-align: right;
+  text-shadow: 1px 1px 10px rgba(0,0,0,.95);
+}

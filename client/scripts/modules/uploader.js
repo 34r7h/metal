@@ -63,10 +63,73 @@ uploader.provider('AWSControl', function(){
                         }// end 
                         return canBeHandled;
                     },
+            myUpload: function(file){
+                api.mediaFile = file;
+                console.log(api.mediaFile);
+            },
+
 
           upload: function(file, key){
+
+
+/*
+
+
+
+
+
+
+
+
+
+              function createObjectURL() {
+                  console.log('file',file);
+                  return (window.URL) ? window.URL.createObjectURL(file) : window.webkitURL.createObjectURL(file);
+
+              };
+
+              function revokeObjectURL(url) {
+                  console.log('url',url);
+                  return (window.URL) ? window.URL.revokeObjectURL(url) : window.webkitURL.revokeObjectURL(url);
+
+
+              };
+
+              (function myUploadOnChangeFunction() {
+
+                          console.log('file',file);
+                          var src = createObjectURL(file);
+                  console.log('src',src);
+
+                  var image = new Image();
+                  console.log('image',image);
+
+                  src = src.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+
+                          image.src = src;
+                          console.log('image.src',image.src);
+                  api.testMe = image.src;
+                  return api.testMe;
+                  // Do whatever you want with your image, it's just like any other image
+                          // but it displays directly from the user machine, not the server!
+
+
+              })();
+
+
+*/
+
+
+              console.log('file', file);
+
+              console.log('key', key);
+
+
+
+
 	          var cDate = Date.now();
-	          key = key+'-'+ cDate;
+              key = key.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+              key = key+'-'+ cDate+'.png';
 	            var handlerIndex = -1;
 	            angular.forEach(this.mimes, function(mime, index){
 	              if (handlerIndex === -1){
@@ -81,15 +144,51 @@ uploader.provider('AWSControl', function(){
 	            //now for handlers
 	            var deferred = $q.defer();
 	            var handler = this.mimes[handlerIndex];
+
+              var createThumbnail = function(file, callback) {
+                  var fileReader;
+                  fileReader = new FileReader;
+                  fileReader.onload = (function(_this) {
+                      return function() {
+                          var img;
+                          img = document.createElement("img");
+                          img.onload = function() {
+                              var canvas, ctx, resizeInfo, thumbnail, _ref, _ref1, _ref2, _ref3;
+                              file.width = img.width;
+                              file.height = img.height;
+
+                              canvas = document.createElement("canvas");
+                              ctx = canvas.getContext("2d");
+                              canvas.width = 100;
+                              canvas.height = 100;
+                              drawImageIOSFix(ctx, img, (_ref = 50) != null ? _ref : 0, (_ref1 = 50) != null ? _ref1 : 0, 100, 100, (_ref2 = 50) != null ? _ref2 : 0, (_ref3 = 40) != null ? _ref3 : 0, 90, 400);
+                              thumbnail = canvas.toDataURL("image/png");
+                              console.log('thumbnail',thumbnail);
+
+                              _this.emit("thumbnail", file, thumbnail);
+                              if (callback != null) {
+                                  return callback();
+                              }
+                          };
+                          console.log('img.src',img.src);
+                          return img.src = fileReader.result;
+                      };
+                  })(this);
+                  return fileReader.readAsDataURL(file);
+              };
+              createThumbnail(file);
+
 	            //TODO switch for different host handlers. Must retun a promise and use $timeout to reject quickly
 	            if (handler.host === 's3'){//begin S3 handler
+
+
 	              var params = {Key: key, ContentType: file.type, Body: file};
 	              AWS.config.update({accessKeyId: handler.accessKeyId, secretAccessKey: handler.secretAccessKey });
 	              AWS.config.region = handler.region;
 	              AWS.config.host = handler.host;
 	              var bucket = new AWS.S3( { params: {Bucket: handler.Bucket } } );
 
-	              bucket.putObject(params, function (err, data) {
+	              bucket.putObject(params, function (err, api) {
 
 	                if (err){
 	                  $rootScope.$broadcast('AWSUploadError');
@@ -154,12 +253,12 @@ uploader.provider('AWSControl', function(){
 });
 
 uploader.directive('uploader', function(AWSControl){
-  
+
   return {
     replace: true,
     scope : {},
     require: 'ngModel',
-    template: '<form novalidate><input class="well" type="file" /><button class="btn btn-behance" id="upIt" data-ng-click="upload()">Upload</button></form>',
+    template: '<form novalidate ><input class="well" type="file" /><button class="btn btn-behance" id="upIt" data-ng-click="upload()">Upload</button></form>',
     restrict: 'E',
     link: function(scope, elem, attrs, ngModel){
        
