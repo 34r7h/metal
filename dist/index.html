@@ -31,7 +31,14 @@
 
             <section ui-view="" id="content" class="content-container test {{admin.pageTransition.class}}"></section>
             <div style="height:400px; overflow: hidden">
-                <img src="{{api.show.site.$getRecord('footerImage').$value}}" width="100%" height="auto">
+                <!-- img src="{{api.show.site.$getRecord('footerImage').$value}}" width="100%" height="auto" -->
+                <div class="footer-text" style="background-image: url({{api.show.site.$getRecord('footerImage').$value}}); background-position: center">
+                    <p>"It may be as many sing,
+                    Gold is over all men king.</p>
+                    <p>Yet if truth be told,
+                    'Tis with iron men win gold."</p>
+                    <p>Author unknown - "Elementary Metalwork" </p>
+                </div>
             </div>
 
             <nav class="navbar navbar-default navbar-fixed-bottom visible-xs list-unstyled" role="navigation">
