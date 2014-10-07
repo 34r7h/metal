@@ -3,16 +3,16 @@
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="fa fa-rocket"></span> Products</strong></div>
         <div class="panel-body" ng-repeat="product in api.show.products">
-            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
+            <div class="col-xs-6" style="max-height: 500px; overflow: hidden">
                 <a ng-href="#/products/{{product.productURL}}"><h2>{{product.title}}</h2></a>
                 <em>From ${{ product.price }}</em>
                 <p class="well" ng-bind-html="product.description"></p>
-                <h3>Variations</h3>
+                <h3 ng-show="product.variations[0]!=='No Variations'">Variations</h3>
                 <div ng-repeat="variation in product.variations" ng-show="product.variations[0]!=='No Variations'">
                     <div>Variation: {{variation.name}}</div>
                     <div>Info: {{variation.description}}</div>
                 </div>
-                <h3>Articles</h3>
+                <h3 ng-show="product.articles[1]">Articles</h3>
                 <div ng-repeat="article in product.articles" ng-show="product.articles[0]!=='No Variations'">
                     <a ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}">{{ api.show.articles.$getRecord(article).title }}</a>
                 </div>
