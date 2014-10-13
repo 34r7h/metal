@@ -1,12 +1,12 @@
-    <section class="panel clearfix">
+    <section class="panel panel-default clearfix">
         <h1 class="col-xs-12 panel-heading">
-            <span class="fa fa-rocket"></span>
+            <span class="fa fa-cube"></span>
             Products
         </h1>
         <div class="panel-body" ng-repeat="product in api.show.products">
             <div class="well  col-xs-12 col-md-5">
-                <a ng-href="#/products/{{product.productURL}}"><h2>{{product.title}}</h2></a>
-                <em>From ${{ product.price }}</em>
+                <a ng-href="#/products/{{product.productURL}}"><h2><i class="fa fa-star-o fa-border"></i> {{product.title}}</h2></a>
+                <em><i class="fa fa-tag fa-flip-horizontal"></i> From ${{ product.price }}</em>
                 <p class="panel padding" ng-bind-html="product.description"></p>
                 <!--h3 ng-show="product.variations[0]!=='No Variations'">Variations</h3>
                 <div ng-repeat="variation in product.variations" ng-show="product.variations[0]!=='No Variations'">
@@ -33,7 +33,7 @@
 
             <div class="well  col-xs-12">
                 <a ng-href="#/products/{{product.productURL}}">
-                    <button class="col-xs-12 btn btn-behance more" >More about {{ product.title }}</button>
+                    <button class="col-xs-12 btn btn-behance more" ><i class="fa fa-arrow-right fa-2x"> More about {{ product.title }}</i></button>
                 </a>
             </div>
 

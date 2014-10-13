@@ -1,10 +1,18 @@
-    <section class="panel clearfix">
+    <section class="panel panel-default clearfix">
         <h1 class="col-xs-12 panel-heading">
             <span class="fa fa-briefcase"></span>
             Clients
         </h1>
         <div class="panel-body" ng-repeat="client in api.show.clients">
-            <a class="col-xs-12 " ng-href="#/clients/{{client.clientURL}}"><h2><i class="fa fa-thumbs-up"></i> {{client.title}}</h2></a>
+            <a class="col-xs-12 " ng-href="#/clients/{{client.clientURL}}">
+                <h2>
+                    <span class="fa-stack">
+  <i class="fa fa-comment fa-flip-horizontal fa-stack-2x"></i>
+  <i class="fa fa-thumbs-o-up fa-inverse fa-stack-1x"></i>
+</span>
+                    {{client.title}}
+                </h2>
+            </a>
             <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL">
                 <a ng-href="#/clients/{{client.clientURL}}">
                     <img ng-src="{{imgSrc}}" width="100%">
@@ -14,7 +22,7 @@
 
                 <br/>
             </div>
-            <div class="col-xs-12 col-md-5" style="max-height: 300px; overflow: hidden">
+            <div class="col-xs-12 col-md-5">
                 <p class="well" ng-bind-html="client.description"></p>
                 <hr/>
                 <div ng-repeat="media in client.media">

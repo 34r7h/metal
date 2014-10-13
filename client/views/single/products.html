@@ -1,16 +1,14 @@
-<div class="page">
-
     <section class="panel panel-default">
         <div class="panel-heading">
             <strong>
-                <h1><i class="fa fa-rocket"></i> <span ng-bind-html="singleData.title"></span>
+                <h1><i class="fa fa-star-o fa-border"></i> <span ng-bind-html="singleData.title"></span>
                 </h1>
             </strong>
         </div>
         <div class="panel-body">
 
             <div class="col-xs-12 col-md-6">
-                <p class="panel-body col-xs-12">Starting from ${{ singleData.price }}</p>
+                <p class="panel-body col-xs-12"><i class="fa fa-tag fa-flip-horizontal"></i> Starting from ${{ singleData.price }}</p>
                 <p class="panel-body col-xs-12" ng-bind-html="singleData.description"></p>
             </div>
 
@@ -25,10 +23,10 @@
                 </div>
             </div>
             <div class="col-xs-12">
-                <h4 class=" col-xs-12" ng-show="singleData.variations[0]!=='No Variations'">Variations</h4>
+                <h4 class=" col-xs-12" ng-show="singleData.variations[0]!=='No Variations'"><i class="fa fa-asterisk"></i> Variations</h4>
                 <div class=" col-xs-12 col-md-6" ng-repeat="variation in singleData.variations" ng-show="singleData.variations[0]!=='No Variations'">
-                    <div>Variation: {{variation.name}}</div>
-                    <div>Info: {{variation.description}}</div>
+                    <h5>{{variation.name}}</h5>
+                    <p>{{variation.description}}</p>
                     <hr class=" col-xs-12">
                 </div>
                 <h4 class="col-xs-12 col-md-6" ng-show="singleData.articles[1]">Related Articles</h4>
@@ -48,4 +46,3 @@
 
     </section>
 
-</div>
