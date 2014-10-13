@@ -1,10 +1,13 @@
-<div class="page" id="about">
+<section class="panel clearfix">
+    <h1 class="col-xs-12 panel-heading">
+        <span class="fa fa-users"></span>
+        About Us
+    </h1>
 
-    <section class="panel panel-default col-xs-12">
 
-        <div class="panel-heading"><strong><span class="fa fa-group"></span> About</strong></div>
+    <div class="panel panel-default col-xs-12 col-md-5">
+
         <div class="panel-body">
-
             <section class="panel panel-box">
                 <div class="panel-top bg-primary">
 
@@ -16,12 +19,6 @@
                 </div>
 
             </section>
-        </div>
-
-    </section>
-    <section class="panel panel-default  col-xs-6">
-
-        <div class="panel-body">
             <div class="media">
                 <div class="media-body">
                     <ul class="list-unstyled list-info">
@@ -41,22 +38,22 @@
                             {{ api.show.contact.$getRecord('Phone').$value }}
                         </li>
                         <li>
-                            <span class="icon glyphicon glyphicon-home"></span>
+                            <span class="icon fa fa-road"></span>
                             <label>Street</label>
                             14-20110 Stewart Cresent
                         </li>
                         <li>
-                            <span class="icon glyphicon glyphicon-home"></span>
+                            <span class="icon fa fa-align-right fa-rotate-90"></span>
                             <label>City</label>
                             {{ api.show.contact.$getRecord('City').$value }}
                         </li>
                         <li>
-                            <span class="icon glyphicon glyphicon-home"></span>
+                            <span class="icon fa fa-compass"></span>
                             <label>Province</label>
                             {{ api.show.contact.$getRecord('Province').$value }}
                         </li>
                         <li>
-                            <span class="icon glyphicon glyphicon-home"></span>
+                            <span class="icon fa fa-envelope-square"></span>
                             <label>Postal</label>
                             {{ api.show.contact.$getRecord('Postal Code').$value }}
                         </li>
@@ -67,14 +64,15 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="panel panel-default col-xs-6">
-        <div class="panel-body">
+    </div>
+    <div class="col-xs-12 col-md-7">
+        <div class="">
             <div ng-repeat="about in api.show.about">
                 <p ng-bind-html="about.description"></p>
             </div>
         </div>
+    </div>
+
+
     </section>
-
-
-</div>
+        <br/>

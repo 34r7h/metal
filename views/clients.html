@@ -1,36 +1,34 @@
-<div class="page">
-
-    <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="fa fa-rocket"></span> Clients</strong></div>
+    <section class="panel panel-default clearfix">
+        <h1 class="col-xs-12 panel-heading">
+            <span class="fa fa-comments"></span>
+            Clients
+        </h1>
         <div class="panel-body" ng-repeat="client in api.show.clients">
-            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
-                <a ng-href="#/clients/{{client.clientURL}}"><h2>{{client.title}}</h2></a>
-                <p class="well" ng-bind-html="client.description"></p>
-                <h3>Testimonials</h3>
-                <div ng-repeat="variation in client.variations" ng-show="client.variations[0]!=='No Variations'">
-                    <h5>Testimonial Title: {{testimonial.name}}</h5>
-                    <div>Testimonial: {{testimonial.description}}</div>
-                </div>
-
-            </div>
-
-            <div class="col-xs-6" style="max-height: 300px; overflow: hidden">
-                <a ng-href="#/clients/{{client.clientURL}}">
-                    <img ng-src="{{api.show.media.$getRecord(client.media[0]).mediaURL}}" width="100%">
-                </a>
-                <hr>
-                <div ng-repeat="media in client.media">
-                    <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(client.media[$index]).mediaURL }}">
-                </div>
-            </div>
-            <a ng-href="#/clients/{{client.clientURL}}">
-                <button class="col-xs-12 btn btn-dark" >More about {{ client.title }}</button>
+            <a class="col-xs-12 " ng-href="#/clients/{{client.clientURL}}">
+                <h2 style="color: #30a79a">
+                    <span class="fa-stack">
+  <i class="fa fa-comment fa-flip-horizontal fa-stack-2x"></i>
+  <i class="fa fa-thumbs-o-up fa-inverse fa-stack-1x"></i>
+</span>
+                    <b>{{client.title}}</b>
+                </h2>
             </a>
+            <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL">
+                <a ng-href="#/clients/{{client.clientURL}}">
+                    <img ng-src="{{imgSrc}}" width="100%">
+                </a>
+                <hr/>
 
+
+                <br/>
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <p class="well" ng-bind-html="client.description"></p>
+                <hr/>
+                <div ng-repeat="media in client.media">
+                    <a href><img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(client.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(client.media[$index]).mediaURL"></a>
+                </div>
+            </div>
 
         </div>
     </section>
-
-
-
-</div>
