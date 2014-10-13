@@ -7,16 +7,19 @@
                 </h1>
             </strong>
         </div>
-        <div><img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(products.media[0]).mediaURL}}</div>
 
-        <hr class="col-xs-12">
-
-        <div ng-repeat="media in singleData">
-            <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}">
+        <div class="panel-body">
+            <p class="well col-xs-12" ng-bind-html="singleData.description"></p>
+            <div class="col-xs-10" ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL"><img ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(products.media[0]).mediaURL}}</div>
+            <div class="col-xs-2">
+                <div ng-repeat="media in singleData.media">
+                    <a href><img ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(singleData.media[$index]).mediaURL" width="100%"></a><hr>
+                </div>
+            </div>
         </div>
-        <hr class="col-xs-12">
-    
-        <p class="well col-xs-12" ng-bind-html="singleData.description"></p>
+
+        <hr/>
+
         <h4 class=" col-xs-12" ng-show="singleData.testimonials[0]!=='No Testimonials'">Testimonials</h4>
         <div class=" col-xs-12" ng-repeat="testimonial in singleData.testimonials" ng-show="singleData.testimonials[0]!=='No Testimonials'">
             <div>Testimonial: {{testimonial.name}}</div>

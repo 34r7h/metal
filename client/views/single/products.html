@@ -15,10 +15,12 @@
             </div>
 
             <div class="col-xs-12 col-md-6">
-                <div class="col-xs-12 panel-body">
-                    <img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(products.media[0]).mediaURL}}
-                    <div ng-repeat="media in singleData">
-                        <img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}">
+                <div class="col-xs-10 panel-body">
+                    <img ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
+                </div>
+                <div class="col-xs-2">
+                    <div ng-repeat="media in singleData.media">
+                        <a href><img ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(singleData.media[$index]).mediaURL" width="100%"></a><hr/>
                     </div>
                 </div>
             </div>
@@ -29,7 +31,7 @@
                     <div>Info: {{variation.description}}</div>
                     <hr class=" col-xs-12">
                 </div>
-                <h4 class="col-xs-12 " ng-show="singleData.articles[1]">Related Articles</h4>
+                <h4 class="col-xs-12 col-md-6" ng-show="singleData.articles[1]">Related Articles</h4>
                 <div class="col-xs-12" ng-repeat="article in singleData.articles" ng-show="singleData.articles[0]!=='No Articles'">
                     <a class="col-xs-4 well" ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}" ng-show="article.length > 0">
                         <img class="col-xs-12" ng-src="{{ api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaURL}}">

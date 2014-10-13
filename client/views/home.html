@@ -2,12 +2,28 @@
     <div class="hidden-xs" style="max-height: 400px; overflow: hidden" ><img ng-src="{{ api.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto"></div>
     <div class="visible-xs" style="max-height: 200px; overflow: hidden" ><img ng-src="{{ api.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto"></div>
     <div class="text-center hidden-xs" style="position:relative; top:-78px; font-size: 56px; color:#fff; height:0;">{{ api.show.site.$getRecord('foldText').$value }}</div>
-    <div ng-include="'views/services.html'"></div>
-    <div ng-include="'views/products.html'"></div>
-    <div ng-include="'views/clients.html'"></div>
-    <!-- div style="max-height:600px; overflow-y:scroll" ng-include="'views/articles.html'"></div -->
-    <!--div style="max-height:600px; overflow-y:scroll" ng-include="'views/media.html'"></div-->
-    <div ng-include="'views/about.html'"></div>
+    <br/>
+    <div class="col-xs-12">
+        <div ng-include="'views/services.html'"></div>
+    </div>
+        <br/>
+    <div class="col-xs-12">
+        <div ng-include="'views/products.html'"></div>
+    </div>
+    <br/>
+    <div class="col-xs-12">
+        <div ng-include="'views/clients.html'"></div>
+    </div>
+    <br/>
+        <!-- div style="max-height:600px; overflow-y:scroll" ng-include="'views/articles.html'"></div -->
+        <!--div style="max-height:600px; overflow-y:scroll" ng-include="'views/media.html'"></div-->
+    <div class="col-xs-12">
+        <div ng-include="'views/about.html'"></div>
+    </div>
+
+
+
+
 
 
 </div>

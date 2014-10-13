@@ -31,6 +31,7 @@
 		  };
 		  AWSControlProvider.supportType(imageSupportParams);
 
+
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
       routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site'];
       routesSingles = ['services','clients','articles','media','products'];
@@ -152,7 +153,15 @@
 				});
 				return filtered;
 			};
-	});
+	})
+        .filter('encodeText', function(){
+            return function(text){
+                var encodedText;
+                encodedText = encodeURIComponent(text);
+                console.log('encodedText',encodedText);
+                return encodedText;
+            }
+        });
 
 }).call(this);
 
