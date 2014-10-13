@@ -301,8 +301,9 @@ angular.module('app.services', ['firebase'])
 				})
 			};
 			api.updateArticle = function(id, description, media, articles){
+                console.log(id, description, media, articles);
 				api.sync.articles.$update(id, {description:description, media:media, articles:articles});
-			}
+			};
 
 			return api;
 

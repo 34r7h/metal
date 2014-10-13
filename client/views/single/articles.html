@@ -1,17 +1,10 @@
-<div class="page">
 
     <section class="panel panel-default">
         <div class="panel-heading">
-            <strong>
-                <h1 class="glyphicon glyphicon-th"> <span ng-bind-html="singleData.title"></span>
+                <h1 class="fa fa-newspaper-o"> {{singleData.title}}
                 </h1>
-            </strong>
         </div>
-        <img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
-        <hr class="col-xs-12">
-        <p class="col-xs-12" ng-bind-html="singleData.description"></p>
-        <hr class="col-xs-12">
+        <img class="pull-left fa-border padding" ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="62%">
+        <p class="panel-body white-bg padding" ng-bind-html="singleData.description"></p>
 
     </section>
-
-</div>

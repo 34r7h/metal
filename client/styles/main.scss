@@ -88,5 +88,14 @@
   text-shadow: 1px 1px 10px rgba(0,0,0,.95);
 }
 
-.padding {padding:1em}
-.more {font-size: 1.4em}
+.padding {padding:1em;}
+.margins {margin: 1em;}
+.no-margins {margin:0!important;}
+.more {font-size: 1em}
+.white-bg {background: #fff;}
+.red-bg {background: #b20815; color:#f5f5f5;}
+.orange-bg {background: #d75d04; color:#f5f5f5;}
+.blue-bg {background: #2a9388; color:#f5f5f5;}
+a {text-decoration: none!important;}
+
+

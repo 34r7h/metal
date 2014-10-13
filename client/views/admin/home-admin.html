@@ -49,13 +49,38 @@
 </section>
 
 <section class="panel panel-default">
-    <div>
+    <div class="clearfix">
         <h5>Opening Text</h5>
         <input class="col-xs-6" ng-model="api.show.site.$getRecord('foldText').$value"/>
         <button class="col-xs-1" ng-click="api.saveSite('foldText',api.show.site.$getRecord('foldText').$value)">
             Save
         </button>
     </div>
+
+    <div class="clearfix">
+        <h5>Services Text</h5>
+        <textarea class="col-xs-6" ng-model="api.show.site.$getRecord('servicesText').$value"/>
+        <button class="col-xs-1" ng-click="api.saveSite('servicesText',api.show.site.$getRecord('servicesText').$value)">
+            Save
+        </button>
+    </div>
+
+    <div class="clearfix">
+        <h5>Products Text</h5>
+        <textarea class="col-xs-6" ng-model="api.show.site.$getRecord('productsText').$value"/>
+        <button class="col-xs-1" ng-click="api.saveSite('productsText',api.show.site.$getRecord('productsText').$value)">
+            Save
+        </button>
+    </div>
+
+    <div class="clearfix">
+        <h5>Clients Text</h5>
+        <textarea class="col-xs-6" ng-model="api.show.site.$getRecord('clientsText').$value"/>
+        <button class="col-xs-1" ng-click="api.saveSite('clientsText',api.show.site.$getRecord('clientsText').$value)">
+            Save
+        </button>
+    </div>
+
 </section>
 
 </div>
