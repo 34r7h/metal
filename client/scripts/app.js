@@ -20,7 +20,8 @@
 	app
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider) {
-		  var imageSupportParams = {
+
+                var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
 			  Bucket         : 'masuk',
