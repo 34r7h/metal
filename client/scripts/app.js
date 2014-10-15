@@ -21,7 +21,7 @@
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
                 $locationProvider.hashPrefix('!');
-                $locationProvider.html5Mode(false);
+                $locationProvider.html5Mode(true);
                 var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
