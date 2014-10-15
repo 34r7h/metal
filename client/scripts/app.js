@@ -21,7 +21,7 @@
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
                 $locationProvider.hashPrefix('!');
-                $locationProvider.html5Mode(true);
+               $locationProvider.html5Mode(true);
                 var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
@@ -104,6 +104,7 @@
           templateUrl: 'views/' + route + '.html',
 	      controller: route+'Ctrl'
         };
+
         $stateProvider.state(state, config);
         return $stateProvider;
       };
@@ -130,7 +131,9 @@
 			  }
 		  };
 		  $stateProvider.state(state, config);
-		  return $stateProvider;
+
+
+          return $stateProvider;
 	  };
 
 	  routes.forEach(function(route) {
@@ -140,7 +143,8 @@
 	  routesSingles.forEach(function(routesSingle) {
 		  return setSingleRoutes(routesSingle);
 	  });
-	  return $urlRouterProvider.otherwise('/home');
+                $stateProvider.state('homey',{url:'/',templateUrl:'views/home.html'});
+	  return $urlRouterProvider.otherwise('/');
 
     }
   ])
