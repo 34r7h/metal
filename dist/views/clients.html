@@ -4,7 +4,7 @@
             Clients
         </h1>
         <div class="panel-body" ng-repeat="client in api.show.clients">
-            <a class="col-xs-12 " ng-href="#/clients/{{client.clientURL}}">
+            <a class="col-xs-12 " ng-href="#!/clients/{{client.clientURL}}">
                 <h2 style="color: #30a79a">
                     <span class="fa-stack">
   <i class="fa fa-comment fa-flip-horizontal fa-stack-2x"></i>
@@ -14,7 +14,7 @@
                 </h2>
             </a>
             <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL">
-                <a ng-href="#/clients/{{client.clientURL}}">
+                <a ng-href="#!/clients/{{client.clientURL}}">
                     <img ng-src="{{imgSrc}}" width="100%">
                 </a>
                 <hr/>

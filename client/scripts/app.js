@@ -19,8 +19,8 @@
       'uploader']);
 	app
 		.config([
-    '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider) {
-
+    '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
+                $locationProvider.hashPrefix('!');
                 var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',

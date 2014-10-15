@@ -9,7 +9,7 @@
                 <div ng-hide="editTitle===true">{{media.mediaTitle}}</div>
                 <input ng-show="editTitle===true" ng-model="media.mediaTitle" ng-blur="saveMedia(media.$id,media.mediaTitle);editTitle=false;">
             </div>
-            <a ng-href="#/media/{{media.mediaLink }}"><img class="" src="{{media.mediaURL}}" width="100%"></a>
+            <a ng-href="#!/media/{{media.mediaLink }}"><img class="" src="{{media.mediaURL}}" width="100%"></a>
             <div class="panel-footer" ng-init="removeMedia = false;">
                 <a href ng-show="!removeMedia" ng-click="removeMedia = true">Remove Media</a>
                 <a href="javascript:;" ng-show="removeMedia" ng-click="api.removeMedia(media.mediaLink, media.$id)" class="btn btn-primary" role="button">Yes, remove this media.</a>

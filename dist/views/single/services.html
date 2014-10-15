@@ -28,7 +28,7 @@
                 <div class="col-xs-12 col-sm-6" ng-show="singleData.articles[0]!=='No Articles'">
                     <h4 class="col-xs-12" ng-show="singleData.articles[1]"><i class="fa fa-newspaper-o"></i> Related Articles</h4>
                     <div class="col-xs-12" ng-repeat="article in singleData.articles" ng-show="singleData.articles[0]!=='No Articles'">
-                        <a ng-href="#/articles/{{ api.show.articles.$getRecord(article).articleURL }}" ng-show="article.length > 0">
+                        <a ng-href="#!/articles/{{ api.show.articles.$getRecord(article).articleURL }}" ng-show="article.length > 0">
                             <img class="col-xs-12" ng-src="{{ api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaURL}}">
                             <b><em class="col-xs-12" >{{ api.show.articles.$getRecord(article).title }}</em></b></a>
                     </div>

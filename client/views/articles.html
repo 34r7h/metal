@@ -4,7 +4,7 @@
         <div class="panel-heading"><h1><span class="fa fa-newspaper-o"></span> Articles</h1></div>
         <div class="panel-body">
             <div ng-repeat="article in api.show.articles">
-                <a ng-href="#/articles/{{article.articleURL}}">
+                <a ng-href="#!/articles/{{article.articleURL}}">
                     <h2><i class="fa fa-star"></i> {{article.title}}</h2>
                     <div><img ng-src="{{api.show.media.$getRecord(article.media[0]).mediaURL}}" width="100%"></div>
                 </a>

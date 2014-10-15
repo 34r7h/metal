@@ -5,13 +5,13 @@
         </h1>
         <div class="panel-body" ng-repeat="product in api.show.products">
             <div class="well  col-xs-12 col-md-5">
-                <a ng-href="#/products/{{product.productURL}}"><h2><i class="fa fa-cube fa-border"></i> {{product.title}}</h2></a>
+                <a ng-href="#!/products/{{product.productURL}}"><h2><i class="fa fa-cube fa-border"></i> {{product.title}}</h2></a>
                 <em><i class="fa fa-tag fa-flip-horizontal"></i> From ${{ product.price }}</em>
                 <p class="panel padding" ng-bind-html="product.description"></p>
             </div>
 
             <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(product.media[0]).mediaURL">
-                <a class="col-xs-10" ng-href="#/products/{{product.productURL}}">
+                <a class="col-xs-10" ng-href="#!/products/{{product.productURL}}">
                     <img ng-src="{{imgSrc}}" width="100%">
                 </a>
                 <div class="col-xs-2">
@@ -23,7 +23,7 @@
             </div>
 
             <div class="well  col-xs-12">
-                <a ng-href="#/products/{{product.productURL}}">
+                <a ng-href="#!/products/{{product.productURL}}">
                     <button class="col-xs-12 btn btn-behance more" ><i class="fa fa-arrow-right fa-2x"> {{ product.title }}</i></button>
                 </a>
             </div>
