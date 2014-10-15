@@ -2,7 +2,7 @@
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
     '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll) {
-            $scope.seoTest = 'See this?';
+
           var foldText = api.sync.site.$asArray();
 		  $scope.foldText = foldText;
 		  $scope.scrollToTop = function(id){

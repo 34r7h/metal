@@ -44,7 +44,8 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, api, $firebase) {
+	      fun = function($scope, $state, api, $firebase, you) {
+        console.log(you);
 		      var apiList = [
 			      'updateAbout',
 			      'saveArticle',
@@ -100,6 +101,7 @@
         var state, config;
 	    state = route;
         config = {
+
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',
 	      controller: route+'Ctrl'
@@ -143,7 +145,7 @@
 	  routesSingles.forEach(function(routesSingle) {
 		  return setSingleRoutes(routesSingle);
 	  });
-                $stateProvider.state('homey',{url:'/',templateUrl:'views/home.html'});
+                $stateProvider.state('homey',{url:'/',templateUrl:'views/home.html', controller:function($scope, you){$scope.test=you;},resolve:{you:function(){return 'rock'}}});
 	  return $urlRouterProvider.otherwise('/');
 
     }
