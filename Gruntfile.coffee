@@ -226,6 +226,7 @@ module.exports = (grunt) ->
                     dest: "<%= yeoman.dist %>"
                     src: [
                         "favicon.ico"
+                        "CNAME"
                         # bower components that has image, font dependencies
                         "bower_components/font-awesome/css/*"
                         "bower_components/font-awesome/fonts/*"
@@ -251,6 +252,10 @@ module.exports = (grunt) ->
                     cwd: ".tmp/images"
                     dest: "<%= yeoman.dist %>/images"
                     src: ["generated/*"]
+                ,
+                  expand: true
+                  dest: "<%= yeoman.dist %>"
+                  src: ["CNAME"]
                 ]
 
             styles:
