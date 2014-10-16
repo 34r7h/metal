@@ -45,11 +45,15 @@
 	      name = route+'Ctrl';
 	      fun = function($scope, $state, $firebase, test, $timeout) {
                 $timeout(function(){
-                    console.log('test2',test.show);
+                    $scope.foldImage = test.show.site.$getRecord('foldImage').$value;
+                    $scope.foldText = test.show.site.$getRecord('foldText').$value;
                     $scope.serviceText = test.show.site.$getRecord('servicesText').$value;
+                    $scope.productText = test.show.site.$getRecord('productsText').$value;
+                    $scope.clientText = test.show.site.$getRecord('clientsText').$value;
 
 
-                }, 2000);
+
+                });
 
 		      /*
                var apiList = [
@@ -114,7 +118,6 @@
                 var deferred = $q.defer();
                 $timeout(function(){
                     deferred.resolve(test1);
-                    console.log('test',test1);
                 }, 2000);
                 return deferred.promise;
             }},
