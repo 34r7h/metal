@@ -43,50 +43,59 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, test1) {
-              $scope.test1 = test1;
-              console.log('test2',test1);
-		      var apiList = [
-			      'updateAbout',
-			      'saveArticle',
-			      'updateArticleTitle',
-			      'saveService',
-			      'updateServiceTitle',
-			      'updateService',
-			      'removeService',
-			      'saveProduct',
-			      'updateProductTitle',
-			      'updateProduct',
-			      'removeProduct',
-			      'saveClient',
-			      'updateClientTitle',
-			      'updateClient',
-			      'removeClient',
-			      'saveMedia',
-			      'removeMedia',
-			      'addContentMedia',
-			      'removeContentMedia',
-			      'addVariation',
-			      'addContentArticles',
-			      'removeContentArticles'
-		      ];
-		      angular.forEach(apiList, function(action){
-			      $scope[action] = test1[action];
-			      return $scope;
+	      fun = function($scope, $state, $firebase, test, $timeout) {
+                $timeout(function(){
+                    console.log('test2',test.show);
+                    $scope.serviceText = test.show.site.$getRecord('servicesText').$value;
 
-		      });
+
+                }, 2000);
+
+		      /*
+               var apiList = [
+               'updateAbout',
+               'saveArticle',
+               'updateArticleTitle',
+               'saveService',
+               'updateServiceTitle',
+               'updateService',
+               'removeService',
+               'saveProduct',
+               'updateProductTitle',
+               'updateProduct',
+               'removeProduct',
+               'saveClient',
+               'updateClientTitle',
+               'updateClient',
+               'removeClient',
+               'saveMedia',
+               'removeMedia',
+               'addContentMedia',
+               'removeContentMedia',
+               'addVariation',
+               'addContentArticles',
+               'removeContentArticles'
+               ];
+               angular.forEach(apiList, function(action){
+               $scope[action] = test[action];
+               return $scope;
+
+               });
+
+               */
+
 
 		      $scope.state = $state;
-		      $scope.api = test1;
+		      $scope.api = test;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-		      $scope.saved = test1.aboutSaved;
+		      $scope.saved = test.aboutSaved;
 		      $scope.media = [];
 		      $scope.articles = [];
-			  $scope.productVariations = test1.variations;
+			  $scope.productVariations = test.variations;
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
@@ -101,9 +110,13 @@
         var state, config;
 	    state = route;
         config = {
-            resolve:{test1:'api',test:function(test1){
-                console.log('test1',test1);
-                return test1.$promise;
+            resolve:{test1:'api',test:function(test1, $q, $timeout){
+                var deferred = $q.defer();
+                $timeout(function(){
+                    deferred.resolve(test1);
+                    console.log('test',test1);
+                }, 2000);
+                return deferred.promise;
             }},
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',

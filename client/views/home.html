@@ -2,15 +2,15 @@
     <div class="hidden-xs" style="max-height: 400px; overflow: hidden" >
         <div class="text-center hidden-xs" style="position:relative; top:154px; font-size: 46px; color:#fff; height: 0">
             <h1 class="no-margins"><i class="fa fa-legal fa-border"></i>
-            <b> {{ test1.show.site.$getRecord('foldText').$value }} </b>
+            <b> {{ test.show.site.$getRecord('foldText').$value }} </b>
             <i class="fa fa-legal fa-flip-horizontal fa-border"></i></h1>
         </div>
-        <img ng-src="{{ test1.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
+        <img ng-src="{{ test.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
 
 
     </div>
     <div class="visible-xs" style="max-height: 200px; overflow: hidden" >
-        <img ng-src="{{ test1.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
+        <img ng-src="{{ test.show.site.$getRecord('foldImage').$value }}" width="100%" height="auto">
     </div>
 
     <br/>
@@ -20,7 +20,7 @@
                 <i class="fa fa-check fa-5x"></i>
                 <p style="font-size: 1.6em;">Our Process</p>
             </div>
-            <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ test1.show.site.$getRecord('servicesText').$value }}</b>
+            <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ serviceText }}</b>
         </div>
     </div>
 <br/>
@@ -38,7 +38,7 @@
                     <i class="fa fa-search-plus fa-5x"></i>
                     <p style="font-size: 1.6em;">Product Line</p>
                 </div>
-                <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ test1.show.site.$getRecord('productsText').$value }}</b>
+                <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ test.show.site.$getRecord('productsText').$value }}</b>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
                     <i class="fa fa-bullhorn fa-5x"></i>
                     <p style="font-size: 1.6em;">Past Work</p>
                 </div>
-                <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ test1.show.site.$getRecord('clientsText').$value }}</b>
+                <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding">{{ test.show.site.$getRecord('clientsText').$value }}</b>
             </div>
         </div>
 
