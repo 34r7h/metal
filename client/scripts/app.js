@@ -44,6 +44,7 @@
 	      var name, fun;
 	      name = route+'Ctrl';
 	      fun = function($scope, $state, $firebase, test1) {
+              $scope.test1 = test1;
               console.log('test2',test1);
 		      var apiList = [
 			      'updateAbout',
