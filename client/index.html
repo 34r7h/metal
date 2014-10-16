@@ -134,5 +134,13 @@
 
 
         <!-- endbuild -->
+
+    <!-- prerender.io considerations -->
+        <script>
+            window.prerenderReady = false;
+            setTimeout(function(){
+                window.prerenderReady = true;
+            }, 5000)
+        </script>
     </body>
 </html>
