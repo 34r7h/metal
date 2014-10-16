@@ -21,7 +21,6 @@
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
                 $locationProvider.hashPrefix('!');
-               // $locationProvider.html5Mode(true);
                 var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
@@ -44,8 +43,8 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, api, $firebase, you) {
-        console.log(you);
+	      fun = function($scope, $state, $firebase, test1) {
+              console.log('test2',test1);
 		      var apiList = [
 			      'updateAbout',
 			      'saveArticle',
@@ -71,22 +70,22 @@
 			      'removeContentArticles'
 		      ];
 		      angular.forEach(apiList, function(action){
-			      $scope[action] = api[action];
+			      $scope[action] = test1[action];
 			      return $scope;
 
 		      });
 
 		      $scope.state = $state;
-		      $scope.api = api;
+		      $scope.api = test1;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-		      $scope.saved = api.aboutSaved;
+		      $scope.saved = test1.aboutSaved;
 		      $scope.media = [];
 		      $scope.articles = [];
-			  $scope.productVariations = api.variations;
+			  $scope.productVariations = test1.variations;
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
@@ -101,12 +100,14 @@
         var state, config;
 	    state = route;
         config = {
-
+            resolve:{test1:'api',test:function(test1){
+                console.log('test1',test1);
+                return test1.$promise;
+            }},
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',
 	      controller: route+'Ctrl'
         };
-
         $stateProvider.state(state, config);
         return $stateProvider;
       };
@@ -133,9 +134,7 @@
 			  }
 		  };
 		  $stateProvider.state(state, config);
-
-
-          return $stateProvider;
+		  return $stateProvider;
 	  };
 
 	  routes.forEach(function(route) {
@@ -145,8 +144,7 @@
 	  routesSingles.forEach(function(routesSingle) {
 		  return setSingleRoutes(routesSingle);
 	  });
-                $stateProvider.state('homey',{url:'/',templateUrl:'views/home.html', controller:function($scope, you){$scope.test=you;},resolve:{you:function(){return 'rock'}}});
-	  return $urlRouterProvider.otherwise('/');
+	  return $urlRouterProvider.otherwise('/home');
 
     }
   ])
