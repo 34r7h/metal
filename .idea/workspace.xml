@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -829,7 +827,11 @@
       <created>1413491115237</created>
       <updated>1413491115237</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="prerender and heroku stuffs">
+      <created>1413491427376</created>
+      <updated>1413491427376</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -896,7 +898,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="created separate admin html, easy api for fb items, image fix, article admin tight" />
     <MESSAGE value="quick fix for loading new admin views" />
     <MESSAGE value="last minute admin changes" />
     <MESSAGE value="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing." />
@@ -921,7 +922,8 @@
     <MESSAGE value="seo" />
     <MESSAGE value="resolve for seo purposes" />
     <MESSAGE value="working on proper way to crawl fb data.. sucks atm" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on proper way to crawl fb data.. sucks atm" />
+    <MESSAGE value="prerender and heroku stuffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="prerender and heroku stuffs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
