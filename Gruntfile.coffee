@@ -255,7 +255,7 @@ module.exports = (grunt) ->
                 ,
                   expand: true
                   dest: "<%= yeoman.dist %>"
-                  src: ["CNAME"]
+                  src: ["CNAME", "sitemap.xml"]
                 ]
 
             styles:
