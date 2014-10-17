@@ -1,28 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://forgingtechnology.com/</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/home</loc>
+    </url>
 
     <url>
-        <loc>http://masukmetal.herokuapp.com/#!/home</loc>
-        <lastmod>2014-10-16T21:31:04+00:00</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>http://forgingtechnology.com/#!/articles</loc>
     </url>
     <url>
-        <loc>http://masukmetal.herokuapp.com/#!/services</loc>
-        <lastmod>2014-10-16T21:31:04+00:00</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>http://forgingtechnology.com/#!/media</loc>
     </url>
     <url>
-        <loc>http://masukmetal.herokuapp.com/#!/products</loc>
-        <lastmod>2014-10-16T21:31:04+00:00</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>http://forgingtechnology.com/#!/services</loc>
     </url>
     <url>
-        <loc>http://masukmetal.herokuapp.com/#!/clients</loc>
-        <lastmod>2014-10-16T21:31:04+00:00</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>http://forgingtechnology.com/#!/products</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/clients</loc>
+    </url>
+
+    <url>
+        <loc>http://forgingtechnology.com/#!/about</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/services/driveway-gates</loc>
+    </url>
+
+    <url>
+        <loc>http://forgingtechnology.com/#!/services/railings</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/services/custom-fabrications</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/products/fire-rakes</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/products/fire-shovels</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/products/andirons</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/products/coat-racks</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/products/tables</loc>
+    </url>
+
+    <url>
+        <loc>http://forgingtechnology.com/#!/clients/gloria-schriever</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/clients/nancy-maloney</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/clients/david-pink</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/clients/calverhall-st-project</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/articles/driveway-gates-in-depth</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/articles/on-fabrication</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/articles/history-of-iron</loc>
+    </url>
+
+    <url>
+        <loc>http://forgingtechnology.com/#!/articles/why-masuk-metal</loc>
+    </url>
+    <url>
+        <loc>http://forgingtechnology.com/#!/articles/looking-for-a-special-railing</loc>
     </url>
 </urlset>
