@@ -13,9 +13,9 @@
                     <b>{{client.title}}</b>
                 </h2>
             </a>
-            <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL">
+            <div class="col-xs-12 col-md-7" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL; imgAlt = api.show.media.$getRecord(client.media[0]).mediaDescription">
                 <a ng-href="#!/clients/{{client.clientURL}}">
-                    <img ng-src="{{imgSrc}}" width="100%">
+                    <img alt="{{imgAlt}}" ng-src="{{imgSrc}}" width="100%">
                 </a>
                 <hr/>
 
@@ -26,7 +26,7 @@
                 <p class="well" ng-bind-html="client.description"></p>
                 <hr/>
                 <div ng-repeat="media in client.media">
-                    <a href><img class="col-xs-3" ng-src="{{ api.show.media.$getRecord(client.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(client.media[$index]).mediaURL"></a>
+                    <a href><img class="col-xs-3" alt="{{ api.show.media.$getRecord(client.media[$index]).mediaDescription }}" ng-src="{{ api.show.media.$getRecord(client.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(client.media[$index]).mediaURL;$parent.imgAlt = api.show.media.$getRecord(client.media[$index]).mediaDescription; "></a>
                 </div>
             </div>
 

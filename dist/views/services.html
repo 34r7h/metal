@@ -15,13 +15,13 @@
                 </div>
 
 
-                <div class="col-xs-12 col-md-6 clearfix" ng-init="imgSrc = api.show.media.$getRecord(service.media[0]).mediaURL">
+                <div class="col-xs-12 col-md-6 clearfix" ng-init="imgSrc = api.show.media.$getRecord(service.media[0]).mediaURL; imgAlt = api.show.media.$getRecord(service.media[0]).mediaDescription; ">
                     <a class="col-xs-10" ng-href="#!/services/{{service.serviceURL}}">
-                        <img ng-src="{{imgSrc || api.show.media.$getRecord(service.media[0]).mediaURL}}" width="100%">
+                        <img alt="{{imgAlt || api.show.media.$getRecord(service.media[0]).mediaDescription}}" ng-src="{{imgSrc || api.show.media.$getRecord(service.media[0]).mediaURL}}" width="100%">
                     </a>
                     <div class="col-xs-2">
                         <div ng-repeat="media in service.media">
-                            <a href><img ng-src="{{ api.show.media.$getRecord(service.media[$index]).mediaURL }}" width="100%" ng-click="$parent.imgSrc = api.show.media.$getRecord(service.media[$index]).mediaURL"><hr></a>
+                            <a href><img alt="{{api.show.media.$getRecord(service.media[$index]).mediaDescription}}" ng-src="{{ api.show.media.$getRecord(service.media[$index]).mediaURL }}" width="100%" ng-click="$parent.imgSrc = api.show.media.$getRecord(service.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(service.media[$index]).mediaDescription; "><hr></a>
                         </div>
                     </div>
 
