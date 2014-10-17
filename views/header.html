@@ -1,0 +1,93 @@
+<header class="top-header clearfix">
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="#!/">
+            <span><img alt="Masuk Metal Logo" src="{{ api.show.site.$getRecord('logo').$value }}" style="max-width: 250px;" width="100%" ></span>
+        </a>
+    </div>
+
+    <!-- needs to be put after logo to make it working-->
+    <div class="menu-button" toggle-off-canvas>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+
+    <div class="top-nav">
+        <ul class="nav-left list-unstyled">
+            <li ng-hide="showExtras=true" >
+                <a href="#!/" data-toggle-nav-collapsed-min
+                             class="toggle-min"
+                             id="step3"
+                             ><i class="fa fa-bars"></i></a>
+            </li>
+
+
+        </ul>
+
+        <ul class="nav-right pull-right list-unstyled col-xs-12">
+
+
+            <li class="well-sm line  col-sm-3 col-xs-6  hidden-xs">
+                <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
+            </li>
+            <li class="well-sm line col-sm-4 col-xs-6 hidden-xs">
+                <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a></div>
+            </li>
+
+            <li class="btn col-sm-5 col-xs-12">
+                <div class="btn-group col-xs-12" dropdown="" is-open="status.isopen4">
+                    <button type="button" class="btn btn-info btn-lg dropdown-toggle col-xs-12" aria-expanded="false"><i class="fa fa-plug"> Let's Connect</i> </button>
+                    <ul ng-click="$parent.$parent.preventClose($event)" class="dropdown-menu col-xs-12" role="menu">
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Send an E-mail </strong></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                            <div class="form-group">
+                                                <label for="name">Your Name</label>
+                                                <input ng-model="mail.name" type="text" class="form-control" id="name" placeholder="Enter you name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="subject">What metalwork are you interested in?</label>
+                                                <input ng-model="mail.subject" type="text" class="form-control" id="subject" placeholder="I'm interested in…">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message">Describe details of request</label>
+                                                <textarea ng-model="mail.body" class="form-control" id="message" placeholder="The details of this job include…"></textarea>
+                                            </div>
+                                            <a href="mailto:masukmetaldesign@gmail.com?subject={{ mail.subject }}&body={{ mail.body + '\n - ' +mail.name }}"><button type="submit" class="btn btn-primary btn-w-md col-xs-12 more">Send Message</button></a>
+                                        <hr class="col-xs-12">
+
+                                        <h4 class="col-xs-12">or connect with us on your preferred social network below</h4>
+                                        <hr class="col-xs-12">
+
+                                        <section class="panel panel-box">
+
+                                            <a style="color:#fff" class="panel-left panel-item bg-facebook" ng-href="{{ api.show.contact.$getRecord('Facebook').$value }}">
+                                                <div >
+                                                    <p class="size-h1"><i class="fa fa-facebook"></i></p>
+                                                    <p>Facebook</p>
+                                                </div>
+                                            </a>
+                                            <a style="color:#fff"  class="panel-right panel-item bg-google-plus" ng-href="{{ api.show.contact.$getRecord('Google').$value }}">
+                                                <div >
+                                                    <p class="size-h1"><i class="fa fa-google-plus"></i></p>
+                                                    <p>Google Plus</p>
+                                                </div>
+                                            </a>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</header>
