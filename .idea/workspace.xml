@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/admin/clients-admin" afterPath="$PROJECT_DIR$/client/views/admin/clients-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin.html" afterPath="$PROJECT_DIR$/client/views/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/app.js" afterPath="$PROJECT_DIR$/client/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/articles.html" afterPath="$PROJECT_DIR$/client/views/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/articles.html" afterPath="$PROJECT_DIR$/client/views/single/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/clients.html" afterPath="$PROJECT_DIR$/client/views/clients.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/clients.html" afterPath="$PROJECT_DIR$/client/views/single/clients.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/header.html" afterPath="$PROJECT_DIR$/client/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home.html" afterPath="$PROJECT_DIR$/client/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/media-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/media-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/media.html" afterPath="$PROJECT_DIR$/client/views/media.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/media.html" afterPath="$PROJECT_DIR$/client/views/single/media.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/products.html" afterPath="$PROJECT_DIR$/client/views/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/products.html" afterPath="$PROJECT_DIR$/client/views/single/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/services-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/services-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/services.html" afterPath="$PROJECT_DIR$/client/views/services.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/services.html" afterPath="$PROJECT_DIR$/client/views/single/services.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/modules/uploader.js" afterPath="$PROJECT_DIR$/client/scripts/modules/uploader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.js" afterPath="$PROJECT_DIR$/web.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -44,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66339064" vertical-offset="660" max-vertical-offset="2895">
+            <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="2895">
               <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.09072581" vertical-offset="0" max-vertical-offset="496">
+              <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -99,16 +91,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.375" vertical-offset="165" max-vertical-offset="615">
               <caret line="18" column="352" selection-start-line="18" selection-start-column="352" selection-end-line="18" selection-end-column="352" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clients.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/single/clients.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="165" max-vertical-offset="615">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -186,7 +168,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
-        <option value="$PROJECT_DIR$/web.js" />
         <option value="$PROJECT_DIR$/dist/sitemap.xml" />
         <option value="$PROJECT_DIR$/sitemap.xml" />
         <option value="$PROJECT_DIR$/client/index.html" />
@@ -208,6 +189,7 @@
         <option value="$PROJECT_DIR$/client/views/admin/services-admin.html" />
         <option value="$PROJECT_DIR$/client/scripts/api.js" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
+        <option value="$PROJECT_DIR$/web.js" />
       </list>
     </option>
   </component>
@@ -946,7 +928,15 @@
       <created>1413518196839</created>
       <updated>1413518196840</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="prerender and heroku stuffs">
+      <created>1413521629377</created>
+      <updated>1413521629377</updated>
+    </task>
+    <task id="LOCAL-00083" summary="prerender and heroku stuffs">
+      <created>1413521704131</created>
+      <updated>1413521704131</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -955,8 +945,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24928367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3252149" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24928367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252149" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1253,14 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
@@ -1433,8 +1415,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66339064" vertical-offset="660" max-vertical-offset="2895">
+        <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="2895">
           <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09072581" vertical-offset="0" max-vertical-offset="496">
+          <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
           <folding />
         </state>
       </provider>
