@@ -21,6 +21,7 @@
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
                 $locationProvider.hashPrefix('!');
+                // $locationProvider.html5Mode(true);
                 var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
@@ -43,17 +44,17 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, test, $timeout) {
+	      fun = function($scope, $state, $firebase, api, $timeout) {
                 $timeout(function(){
-                    $scope.foldImage = test.show.site.$getRecord('foldImage').$value;
-                    $scope.foldText = test.show.site.$getRecord('foldText').$value;
-                    $scope.serviceText = test.show.site.$getRecord('servicesText').$value;
-                    $scope.productText = test.show.site.$getRecord('productsText').$value;
-                    $scope.clientText = test.show.site.$getRecord('clientsText').$value;
+                    $scope.foldImage = api.show.site.$getRecord('foldImage').$value;
+                    $scope.foldText = api.show.site.$getRecord('foldText').$value;
+                    $scope.serviceText = api.show.site.$getRecord('servicesText').$value;
+                    $scope.productText = api.show.site.$getRecord('productsText').$value;
+                    $scope.clientText = api.show.site.$getRecord('clientsText').$value;
 
 
 
-                });
+                },2000);
 
 		      /*
                var apiList = [
@@ -90,16 +91,16 @@
 
 
 		      $scope.state = $state;
-		      $scope.api = test;
+		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-		      $scope.saved = test.aboutSaved;
+		      $scope.saved = api.aboutSaved;
 		      $scope.media = [];
 		      $scope.articles = [];
-			  $scope.productVariations = test.variations;
+			  $scope.productVariations = api.variations;
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
@@ -114,13 +115,17 @@
         var state, config;
 	    state = route;
         config = {
-            resolve:{test1:'api',test:function(test1, $q, $timeout){
-                var deferred = $q.defer();
-                $timeout(function(){
-                    deferred.resolve(test1);
-                }, 2000);
-                return deferred.promise;
-            }},
+
+            /*
+             resolve:{test1:'api',test:function(test1, $q, $timeout){
+             var deferred = $q.defer();
+             $timeout(function(){
+             deferred.resolve(test1);
+             }, 2000);
+             return deferred.promise;
+             }},
+             */
+
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',
 	      controller: route+'Ctrl'
@@ -161,6 +166,7 @@
 	  routesSingles.forEach(function(routesSingle) {
 		  return setSingleRoutes(routesSingle);
 	  });
+                $stateProvider.state('main',{url:'/',templateUrl:'views/home.html', controller:'homeCtrl'});
 	  return $urlRouterProvider.otherwise('/home');
 
     }
