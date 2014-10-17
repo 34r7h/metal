@@ -6,7 +6,7 @@
             <div ng-repeat="article in api.show.articles">
                 <a ng-href="#!/articles/{{article.articleURL}}">
                     <h2><i class="fa fa-star"></i> {{article.title}}</h2>
-                    <div><img ng-src="{{api.show.media.$getRecord(article.media[0]).mediaURL}}" width="100%"></div>
+                    <div><img alt="{{api.show.media.$getRecord(article.media[0]).mediaDescription}}" ng-src="{{api.show.media.$getRecord(article.media[0]).mediaURL}}" width="100%"></div>
                 </a>
                 <div class="panel-footer">
                     <p class="col-xs-12" ng-bind-html="article.description"></p>

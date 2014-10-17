@@ -24,10 +24,10 @@ angular.module('app.services', ['firebase'])
 			};
 
 // Media
-			api.saveMedia = function(id, title){
+			api.saveMedia = function(id, title, description){
 				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 
-			api.sync.media.$update(id, {mediaTitle:title, mediaLink:link}).then(function(media){
+			    api.sync.media.$update(id, {mediaTitle:title, mediaLink:link, mediaDescription:description}).then(function(media){
 				api.newID = media.name();
 				if(api.sync.index.media[link] === false){
 					api.sync.index.media.$set(link, api.newID);
@@ -47,6 +47,7 @@ angular.module('app.services', ['firebase'])
 			};
 // Add to Content
 			api.addContentMedia = function(content, id, media){
+                console.log(content,id,media);
 				media.unshift(id);
 			};
 			api.removeContentMedia = function(media, id){

@@ -44,19 +44,9 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, api, $timeout) {
-                $timeout(function(){
-                    $scope.foldImage = api.show.site.$getRecord('foldImage').$value;
-                    $scope.foldText = api.show.site.$getRecord('foldText').$value;
-                    $scope.serviceText = api.show.site.$getRecord('servicesText').$value;
-                    $scope.productText = api.show.site.$getRecord('productsText').$value;
-                    $scope.clientText = api.show.site.$getRecord('clientsText').$value;
+	      fun = function($scope, $state, $firebase, api) {
 
 
-
-                },2000);
-
-		      /*
                var apiList = [
                'updateAbout',
                'saveArticle',
@@ -82,12 +72,12 @@
                'removeContentArticles'
                ];
                angular.forEach(apiList, function(action){
-               $scope[action] = test[action];
+               $scope[action] = api[action];
                return $scope;
 
                });
 
-               */
+
 
 
 		      $scope.state = $state;

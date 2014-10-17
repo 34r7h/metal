@@ -198,6 +198,7 @@ uploader.provider('AWSControl', function(){
 	                    $rootScope.$broadcast('AWSUploadSuccess');
 						$rootScope.newImage = 'https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key);
 	                    $rootScope.mediaTitle = prompt('Upload Successful! Please name your media.');
+                        $rootScope.mediaDescription = prompt('Give us a description, useful for SEO');
 		                $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 
 /* beginning of self-called check on path availablility
@@ -215,10 +216,10 @@ uploader.provider('AWSControl', function(){
 			                console.log('loop over.')
 		                })();
 */
-	                    console.log($rootScope.newImage + ' ' + $rootScope.newImage);
+	                    console.log($rootScope.newImage, $rootScope.newImage);
 	                    var media = new Firebase("https://metal.firebaseio.com/media");
 	                    var sync = $firebase(media);
-	                    sync.$push({mediaURL:$rootScope.newImage, mediaTitle:$rootScope.mediaTitle, mediaLink:$rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '')}).then(function (media){
+	                    sync.$push({mediaURL:$rootScope.newImage, mediaTitle:$rootScope.mediaTitle, mediaLink:$rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, ''), mediaDescription:$rootScope.mediaDescription}).then(function (media){
 		                    var newID = media.name();
 		                    var index = new Firebase("https://metal.firebaseio.com/index/media");
 		                    var sync = $firebase(index);
