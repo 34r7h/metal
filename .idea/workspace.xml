@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="newly unfucked">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="$PROJECT_DIR$/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/sitemap.xml" afterPath="$PROJECT_DIR$/dist/sitemap.xml" />
+    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.sass-cache/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2215" max-vertical-offset="2895">
@@ -37,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
@@ -47,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="3707" max-vertical-offset="4635">
@@ -57,22 +60,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2235">
-              <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+            <state vertical-scroll-proportion="-23.875" vertical-offset="1677" max-vertical-offset="2385">
+              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sitemap.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="9614" selection-start-line="0" selection-start-column="9611" selection-end-line="0" selection-end-column="9614" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.050632913" vertical-offset="40" max-vertical-offset="1350">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sitemap.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sitemap.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13392857" vertical-offset="0" max-vertical-offset="1305">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1305">
               <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/views/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="1485">
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,62 +122,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/client/styles/ui/components/_animation.scss" />
-        <option value="$PROJECT_DIR$/dist/views/admin.html" />
-        <option value="$PROJECT_DIR$/dist/views/home.html" />
-        <option value="$PROJECT_DIR$/client/scripts/service.js" />
-        <option value="$PROJECT_DIR$/client/views/admin/about.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/articles.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/dist/views/about.html" />
-        <option value="$PROJECT_DIR$/dist/views/services.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/client/views/admin/products-admin.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/clients-admin" />
-        <option value="$PROJECT_DIR$/happiness" />
-        <option value="$PROJECT_DIR$/client/styles/ui/components/_buttons.scss" />
-        <option value="$PROJECT_DIR$/dist/styles/main.css" />
-        <option value="$PROJECT_DIR$/client/styles/global/_var.scss" />
-        <option value="$PROJECT_DIR$/client/styles/global/_var-pages.scss" />
-        <option value="$PROJECT_DIR$/client/views/admin/home-admin.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/articles-admin.html" />
-        <option value="$PROJECT_DIR$/client/styles/main.scss" />
-        <option value="$PROJECT_DIR$/client/views/nav.html" />
-        <option value="$PROJECT_DIR$/dist/CNAME" />
-        <option value="$PROJECT_DIR$/client/scripts/shared/main.js" />
-        <option value="$PROJECT_DIR$/client/views/about.html" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/dist/sitemap.xml" />
-        <option value="$PROJECT_DIR$/client/scripts/modules/uploader.js" />
-        <option value="$PROJECT_DIR$/client/views/admin/media-admin.html" />
-        <option value="$PROJECT_DIR$/client/views/clients.html" />
-        <option value="$PROJECT_DIR$/client/views/articles.html" />
-        <option value="$PROJECT_DIR$/client/views/header.html" />
-        <option value="$PROJECT_DIR$/client/views/media.html" />
-        <option value="$PROJECT_DIR$/client/views/products.html" />
-        <option value="$PROJECT_DIR$/client/views/services.html" />
-        <option value="$PROJECT_DIR$/client/views/single/articles.html" />
-        <option value="$PROJECT_DIR$/client/views/single/clients.html" />
-        <option value="$PROJECT_DIR$/client/views/single/media.html" />
-        <option value="$PROJECT_DIR$/client/views/single/services.html" />
-        <option value="$PROJECT_DIR$/client/views/single/products.html" />
-        <option value="$PROJECT_DIR$/client/views/home.html" />
-        <option value="$PROJECT_DIR$/client/views/admin.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/services-admin.html" />
-        <option value="$PROJECT_DIR$/client/scripts/api.js" />
-        <option value="$PROJECT_DIR$/CNAME" />
-        <option value="$PROJECT_DIR$/client/scripts/app.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/web.js" />
-        <option value="$PROJECT_DIR$/client/index.html" />
-        <option value="$PROJECT_DIR$/sitemap.xml" />
-      </list>
-    </option>
+  <component name="JsBowerSettings">
+    <exe-path>/usr/local/bin/bower</exe-path>
+    <config-path>$PROJECT_DIR$/bower.json</config-path>
   </component>
   <component name="JsGruntFileManager">
     <gruntfiles>
@@ -275,9 +257,13 @@
     </gruntfiles>
     <initial>false</initial>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="y" value="23" />
+    <option name="width" value="1362" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -338,6 +324,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -346,8 +368,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/FOSSCAD_MEGA_PACK_v4.7_(Aramaki)" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="FullScreen" value="true" />
-    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.sass.extensions.compass.CompassConfigurableProvider$1" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -367,6 +389,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="927" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="editorconfig.notification" value="Applied .editorconfig settings" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -382,32 +406,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -415,6 +417,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -433,441 +439,654 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="" />
       <created>1408743255932</created>
+      <option name="number" value="Default" />
       <updated>1410231125332</updated>
     </task>
     <task id="LOCAL-00001" summary="gh-pages">
       <created>1408828058214</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1408828058214</updated>
     </task>
     <task id="LOCAL-00002" summary="gh-pages">
       <created>1408832389384</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1408832389384</updated>
     </task>
     <task id="LOCAL-00003" summary="image upload and media gallery">
       <created>1410228832999</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1410228832999</updated>
     </task>
     <task id="LOCAL-00004" summary="image upload and media gallery">
       <created>1410229439774</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1410229439774</updated>
     </task>
     <task id="LOCAL-00005" summary="image upload and media gallery">
       <created>1410229516516</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1410229516516</updated>
     </task>
     <task id="LOCAL-00006" summary="image upload and media gallery">
       <created>1410229561199</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1410229561199</updated>
     </task>
     <task id="LOCAL-00007" summary="image upload and media gallery">
       <created>1410230755816</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1410230755816</updated>
     </task>
     <task id="LOCAL-00008" summary="Deploy GH Pages">
       <created>1410231092003</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1410231125167</updated>
     </task>
     <task id="LOCAL-00009" summary="about updatable">
       <created>1410311502191</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1410311502191</updated>
     </task>
     <task id="LOCAL-00010" summary="dynamic controller creation in config for homepage $scopes">
       <created>1410405272038</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1410405272038</updated>
     </task>
     <task id="LOCAL-00011" summary="crud operations nearly complete">
       <created>1410501063481</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1410501063481</updated>
     </task>
     <task id="LOCAL-00012" summary="complete crud on everything but image attachments">
       <created>1410577732277</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1410577732278</updated>
     </task>
     <task id="LOCAL-00013" summary="completed image attachments on new article, add/remove on existing articles, needs some error/duplicate handling">
       <created>1410676799681</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1410676799681</updated>
     </task>
     <task id="LOCAL-00014" summary="image fix and refactoring code">
       <created>1410732355541</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1410732355541</updated>
     </task>
     <task id="LOCAL-00015" summary="created separate admin html, easy api for fb items, image fix, article admin tight">
       <created>1410765103791</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1410765103791</updated>
     </task>
     <task id="LOCAL-00016" summary="quick fix for loading new admin views">
       <created>1410765542165</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1410765542165</updated>
     </task>
     <task id="LOCAL-00017" summary="quick fix for loading new admin views">
       <created>1410765726231</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1410765726231</updated>
     </task>
     <task id="LOCAL-00018" summary="last minute admin changes">
       <created>1410829100746</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1410829100746</updated>
     </task>
     <task id="LOCAL-00019" summary="last minute admin changes">
       <created>1410829214768</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1410829214768</updated>
     </task>
     <task id="LOCAL-00020" summary="last minute admin changes">
       <created>1410829221495</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1410829221495</updated>
     </task>
     <task id="LOCAL-00021" summary="last minute admin changes">
       <created>1410829298709</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1410829298709</updated>
     </task>
     <task id="LOCAL-00022" summary="last minute admin changes">
       <created>1410829418236</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1410829418236</updated>
     </task>
     <task id="LOCAL-00023" summary="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing.">
       <created>1410849900479</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1410849900479</updated>
     </task>
     <task id="LOCAL-00024" summary="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing.">
       <created>1410850555603</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1410850555603</updated>
     </task>
     <task id="LOCAL-00025" summary="installed variations for products">
       <created>1410989418059</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1410989418059</updated>
     </task>
     <task id="LOCAL-00026" summary="remove variations">
       <created>1410993487231</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1410993487231</updated>
     </task>
     <task id="LOCAL-00027" summary="edit variations">
       <created>1411002033970</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1411002033970</updated>
     </task>
     <task id="LOCAL-00028" summary="ported variations to services admin">
       <created>1411010865564</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
       <updated>1411010865564</updated>
     </task>
     <task id="LOCAL-00029" summary="ported variations to services admin">
       <created>1411010901855</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
       <updated>1411010901855</updated>
     </task>
     <task id="LOCAL-00030" summary="ported variations to services admin">
       <created>1411011032884</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
       <updated>1411011032884</updated>
     </task>
     <task id="LOCAL-00031" summary="attach and remove articles from products&#10;">
       <created>1411082841200</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
       <updated>1411082841200</updated>
     </task>
     <task id="LOCAL-00032" summary="attach and remove articles from products&#10;added timestamps to articles/products/services and testimonials to clients&#10;fix: connect dropdown bug">
       <created>1411524427413</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
       <updated>1411524427413</updated>
     </task>
     <task id="LOCAL-00033" summary="attach and remove articles from products&#10;added timestamps to articles/products/services and testimonials to clients&#10;fix: connect dropdown bug">
       <created>1411535614341</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1411535614342</updated>
     </task>
     <task id="LOCAL-00034" summary="home admin done, good start on layouts for group and singles">
       <created>1411608196430</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1411608196430</updated>
     </task>
     <task id="LOCAL-00035" summary="dist">
       <created>1411608257849</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1411608257849</updated>
     </task>
     <task id="LOCAL-00036" summary="design work - logo/colors/fixed hieght of header/footer imgs&#10;">
       <created>1411689793944</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1411689793944</updated>
     </task>
     <task id="LOCAL-00037" summary="logo mapped to db and admin'd">
       <created>1411690226791</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1411690226791</updated>
     </task>
     <task id="LOCAL-00038" summary="fixed responsive bugs - header overlapping content and menu collapse">
       <created>1411774624639</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1411774624639</updated>
     </task>
     <task id="LOCAL-00039" summary="html css aranging, some content">
       <created>1412644967410</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
       <updated>1412644967410</updated>
     </task>
     <task id="LOCAL-00040" summary="html css aranging, some content">
       <created>1412645229590</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
       <updated>1412645229590</updated>
     </task>
     <task id="LOCAL-00041" summary="html/css layoutings&#10;connect button working&#10;image gallery / page hybrid">
       <created>1413175283797</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
       <updated>1413175283797</updated>
     </task>
     <task id="LOCAL-00042" summary="iconography">
       <created>1413185900748</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
       <updated>1413185900748</updated>
     </task>
     <task id="LOCAL-00043" summary="home page colorizations&#10;section breaks&#10;article fix">
       <created>1413196477387</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
       <updated>1413196477387</updated>
     </task>
     <task id="LOCAL-00044" summary="minors">
       <created>1413235779105</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
       <updated>1413235779105</updated>
     </task>
     <task id="LOCAL-00045" summary="cname added forgingtechnology.com">
       <created>1413339117215</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
       <updated>1413339117215</updated>
     </task>
     <task id="LOCAL-00046" summary="cname added forgingtechnology.com">
       <created>1413339350006</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
       <updated>1413339350006</updated>
     </task>
     <task id="LOCAL-00047" summary="cname added forgingtechnology.com">
       <created>1413339933465</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
       <updated>1413339933465</updated>
     </task>
     <task id="LOCAL-00048" summary="title/ seo">
       <created>1413341297812</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
       <updated>1413341297812</updated>
     </task>
     <task id="LOCAL-00049" summary="title/ seo">
       <created>1413341336048</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
       <updated>1413341336048</updated>
     </task>
     <task id="LOCAL-00050" summary="title/ seo">
       <created>1413341767014</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
       <updated>1413341767014</updated>
     </task>
     <task id="LOCAL-00051" summary="title/ seo">
       <created>1413343559347</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
       <updated>1413343559348</updated>
     </task>
     <task id="LOCAL-00052" summary="title/ seo">
       <created>1413344514102</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
       <updated>1413344514102</updated>
     </task>
     <task id="LOCAL-00053" summary="title/ seo">
       <created>1413344556631</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
       <updated>1413344556632</updated>
     </task>
     <task id="LOCAL-00054" summary="seo">
       <created>1413411084563</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
       <updated>1413411084563</updated>
     </task>
     <task id="LOCAL-00055" summary="seo">
       <created>1413412541156</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
       <updated>1413412541159</updated>
     </task>
     <task id="LOCAL-00056" summary="seo">
       <created>1413413184938</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
       <updated>1413413184938</updated>
     </task>
     <task id="LOCAL-00057" summary="seo">
       <created>1413413191996</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
       <updated>1413413191996</updated>
     </task>
     <task id="LOCAL-00058" summary="seo">
       <created>1413413622588</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
       <updated>1413413622588</updated>
     </task>
     <task id="LOCAL-00059" summary="seo">
       <created>1413413668257</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
       <updated>1413413668258</updated>
     </task>
     <task id="LOCAL-00060" summary="seo">
       <created>1413414821345</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
       <updated>1413414821346</updated>
     </task>
     <task id="LOCAL-00061" summary="seo">
       <created>1413415014579</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
       <updated>1413415014579</updated>
     </task>
     <task id="LOCAL-00062" summary="seo">
       <created>1413417396764</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
       <updated>1413417396765</updated>
     </task>
     <task id="LOCAL-00063" summary="resolve for seo purposes">
       <created>1413421749802</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
       <updated>1413421749803</updated>
     </task>
     <task id="LOCAL-00064" summary="resolve for seo purposes">
       <created>1413422348890</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
       <updated>1413422348890</updated>
     </task>
     <task id="LOCAL-00065" summary="resolve for seo purposes">
       <created>1413424041357</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
       <updated>1413424041358</updated>
     </task>
     <task id="LOCAL-00066" summary="working on proper way to crawl fb data.. sucks atm">
       <created>1413426006514</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
       <updated>1413426006514</updated>
     </task>
     <task id="LOCAL-00067" summary="working on proper way to crawl fb data.. sucks atm">
       <created>1413490397513</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
       <updated>1413490397514</updated>
     </task>
     <task id="LOCAL-00068" summary="working on proper way to crawl fb data.. sucks atm">
       <created>1413491115237</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
       <updated>1413491115237</updated>
     </task>
     <task id="LOCAL-00069" summary="prerender and heroku stuffs">
       <created>1413491427376</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
       <updated>1413491427376</updated>
     </task>
     <task id="LOCAL-00070" summary="prerender and heroku stuffs">
       <created>1413491450071</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
       <updated>1413491450071</updated>
     </task>
     <task id="LOCAL-00071" summary="prerender and heroku stuffs">
       <created>1413491985602</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
       <updated>1413491985603</updated>
     </task>
     <task id="LOCAL-00072" summary="prerender and heroku stuffs">
       <created>1413492021737</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
       <updated>1413492021737</updated>
     </task>
     <task id="LOCAL-00073" summary="prerender and heroku stuffs">
       <created>1413492200180</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
       <updated>1413492200182</updated>
     </task>
     <task id="LOCAL-00074" summary="prerender and heroku stuffs">
       <created>1413492413630</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
       <updated>1413492413630</updated>
     </task>
     <task id="LOCAL-00075" summary="prerender and heroku stuffs">
       <created>1413492541680</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
       <updated>1413492541681</updated>
     </task>
     <task id="LOCAL-00076" summary="prerender and heroku stuffs">
       <created>1413492586445</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
       <updated>1413492586446</updated>
     </task>
     <task id="LOCAL-00077" summary="prerender and heroku stuffs">
       <created>1413501881072</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
       <updated>1413501881072</updated>
     </task>
     <task id="LOCAL-00078" summary="prerender and heroku stuffs">
       <created>1413507979516</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
       <updated>1413507979517</updated>
     </task>
     <task id="LOCAL-00079" summary="prerender and heroku stuffs">
       <created>1413511251295</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
       <updated>1413511251295</updated>
     </task>
     <task id="LOCAL-00080" summary="prerender and heroku stuffs">
       <created>1413511397561</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
       <updated>1413511397562</updated>
     </task>
     <task id="LOCAL-00081" summary="prerender and heroku stuffs">
       <created>1413518196839</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
       <updated>1413518196840</updated>
     </task>
     <task id="LOCAL-00082" summary="prerender and heroku stuffs">
       <created>1413521629377</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
       <updated>1413521629377</updated>
     </task>
     <task id="LOCAL-00083" summary="prerender and heroku stuffs">
       <created>1413521704131</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
       <updated>1413521704131</updated>
     </task>
     <task id="LOCAL-00084" summary="prerender and heroku stuffs">
       <created>1413521874238</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
       <updated>1413521874239</updated>
     </task>
     <task id="LOCAL-00085" summary="prerender and heroku stuffs">
       <created>1413521999787</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
       <updated>1413521999787</updated>
     </task>
     <task id="LOCAL-00086" summary="prerender and heroku stuffs">
       <created>1413522060029</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
       <updated>1413522060030</updated>
     </task>
     <task id="LOCAL-00087" summary="prerender and heroku stuffs">
       <created>1413522397395</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
       <updated>1413522397395</updated>
     </task>
     <task id="LOCAL-00088" summary="prerender and heroku stuffs">
       <created>1413523372329</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
       <updated>1413523372329</updated>
     </task>
     <task id="LOCAL-00089" summary="prerender and heroku stuffs">
       <created>1413525655513</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
       <updated>1413525655514</updated>
     </task>
     <task id="LOCAL-00090" summary="prerender and heroku stuffs">
       <created>1413526579833</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
       <updated>1413526579833</updated>
     </task>
     <task id="LOCAL-00091" summary="prerender and heroku stuffs">
       <created>1413526865338</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
       <updated>1413526865338</updated>
     </task>
     <task id="LOCAL-00092" summary="prerender and heroku stuffs">
       <created>1413526904349</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
       <updated>1413526904350</updated>
     </task>
     <task id="LOCAL-00093" summary="prerender and heroku stuffs">
       <created>1413529549020</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
       <updated>1413529549020</updated>
     </task>
     <task id="LOCAL-00094" summary="prerender and heroku stuffs">
       <created>1413529581022</created>
+      <option name="number" value="00094" />
+      <option name="project" value="LOCAL" />
       <updated>1413529581022</updated>
     </task>
     <task id="LOCAL-00095" summary="newly fucked">
       <created>1413530644152</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
       <updated>1413530644152</updated>
     </task>
     <task id="LOCAL-00096" summary="newly fucked">
       <created>1413530725063</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
       <updated>1413530725063</updated>
     </task>
     <task id="LOCAL-00097" summary="newly fucked">
       <created>1413531457397</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
       <updated>1413531457397</updated>
     </task>
     <task id="LOCAL-00098" summary="newly fucked">
       <created>1413531644944</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
       <updated>1413531644945</updated>
     </task>
     <task id="LOCAL-00099" summary="newly unfucked">
       <created>1413532881860</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
       <updated>1413532881860</updated>
     </task>
     <task id="LOCAL-00100" summary="newly unfucked">
       <created>1413533421360</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
       <updated>1413533421360</updated>
     </task>
     <task id="LOCAL-00101" summary="newly unfucked">
       <created>1413533464006</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
       <updated>1413533464006</updated>
     </task>
     <task id="LOCAL-00102" summary="newly unfucked">
       <created>1413535151201</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
       <updated>1413535151201</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="newly unfucked">
+      <created>1414191223000</created>
+      <option name="number" value="00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1414191223000</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1362" height="745" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31805158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31755725" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24928367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25777778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24907063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15836431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1588367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252149" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37059724" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -888,9 +1107,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15871833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -941,24 +1160,9 @@
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3707" max-vertical-offset="4635">
-          <caret line="263" column="36" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2235">
@@ -1127,6 +1331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.076923" vertical-offset="2625" max-vertical-offset="4365">
           <caret line="219" column="87" selection-start-line="219" selection-start-column="87" selection-end-line="219" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,13 +1462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54744524" vertical-offset="15" max-vertical-offset="1260">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CNAME">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="496">
@@ -1294,18 +1492,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2235">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+    <entry file="file://$PROJECT_DIR$/dist/views/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13392857" vertical-offset="0" max-vertical-offset="1305">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        <state vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="1485">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.875" vertical-offset="1677" max-vertical-offset="2385">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="9614" selection-start-line="0" selection-start-column="9611" selection-end-line="0" selection-end-column="9614" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050632913" vertical-offset="40" max-vertical-offset="1350">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1327,4 +1551,3 @@
     </states>
   </component>
 </project>
-
