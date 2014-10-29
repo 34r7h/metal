@@ -4,7 +4,7 @@ angular.module('app.services', ['firebase'])
 
 			var api = {show:{},sync:{index:{}},index:{}};
 
-			var types = ['media','clients','services','articles', 'about','products','contact','site'];
+			var types = ['media','clients','services','articles', 'about','products','contact','site', 'domains'];
 			var baseURL = 'https://metal.firebaseio.com/';
 			var indexURL = 'https://metal.firebaseio.com/index/';
 			angular.forEach(types, function(type){
@@ -22,6 +22,22 @@ angular.module('app.services', ['firebase'])
 			api.saveSite = function(feature, address){
 				api.sync.site.$set(feature, address);
 			};
+            api.addDomain = function(url, text){
+                if (api.show.domains.length > 0){
+                    var domains = api.show.domains;
+                    domains.$add({url: url, text:text});
+                } else {
+                    api.sync.domains.$push({url:url,text:text});
+                }
+
+            };
+            api.updateDomain = function(domain, text, url){
+                api.sync.domains.$set(domain, {text:text,url:url})
+            };
+            api.removeDomain = function (id) {
+                console.log('id:',id);
+                api.sync.domains.$remove(id);
+            }
 
 // Media
 			api.saveMedia = function(id, title, description){
