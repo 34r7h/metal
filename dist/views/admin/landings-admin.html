@@ -1,0 +1,51 @@
+<div class="panel panel-default" ng-controller="adminCtrl">
+
+
+
+<section class="panel-body">
+    <div class=" col-xs-4 well">
+        <h1 class="col-xs-12 " ><input class="col-xs-12" ng-model="newDomainURL" placeholder="New landing page url"/></h1>
+        <h3 class="col-xs-12 " ><textarea data-ng-model="newDomainText" placeholder="Enter welcome message for landing page."></textarea></h3>
+        <br class="col-xs-12 ">
+        <button class="col-xs-12  btn btn-behance" ng-click="api.addDomain(newDomainURL, newDomainText)">
+            Add New Landing Page
+        </button>
+    </div>
+
+    <div class="col-xs-1"></div>
+
+    <div class="col-xs-7 well" >
+        <div class="" ng-repeat="domain in api.show.domains">
+            <h1 class="col-xs-12 " >{{($index+1) + ": " + domain.url}}</h1>
+            <div class="col-xs-12 ">
+                <textarea class="col-xs-6" ng-model="domain.text" cols="10"/>
+
+            </div>
+            <hr class="col-xs-12 ">
+            <div class="col-xs-12 ">
+                <button class="col-xs-12 btn btn-dark" ng-click="api.updateDomain(domain.$id, domain.text, domain.url)">
+                    Save
+                </button>
+                <hr>
+                <button class="col-xs-6 btn btn-default pull-right" ng-hide="showRemoveDomain" ng-click="showRemoveDomain = true;">
+                    Remove
+                </button>
+                <button class="col-xs-6 btn btn-danger pull-right" ng-show="showRemoveDomain" ng-click="api.removeDomain(domain.$id)">
+                    Yes, be gone!
+                </button>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</section>
+
+</div>
