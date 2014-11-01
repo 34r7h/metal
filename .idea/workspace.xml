@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
+    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="enhancement: gradients and text shadows">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/header.html" afterPath="$PROJECT_DIR$/client/views/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/header.html" afterPath="$PROJECT_DIR$/dist/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home.html" afterPath="$PROJECT_DIR$/client/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/home.html" afterPath="$PROJECT_DIR$/dist/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/nav.html" afterPath="$PROJECT_DIR$/client/views/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/nav.html" afterPath="$PROJECT_DIR$/dist/views/nav.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -93,8 +89,8 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/views/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07594936" vertical-offset="0" max-vertical-offset="1605">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.56962025" vertical-offset="0" max-vertical-offset="1605">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#header#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#li#2;n#ul#1;n#div#2;n#header#0;n#!!top" expanded="true" />
@@ -1188,7 +1184,13 @@
       <option name="project" value="LOCAL" />
       <updated>1414808780904</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="enhancement: gradients and text shadows">
+      <created>1414810970371</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1414810970371</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -1629,8 +1631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07594936" vertical-offset="0" max-vertical-offset="1605">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.56962025" vertical-offset="0" max-vertical-offset="1605">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#header#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#li#2;n#ul#1;n#div#2;n#header#0;n#!!top" expanded="true" />

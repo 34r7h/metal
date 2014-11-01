@@ -1,7 +1,7 @@
 <header class="top-header clearfix">
 
     <!-- Logo -->
-    <div class="logo light-gradient">
+    <div class="logo dark-gradient border-right">
         <a class="" href="#!/">
             <span><img alt="Masuk Metal Logo" src="{{ api.show.site.$getRecord('logo').$value }}" style="max-width: 250px;" width="100%" ></span>
         </a>
@@ -59,7 +59,7 @@
                                                 <textarea ng-model="mail.body" class="form-control" id="message" placeholder="The details of this job include…"></textarea>
                                             </div>
                                             <a class="light-gradient text-shadow-weak" href="mailto:masukmetaldesign@gmail.com?subject={{ mail.subject }}&body={{ mail.body + '\n - ' +mail.name }}">
-                                                <button type="submit" class="btn btn-primary btn-w-md col-xs-12 more">
+                                                <button type="submit" class="btn btn-primary btn-w-md col-xs-12 more text-shadow-weak">
                                                     <i class="glyphicon glyphicon-envelope"></i>
                                                     <span>Send Message</span>
                                                 </button>
@@ -69,20 +69,23 @@
                                         <h4 class="col-xs-12">or connect with us on your preferred social network below</h4>
                                         <hr class="col-xs-12">
 
-                                        <section class="panel panel-box">
+                                        <section class="panel panel-box ">
+                                            <div class="text-shadow-strong ">
+                                                <a style="color:#fff" class="panel-left panel-item bg-facebook" ng-href="{{ api.show.contact.$getRecord('Facebook').$value }}">
+                                                    <div>
+                                                        <p class="size-h1"><i class="fa fa-facebook"></i></p>
+                                                        <p>Facebook</p>
+                                                    </div>
+                                                </a>
+                                                <a style="color:#fff"  class=" panel-right panel-item bg-google-plus" ng-href="{{ api.show.contact.$getRecord('Google').$value }}">
+                                                    <div>
+                                                        <p class="size-h1"><i class="fa fa-google-plus"></i></p>
+                                                        <p>Google Plus</p>
+                                                    </div>
+                                                </a>
+                                            </div>
 
-                                            <a style="color:#fff" class="panel-left panel-item bg-facebook" ng-href="{{ api.show.contact.$getRecord('Facebook').$value }}">
-                                                <div >
-                                                    <p class="size-h1"><i class="fa fa-facebook"></i></p>
-                                                    <p>Facebook</p>
-                                                </div>
-                                            </a>
-                                            <a style="color:#fff"  class="panel-right panel-item bg-google-plus" ng-href="{{ api.show.contact.$getRecord('Google').$value }}">
-                                                <div >
-                                                    <p class="size-h1"><i class="fa fa-google-plus"></i></p>
-                                                    <p>Google Plus</p>
-                                                </div>
-                                            </a>
+
                                         </section>
                                     </div>
                                 </div>
