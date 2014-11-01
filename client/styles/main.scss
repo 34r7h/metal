@@ -1,13 +1,13 @@
 
 // Shared variables and mixins
-@import 
+@import
     "global/var"                        // global variables
 ,   "bootstrap/bootstrap/mixins"        // Bootstrap mixins
 ,   "bourbon/bourbon"                   // mixins
 ;
 
 
-@import 
+@import
     // Plugins, overrides plugins' style
     "plugins/bootstrap-slider"
 ,   "plugins/responsive-tables"
@@ -90,7 +90,9 @@
 
 .padding {padding:1em;}
 .margins {margin: 1em;}
+.no-padding {padding:0!important}
 .no-margins {margin:0!important;}
+.border-right {border-right: inset #fff 1px}
 .more {font-size: 1em}
 .white-bg {background: #fff;}
 .red-bg {background: #b20815; color:#f5f5f5;}
