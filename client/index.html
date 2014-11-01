@@ -45,7 +45,7 @@
                  data-ng-class=" {'header-fixed': admin.fixedHeader} "
                  data-ng-controller="HeaderCtrl"></section>
 
-        <div class="main-container">
+        <div class="main-container dark-gradient">
             <aside data-ng-include=" 'views/nav.html' "
                    id="nav-container"
                    class="nav-container"
@@ -56,7 +56,7 @@
                      id="content"
                      class="content-container test {{admin.pageTransition.class}}"></section>
             <div style="height:300px; overflow: hidden">
-                <div class="footer-text" style="background-image: url({{api.show.site.$getRecord('footerImage').$value}}); background-position: center;  ">
+                <div class="footer-text  text-shadow-strong" style="background-image: url({{api.show.site.$getRecord('footerImage').$value}}); background-position: center;  ">
                     <p>"It may be as many sing,
                     Gold is over all men king.</p>
                     <p>Yet if truth be told,

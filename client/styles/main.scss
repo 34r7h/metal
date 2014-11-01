@@ -100,4 +100,26 @@
 .blue-bg {background: #2a9388; color:#f5f5f5;}
 a {text-decoration: none!important;}
 
+.text-shadow-strong {text-shadow:1px 1px 1px rgba(0,0,0,.9)}
+.text-shadow-weak {text-shadow:1px 1px 1px rgba(0,0,0,.3)}
+
+.dark-gradient {background: -moz-linear-gradient(45deg, rgba(0,0,0,0.37) 0%, rgba(0,0,0,0) 38%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.37)), color-stop(38%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
+    background: -o-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
+    background: -ms-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
+    background: linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );}
+
+.light-gradient {
+    background: -moz-linear-gradient(45deg,  rgba(255,255,255,0) 0%, rgba(255,255,255,.1) 62%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,.1)));
+    background: -webkit-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
+    background: -o-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
+    background: -ms-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 62%);
+    background: linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+
+}
+
 
