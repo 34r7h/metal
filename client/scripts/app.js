@@ -44,12 +44,15 @@
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, api) {
+	      fun = function($scope, $state, $firebase, api, $timeout) {
 
               $scope.sections = ['views/fold','views/services','views/products','views/clients', 'views/about'];
 
               // $scope.sections = routes; //html files to load (about.html, etc)
               $scope.loadedSections = [$scope.sections[0]];
+              $timeout(function(){
+                  $scope.loadedSections = [$scope.sections[0],$scope.sections[1]];
+              },3000);
 
 
                var apiList = [
