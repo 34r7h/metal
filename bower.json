@@ -35,7 +35,8 @@
     "angularfire": "~0.8.0",
     "angular-ui-router": "~0.2.11",
     "angular-deckgrid": "~0.4.4",
-    "ngFitText": "~3.0.0"
+    "ngFitText": "~3.0.0",
+    "angular-scroll-section-loader": "~0.1.1"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",

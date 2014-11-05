@@ -14,7 +14,7 @@
 	  'app.directives',
 	  'app.localization',
 	  'app.nav',
-
+      'scrollSectionLoader',
 	  'akoenig.deckgrid',
       'uploader']);
 	app
@@ -37,14 +37,19 @@
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
       routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site'];
       routesSingles = ['services','clients','articles','media','products'];
-		app.controller = function(name, constructor){
-			$controllerProvider.register(name, constructor);
-			return(this);
-		};
+        app.controller = function(name, constructor){
+            $controllerProvider.register(name, constructor);
+            return(this);
+        };
       setControllers = function(route){
 	      var name, fun;
 	      name = route+'Ctrl';
 	      fun = function($scope, $state, $firebase, api) {
+
+              $scope.sections = ['views/fold','views/services','views/products','views/clients', 'views/about'];
+
+              // $scope.sections = routes; //html files to load (about.html, etc)
+              $scope.loadedSections = [$scope.sections[0]];
 
 
                var apiList = [
