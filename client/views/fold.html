@@ -1,0 +1,13 @@
+<div class="hidden-xs" style="max-height: 400px; overflow: hidden" >
+    <div class="text-center hidden-xs text-shadow-weak" style="position:relative; top:154px; font-size: 46px; color:#fff; height: 0" ng-init="headerImg =  api.show.site">
+        <h1 class="no-margins"><i class="fa fa-legal fa-border"></i>
+            <b> {{ api.show.site.$getRecord('foldText').$value }} </b>
+            <i class="fa fa-legal fa-flip-horizontal fa-border"></i></h1>
+    </div>
+    <img alt="Masuk Metal - Metalwork and design for driveway gates, fencing, railings, and custom fabrications in Vancouver BC" ng-src="{{ headerImg[3].$value }}" width="100%" height="auto">
+
+
+</div>
+<div class="visible-xs" style="max-height: 200px; overflow: hidden" >
+    <img alt="Masuk Metal - Metalwork and design for driveway gates, fencing, railings, and custom fabrications in Vancouver BC" ng-src="{{ headerImg[3].$value }}" width="100%" height="auto">
+</div>
