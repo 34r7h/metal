@@ -6,10 +6,18 @@
                 </h1>
             </strong>
         </div>
+        <div class="col-xs-12 " ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL;imgAlt = api.show.media.$getRecord(singleData.media[0]).mediaDescription">
 
-        <div class="panel-body col-xs-12 col-sm-7" ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL;imgAlt = api.show.media.$getRecord(singleData.media[0]).mediaDescription">
+            <div ng-show="enlarge===true" style="position:absolute; background: rgba(0,0,0,.38); z-index:800; width:100%">
+                <img ng-click="enlarge = false;" alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(services.media[0]).mediaURL}}
+
+            </div>
+
+
+        <div class="panel-body col-xs-12 col-sm-7" >
+
             <div class="col-xs-10 hidden-xs">
-                <img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(services.media[0]).mediaURL}}
+                <a ng-click="enlarge = true;" href><img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(services.media[0]).mediaURL}}</a>
             </div>
             <div class="col-xs-2 hidden-xs no-padding">
                 <div ng-repeat="media in singleData.media">
@@ -52,7 +60,7 @@
             <p class="well col-xs-12" ng-bind-html="singleData.description"></p>
         </div>
 
-
+        </div>
 
 
     </section>
