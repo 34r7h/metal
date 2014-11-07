@@ -14,12 +14,20 @@ $scope.api = api;
 		  $scope.msg = '';
 
 	  $scope.myfile = {};
-	  $rootScope.$on('AWSUploadSuccess', function(){
-		  $scope.msg = 'Upload successful';
-	  });
-	  $rootScope.$on('AWSUploadError', function(){
-		  $scope.msg = 'Upload failed. Please retry';
-	  });
+
+      $rootScope.dataImg = AWSControl.dataImg;
+      $scope.msg = '';
+      $scope.fromservice = AWSControl.yeah; //no use
+      $scope.myfile = {};
+
+      $rootScope.$on('AWSUploadSuccess', function(AWSControl){
+          $scope.msg = 'Upload successful';
+
+      });
+
+      $rootScope.$on('AWSUploadError', function(){
+          $scope.msg = 'Upload failed. Please retry';
+      });
 
       var $window;
       $window = $(window);
