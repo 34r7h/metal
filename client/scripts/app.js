@@ -51,8 +51,8 @@
               // $scope.sections = routes; //html files to load (about.html, etc)
               $scope.loadedSections = [$scope.sections[0]];
               $timeout(function(){
-                  $scope.loadedSections = [$scope.sections[0],$scope.sections[1]];
-              },3000);
+                  $scope.loadedSections.push($scope.sections[1]);
+              },2000);
 
 
                var apiList = [

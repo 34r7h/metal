@@ -10,7 +10,7 @@
 			  $anchorScroll();
 		  };
 		  $scope.preventClose = function(event) { event.stopPropagation(); };
-$scope.api = api;
+          $scope.api = api;
 		  $scope.msg = '';
 
 	  $scope.myfile = {};
