@@ -187,7 +187,7 @@ uploader.directive('uploader', function(AWSControl){
         replace: true,
         scope : {},
         require: 'ngModel',
-        templateUrl: 'scripts/modules/uploader.html',
+        templateUrl: 'views/admin/uploader.html',
         restrict: 'E',
         link: function(scope, elem, attrs, ngModel){
 
