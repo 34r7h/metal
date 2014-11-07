@@ -36,11 +36,13 @@
             <section ui-view="" id="content" class="content-container test {{admin.pageTransition.class}}"></section>
             <div style="height:300px; overflow: hidden">
                 <div class="footer-text text-shadow-strong" style="background-image: url({{api.show.site.$getRecord('footerImage').$value}}); background-position: center">
+
                     <p>"It may be as many sing,
                     Gold is over all men king.</p>
                     <p>Yet if truth be told,
                     'Tis with iron men win gold."</p>
                     <p>Author unknown - "Elementary Metalwork" </p>
+
                 </div>
             </div>
 
@@ -58,6 +60,15 @@
 
 
         <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.5.min.js"></script>
+        <script type="text/javascript">
+            (function(d){
+                var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+                p.type = 'text/javascript';
+                p.async = true;
+                p.src = '//assets.pinterest.com/js/pinit.js';
+                f.parentNode.insertBefore(p, f);
+            }(document));
+        </script>
         <!-- prerender.io considerations -->
         <script>
             window.prerenderReady = false;
