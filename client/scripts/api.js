@@ -25,19 +25,42 @@ angular.module('app.services', ['firebase'])
             api.addDomain = function(url, text){
                 if (api.show.domains.length > 0){
                     var domains = api.show.domains;
-                    domains.$add({url: url, text:text});
+                    domains.$add({url: url, text:text,image:['No Image Yet']}).then(
+                        function(domain){
+                            var newURL = url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                            var newID = domain.name();
+                            console.log(domain,newID);
+                            api.sync.index.domains.$set(newURL, newID)
+                        }
+                    );
+
                 } else {
-                    api.sync.domains.$push({url:url,text:text});
+                    api.sync.domains.$push({url:url, text:text,image:['No Image Yet']}).then(
+                        function(domain){
+                            var newURL = url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                            var newID = domain.name();
+                            console.log(domain,newID);
+                            api.sync.index.domains.$set(newURL, newID)
+                        }
+                    );
                 }
 
             };
-            api.updateDomain = function(domain, text, url){
-                api.sync.domains.$set(domain, {text:text,url:url})
+            api.updateDomain = function(domain, text, url, media){
+                api.sync.domains.$set(domain, {text:text, url:url, image:media}).then(
+                    function(domain){
+                        var newURL = url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                        var newID = domain.name();
+                        api.sync.index.domains.$set(newURL, newID);
+
+                    }
+                );
             };
-            api.removeDomain = function (id) {
+            api.removeDomain = function (id,url) {
                 console.log('id:',id);
                 api.sync.domains.$remove(id);
-            }
+                api.sync.index.domains.$remove(url);
+            };
 
 // Media
 			api.saveMedia = function(id, title, description){
