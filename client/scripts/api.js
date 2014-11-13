@@ -431,7 +431,7 @@ angular.module('app.services', ['firebase'])
                 })
             };
             api.updateGallery = function(id, description, media, articles){
-                variations = angular.copy(variations);
+
                 api.sync.gallery.$update(id, {description:description, media:media, articles:articles});
             };
 
