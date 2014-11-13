@@ -2,9 +2,9 @@ angular.module('app.services', ['firebase'])
 	.factory('api', ['$firebase',
 		function($firebase) {
 
+// Database Setup
 			var api = {show:{},sync:{index:{}},index:{}};
-
-			var types = ['media','clients','services','articles', 'about','products','contact','site', 'domains'];
+			var types = ['media','clients','services','articles', 'gallery', 'about','products','contact','site', 'domains'];
 			var baseURL = 'https://metal.firebaseio.com/';
 			var indexURL = 'https://metal.firebaseio.com/index/';
 			angular.forEach(types, function(type){
@@ -15,6 +15,28 @@ angular.module('app.services', ['firebase'])
 				// makes display object
 				api.show[type] = api.sync[type].$asArray();
 			});
+
+// Helper Functions
+            api.addToArray = function(array,item){
+                if (item && item.length > 0) {
+                    if(array[0]===('No Tags Selected')){
+                        array.splice(0,1);
+                    }
+                    array.push(item);
+                    console.log('pushed to: ',array);
+                    return array;
+                }
+
+            };
+            api.removeFromArray = function(array,index){
+                if(array[0] !== 'No Tags Selected'){
+                    array.splice(index,1);
+
+                }
+
+
+            };
+
 // Site
 			api.saveContact = function(provider, address){
 				api.sync.contact.$set(provider, address);
@@ -62,22 +84,47 @@ angular.module('app.services', ['firebase'])
                 api.sync.index.domains.$remove(url);
             };
 
-// Media
-			api.saveMedia = function(id, title, description){
-				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 
-			    api.sync.media.$update(id, {mediaTitle:title, mediaLink:link, mediaDescription:description}).then(function(media){
+            var myMedia = api.sync.media.$asArray();
+            console.log(myMedia);
+
+            setTimeout(function(){
+                angular.forEach(myMedia,function(media, key){
+
+                    if (!media.mediaTags) {
+                        media.mediaTags = ['No Tags Selected'];
+                    }
+                    if (!media.mediaDescription){
+                        media.mediaDescription = 'Vancouver Metalwork';
+                    }
+
+                    myMedia.$save();
+
+                });
+            }, 5000);
+
+
+
+// Media
+			api.saveMedia = function(id, title, description, tags){
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                if (!tags) {
+                    var tags = ['No Tags Selected'];
+                } else if (tags[0] === 'No Tags Selected' && tags.length > 1) {
+                    tags.splice(0,1);
+                }
+			    api.sync.media.$update(id, {mediaTitle:title, mediaLink:link, mediaDescription:description, mediaTags:tags}).then(function(media){
 				api.newID = media.name();
 				if(api.sync.index.media[link] === false){
 					api.sync.index.media.$set(link, api.newID);
 				}
 			})
 			};
+
 			api.removeMedia = function(name,id){
 				api.sync.media.$remove(id).then(function(){
 					api.sync.index.media.$remove(name);
 				});
-
 			};
 // About
 			api.updateAbout = function(id, text){
@@ -344,6 +391,49 @@ angular.module('app.services', ['firebase'])
                 console.log(id, description, media, articles);
 				api.sync.articles.$update(id, {description:description, media:media, articles:articles});
 			};
+
+            // Galleries
+
+            api.saveGallery = function(title, description, media, articles){
+                if(!media){
+                    var media = [];
+                    media[0] = 'No Media';
+                }
+                if(!articles){
+                    var articles = [];
+                    articles[0] = 'No Articles';
+                }
+                this.media = media;
+                var galleryURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                var time = Date.now();
+                api.sync.gallery.$push({title:title, description:description, galleryURL:galleryURL, media:media, articles:articles, time:time}).then(function (gallery){
+                    api.newID = gallery.name();
+                    if(!api.show.gallery.$getRecord(api.newID).media){
+                        api.sync.gallery.$update(api.newID, {media:['']});
+                    }
+                    if(!api.show.gallery.$getRecord(api.newID).articles){
+                        api.sync.gallery.$update(api.newID, {articles:['']});
+                    }
+                    api.sync.index.gallery.$set(galleryURL, api.newID);
+                });
+            };
+            api.removeGallery = function(name,id){
+                api.sync.gallery.$remove(id).then(function(){
+                    api.sync.index.gallery.$remove(name);
+                });
+
+            };
+            api.updateGalleryTitle = function(id, title){
+                var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+                api.sync.gallery.$update(id, {title:title, galleryURL:link}).then(function(gallery){
+                    api.newID = gallery.name();
+                    api.sync.index.gallery.$set(link, api.newID);
+                })
+            };
+            api.updateGallery = function(id, description, media, articles){
+                variations = angular.copy(variations);
+                api.sync.gallery.$update(id, {description:description, media:media, articles:articles});
+            };
 
 			return api;
 

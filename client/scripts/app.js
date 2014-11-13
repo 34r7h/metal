@@ -35,8 +35,8 @@
 
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site'];
-      routesSingles = ['services','clients','articles','media','products'];
+      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site', 'gallery'];
+      routesSingles = ['services','clients','articles','media','products','gallery'];
         app.controller = function(name, constructor){
             $controllerProvider.register(name, constructor);
             return(this);
@@ -63,6 +63,10 @@
                'updateServiceTitle',
                'updateService',
                'removeService',
+               'saveGallery',
+               'updateGalleryTitle',
+               'updateGallery',
+               'removeGallery',
                'saveProduct',
                'updateProductTitle',
                'updateProduct',
@@ -86,12 +90,12 @@
                });
 
 
-
-
 		      $scope.state = $state;
 		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
+
+
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
@@ -165,6 +169,24 @@
 		  return setSingleRoutes(routesSingle);
 	  });
                 $stateProvider.state('main',{url:'/',templateUrl:'views/home.html', controller:'homeCtrl'});
+
+               /* TODO Admin Routing Start
+                $stateProvider.state('new-admin',{
+                    url:'/new-admin',
+                    controller:'AdminCtrl',
+                    views:{
+                        view1:{
+                            template: 'views/admin.html',
+                            controller:'AdminCtrl'
+                        },
+                        view2:{
+                            template: 'views/media.html',
+                            controller:'AdminCtrl'
+                        }
+                    }
+                });
+                */
+
 	  return $urlRouterProvider.otherwise('/home');
 
     }
