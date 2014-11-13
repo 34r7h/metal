@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
-    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll) {
+    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll','$document',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll, $document) {
 
           var foldText = api.sync.site.$asArray();
 		  $scope.foldText = foldText;

@@ -1,8 +1,10 @@
-<div class="panel">Add Media</div>
-<div class="panel">
+<h3 ng-click="showAddMedia=!showAddMedia">Add Media</h3>
+<div ng-show="showAddMedia" class="panel">
     <uploader data-ng-model="myfile"></uploader>
 </div>
-<div >
+
+<h3 ng-click="showAllMedia = !showAllMedia">All Media</h3>
+<div ng-if="showAllMedia">
     <div ng-repeat="media in api.show.media">
         <div class="panel col-sm-3">
             <div class="panel-heading" ng-click="editTitle = true">
@@ -14,10 +16,23 @@
                 <a href ng-show="!removeMedia" ng-click="removeMedia = true">Remove Media</a>
                 <a href="javascript:;" ng-show="removeMedia" ng-click="api.removeMedia(media.mediaLink, media.$id)" class="btn btn-primary" role="button">Yes, remove this media.</a>
                 <a href="javascript:;" ng-show="removeMedia" ng-click="removeMedia = false"class="btn btn-default" role="button">Cancel</a>
-                <hr><label for="description">Description</label><textarea name="description" ng-model="media.mediaDescription" ng-blur="saveMedia(media.$id,media.mediaTitle, media.mediaDescription);editTitle=false;"></textarea>
+                <hr><label for="description">Description</label><textarea id="description" name="description" ng-model="media.mediaDescription" ng-blur="saveMedia(media.$id,media.mediaTitle, media.mediaDescription, media.mediaTags);editTitle=false;"></textarea>
                 <p><label>ID:</label><pre>{{media.$id}}</pre></p>
                 <label>URL:</label><pre><code>{{media.mediaURL}}</code></pre>
+                <code>
+                    <h4>Tags:</h4>
+                    <input ng-model="newTag" placeholder="New Tag" ng-blur="api.addToArray(media.mediaTags,newTag); newTag=''">
+                    <div ng-repeat="tag in media.mediaTags">
+                        <span class="col-xs-10" ng-hide="showRemoveTag">{{tag}}</span>
+                        <span class="col-xs-2 text-center" ng-click="showRemoveTag=!showRemoveTag" ng-hide="showRemoveTag"> x </span>
+                        <span class="col-xs-4 text-center" ng-click="showRemoveTag=!showRemoveTag" ng-show="showRemoveTag"> Cancel </span>
+                        <button class="col-xs-8" ng-show="showRemoveTag" ng-click="api.removeFromArray(media.mediaTags,$index);">
+                            Remove {{tag}}?
+                        </button>
+                    </div>
+                </code>
             </div>
+            <a href class="btn btn-default" ng-click="saveMedia(media.$id,media.mediaTitle, media.mediaDescription, media.mediaTags);">Save Media</a>
         </div>
         <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>
     </div>

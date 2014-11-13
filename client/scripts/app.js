@@ -20,18 +20,18 @@
 	app
 		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider',function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider,$locationProvider) {
-                $locationProvider.hashPrefix('!');
-                // $locationProvider.html5Mode(true);
-                var imageSupportParams = {
-			  type           : 'image.*',
-			  host           : 's3',
-			  Bucket         : 'masuk',
-			  accessKeyId    : 'AKIAIABNWCTWZ65JJV4A',
-			  secretAccessKey: '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',
-			  region         : 'us-west-2'
 
-		  };
-		  AWSControlProvider.supportType(imageSupportParams);
+        $locationProvider.hashPrefix('!');
+        // $locationProvider.html5Mode(true);
+        var imageSupportParams = {
+          type           : 'image.*',
+          host           : 's3',
+          Bucket         : 'masuk',
+          accessKeyId    : 'AKIAIABNWCTWZ65JJV4A',
+          secretAccessKey: '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',
+          region         : 'us-west-2'
+        };
+        AWSControlProvider.supportType(imageSupportParams);
 
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
@@ -42,9 +42,12 @@
             return(this);
         };
       setControllers = function(route){
+
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, api, $timeout) {
+	      fun = function($scope, $state, $firebase, api, $timeout, $rootScope, $location, $document) {
+              $rootScope.title = $location.path()+' | Masuk Metal - Serving Vancouver BC with metalwork for driveway gates, railings, fences, and home automation.';
+              $document[0].title = $rootScope.title;
 
               $scope.sections = ['views/fold','views/services','views/products','views/clients', 'views/about'];
 
@@ -142,7 +145,9 @@
 		  config = {
 			  url: '/'+ singleRoute+ '/:' + singleRoute,
 			  templateUrl: 'views/single/'+ singleRoute + '.html',
-			  controller: function($scope, $state, api, $firebase){
+			  controller: function($scope, $state, api, $firebase, $rootScope, $location, $document){
+                  $rootScope.title = $location.path()+' | Masuk Metal - Serving Vancouver BC with metalwork for driveway gates, railings, fences, and home automation.';
+                  $document[0].title = $rootScope.title;
 				  $scope.thisData = $state.current.data;
 				  $scope.state = $state;
 				  $scope.api = api;
