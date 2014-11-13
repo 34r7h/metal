@@ -26,6 +26,9 @@
         <loc>http://www.forgingtechnology.com/#!/about</loc>
     </url>
     <url>
+        <loc>http://www.forgingtechnology.com/#!/gallery</loc>
+    </url>
+    <url>
         <loc>http://www.forgingtechnology.com/#!/services/driveway-gates</loc>
     </url>
 
@@ -79,4 +82,5 @@
     <url>
         <loc>http://www.forgingtechnology.com/#!/articles/looking-for-a-special-railing</loc>
     </url>
+
 </urlset>
