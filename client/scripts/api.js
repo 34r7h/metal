@@ -68,8 +68,8 @@ angular.module('app.services', ['firebase'])
                 }
 
             };
-            api.updateDomain = function(domain, text, url, media){
-                api.sync.domains.$set(domain, {text:text, url:url, image:media}).then(
+            api.updateDomain = function(domain, heading, text, url, media, link, linkText, title, description){
+                api.sync.domains.$set(domain, {heading:heading, text:text, url:url, image:media, link:link, linkText:linkText, title:title, description:description}).then(
                     function(domain){
                         var newURL = url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
                         var newID = domain.name();

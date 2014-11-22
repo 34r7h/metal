@@ -20,9 +20,25 @@
         <div class="col-xs-6 " ng-repeat="domain in api.show.domains">
             <div class="padding well">
                 <h3 class="col-xs-12" >
-                    <input class="col-xs-12" type="text" ng-model="domain.url"/>
+                    <span class="col-xs-3 text-right">URL: </span><input class="col-xs-9 PULL-RIGHT" type="text" ng-model="domain.url"/>
+                </h3>
                 <div class="col-xs-12 ">
-                    <textarea class="col-xs-6" ng-model="domain.text" cols="10"/>
+                    <span class="col-xs-3 text-right">Heading: </span><input class="col-xs-9" ng-model="domain.heading"/>
+                </div>
+                <div class="col-xs-12 ">
+                    <span class="col-xs-3 text-right">Text: </span><textarea class="col-xs-6" ng-model="domain.text" cols="10"/>
+                </div>
+                <div class="col-xs-12 ">
+                    <span class="col-xs-3 text-right">Link to: </span><input class="col-xs-6" ng-model="domain.link" cols="10"/>
+                </div>
+                <div class="col-xs-12 ">
+                    <span class="col-xs-3 text-right">Link text: </span><input class="col-xs-6" ng-model="domain.linkText" cols="10"/>
+                </div>
+                <div class="col-xs-12 ">
+                    <span class="col-xs-3 text-right">Link text: </span><input class="col-xs-6" ng-model="domain.title" cols="10"/>
+                </div>
+                <div class="col-xs-12 ">
+                    <span class="col-xs-3 text-right">Link text: </span><textarea class="col-xs-6" ng-model="domain.description" cols="10"/>
                 </div>
 
                 // media
@@ -43,7 +59,10 @@
 
                 <hr class="col-xs-12 ">
                 <div class="col-xs-12 ">
-                    <button class="col-xs-4 btn btn-dark pull-right" ng-hide="showRemoveDomain" ng-click="api.updateDomain(domain.$id, domain.text, domain.url, domain.image)">
+                    <button
+                        class="col-xs-4 btn btn-dark pull-right"
+                        ng-hide="showRemoveDomain"
+                        ng-click="api.updateDomain(domain.$id, domain.heading, domain.text, domain.url, domain.image, domain.link, domain.linkText, domain.title, domain.description)">
                         Save
                     </button>
                     <a class="col-xs-8 pull-left" ng-hide="showRemoveDomain" ng-click="showRemoveDomain = true;">
