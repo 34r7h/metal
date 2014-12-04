@@ -126,7 +126,7 @@
                 <h4 class="col-xs-12" ><input type="text" ng-model="search.newGallery" placeholder="Search Images"/></h4>
                 <div class="col-xs-4 padding" ng-repeat="image in api.show.media | filter:search.newGallery | filterOut: $parent.media">
                     <div class="col-xs-12"><h4>{{image.mediaTitle}}</h4></div>
-                    <img ng-click="addContentMedia($parent.api.show.media, image.$id, $parent.media)" ng-src="{{image.mediaURL}}" width="100%">
+                    <img ng-click="addContentMedia($parent.api.show.media, image.$id, $parent.media)" ng-src="{{image.mediaThumbs || image.mediaURL}}" width="100%">
                     <div class="col-xs-12">Tags: <code ng-repeat="tag in image.mediaTags"> {{tag}},</code></div>
                     <p>Description</p>
                     <p>{{image.mediaDescription}}</p>
@@ -138,7 +138,7 @@
                 <h3>Images in the {{galleryTitle}} Gallery</h3>
                 <div class="col-xs-6" ng-repeat="media in $parent.media">
                     <h4 class="col-xs-12">{{$parent.api.show.media.$getRecord(media).mediaTitle}}</h4>
-                    <img class="well-sm" ng-src="{{$parent.api.show.media.$getRecord(media).mediaURL}}" width="100%" ng-click="api.removeContentMedia($parent.$parent.media, media)">
+                    <img class="well-sm" ng-src="{{$parent.api.show.media.$getRecord(media).mediaThumbs || $parent.api.show.media.$getRecord(media).mediaURL}}" width="100%" ng-click="api.removeContentMedia($parent.$parent.media, media)">
                 </div>
             </div>
 
