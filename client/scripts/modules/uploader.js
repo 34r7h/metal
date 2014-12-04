@@ -80,15 +80,14 @@ uploader.provider('AWSControl', function(){
 
                 return canBeHandled;
             },
-// todo What's this? myUpload()
+            /*
+            // todo What's this? myUpload()
             myUpload: function(file){
                 api.mediaFile = file;
                 console.log(api.mediaFile);
             },
-
+            */
             upload: function(file, key){
-
-
 
                 console.log('file: ',file);
                 console.log('key: ',key);
@@ -139,15 +138,15 @@ uploader.provider('AWSControl', function(){
                         else{
                             $rootScope.$broadcast('AWSUploadSuccess');
                             deferred.resolve(data);
-
                             $rootScope.newImage = 'https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key);
                             $rootScope.mediaTitle = originalKey;
+                            $rootScope.mediaThumbs = {};
                             $rootScope.mediaDescription = 'Vancouver Metalwork';
                             $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
                             $rootScope.mediaTags = [originalKey];
                             var media = new Firebase("https://metal.firebaseio.com/media");
                             var sync = $firebase(media);
-                            sync.$push({mediaURL:$rootScope.newImage, mediaTitle:$rootScope.mediaTitle, mediaLink:$rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, ''), mediaDescription:$rootScope.mediaDescription, mediaTags:$rootScope.mediaTags}).then(function (media){
+                            sync.$push({mediaThumbs:$rootScope.smallMedia, mediaURL:$rootScope.newImage, mediaTitle:$rootScope.mediaTitle, mediaLink:$rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, ''), mediaDescription:$rootScope.mediaDescription, mediaTags:$rootScope.mediaTags}).then(function (media){
                                 var newID = media.name();
                                 var index = new Firebase("https://metal.firebaseio.com/index/media");
                                 var sync = $firebase(index);
@@ -181,7 +180,7 @@ uploader.provider('AWSControl', function(){
 
 });
 
-uploader.directive('uploader', function(AWSControl){
+uploader.directive('uploader', function(AWSControl, $rootScope){
 
     return {
         replace: true,
@@ -194,7 +193,7 @@ uploader.directive('uploader', function(AWSControl){
             scope.upload = function(){
                 var fileList = document.getElementById("yourInput").files.length;
 
-                for(x=0;x<fileList;x++){
+                for(var x=0;x<fileList;x++){
                     var fileInput = elem[0].children[0];
                     var file = fileInput.files[x];
                     elem[0].children[1].disabled = true;
@@ -207,6 +206,7 @@ uploader.directive('uploader', function(AWSControl){
 
                     }
                     else{
+
                         scope.reader = new FileReader();
                         scope.reader.onload = (function(lefile){
 
@@ -218,28 +218,36 @@ uploader.directive('uploader', function(AWSControl){
                             });
 
                             return function(e){
+
+
                                 console.log("Filereader done");
-                                /*
-                                AWSControl.upload(e.target.result, lefile.name).then(
-                                    function(data){
-                                        elem[0].reset(); //clear the file input
-                                        elem[0].children[1].disabled = false;
-                                        elem[0].children[1].innerHTML = 'Upload';
-                                        console.log('data',data);
-                                        //alert('Notification about a successful upload');
-                                    },
+                                console.log('-- RESULT',e.target.result, '-- NAME:', lefile.name);
 
-                                    function(err){
-                                        elem[0].children[1].disabled = false;
-                                        elem[0].children[1].innerHTML = 'Upload';
-                                        console.log(err);
-                                        //alert('FAILED: Notification about a failed upload');
-                                    },
+                                (function imageToDataUri(img, width, height)
+                                {// create an off-screen canvas
+                                    var canvas = document.createElement('canvas'),
+                                        ctx = canvas.getContext('2d'),
+                                        encodedImageData = img;
+                                    var img = new Image();
 
-                                    function(msg){
+                                    img.src = encodedImageData;
+                                    // set its dimension to target size
+                                    canvas.width = width;
+                                    canvas.height = height;
 
-                                    });
-*/
+                                    // draw source image into the off-screen canvas:
+                                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                                    console.log('canvas', canvas.toDataURL());
+                                    $rootScope.smallMedia = canvas.toDataURL();
+                                    console.log('$rootScope.smallMedia',$rootScope.smallMedia);
+
+                                    // encode image to data-uri with base64 version of compressed image
+                                    return e.target.result;
+                                })(e.target.result, 100, 100);
+
+
+
+
                                 //---
 
 
@@ -255,6 +263,7 @@ uploader.directive('uploader', function(AWSControl){
                                 elem[0].reset(); //clear the file input
                                 elem[0].children[1].disabled = false;
                                 elem[0].children[1].innerHTML = 'Upload';
+                                console.log('data from aws upload call',data);
                                 //alert('Notification about a successful upload');
                             },
 
