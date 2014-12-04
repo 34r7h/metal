@@ -22,12 +22,12 @@
             </div>
 
             <a class="col-xs-12 visible-xs no-padding" ng-href="#!/gallery/{{gallery.galleryURL}}">
-                <img alt="{{imgAlt || api.show.media.$getRecord(gallery.media[0]).mediaDescription}}" ng-src="{{imgSrc || api.show.media.$getRecord(gallery.media[0]).mediaURL}}" width="100%">
+                <img alt="{{imgAlt || api.show.media.$getRecord(gallery.media[0]).mediaDescription}}" ng-src="{{ imgSrc || api.show.media.$getRecord(gallery.media[0]).mediaURL}}" width="100%">
             </a>
             <hr class="col-xs-12">
             <div class="col-xs-12 visible-xs no-padding" >
                 <div class="col-xs-4 no-padding border-right" width="100%" ng-repeat="media in gallery.media">
-                    <a href><img alt="{{api.show.media.$getRecord(gallery.media[$index]).mediaDescription}}" ng-src="{{ api.show.media.$getRecord(gallery.media[$index]).mediaURL }}" width="100%" ng-click="$parent.imgSrc = api.show.media.$getRecord(gallery.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(gallery.media[$index]).mediaDescription; "><hr></a>
+                    <a href><img alt="{{api.show.media.$getRecord(gallery.media[$index]).mediaDescription}}" ng-src="{{ api.show.media.$getRecord(gallery.media[$index]).mediaThumbs || api.show.media.$getRecord(gallery.media[$index]).mediaURL }}" width="100%" ng-click="$parent.imgSrc = api.show.media.$getRecord(gallery.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(gallery.media[$index]).mediaDescription; "><hr></a>
                 </div>
             </div>
 
