@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="finished refactor of uploads, now includes 60,100,160px sizes saved on the db">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/header.html" afterPath="$PROJECT_DIR$/client/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/header.html" afterPath="$PROJECT_DIR$/dist/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/landings-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/landings-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/admin/landings-admin.html" afterPath="$PROJECT_DIR$/dist/views/admin/landings-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/media-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/media-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/admin/media-admin.html" afterPath="$PROJECT_DIR$/dist/views/admin/media-admin.html" />
+    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/gallery.html" afterPath="$PROJECT_DIR$/client/views/gallery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/gallery.html" afterPath="$PROJECT_DIR$/dist/views/gallery.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -35,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="media-admin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="media-admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/admin/media-admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.1878453" vertical-offset="147" max-vertical-offset="690">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="690">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -58,52 +53,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gallery.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/views/gallery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2083334" vertical-offset="256" max-vertical-offset="825">
-              <caret line="19" column="185" selection-start-line="19" selection-start-column="185" selection-end-line="19" selection-end-column="185" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery-admin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/admin/gallery-admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="1950" max-vertical-offset="2835">
-              <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landings-admin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/admin/landings-admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125" vertical-offset="360" max-vertical-offset="1530">
-              <caret line="45" column="101" selection-start-line="45" selection-start-column="101" selection-end-line="45" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="1605">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="6660">
-              <caret line="110" column="52" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="0.71270716" vertical-offset="138" max-vertical-offset="945">
+              <caret line="35" column="120" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,16 +99,16 @@
         <option value="$PROJECT_DIR$/client/styles/main.scss" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/views/admin/uploader.html" />
-        <option value="$PROJECT_DIR$/client/views/gallery.html" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
         <option value="$PROJECT_DIR$/client/views/single/gallery.html" />
         <option value="$PROJECT_DIR$/client/scripts/modules/uploader.js" />
         <option value="$PROJECT_DIR$/client/scripts/api.js" />
-        <option value="$PROJECT_DIR$/client/views/admin/gallery-admin.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/landings-admin.html" />
         <option value="$PROJECT_DIR$/client/views/header.html" />
         <option value="$PROJECT_DIR$/client/views/admin/media-admin.html" />
+        <option value="$PROJECT_DIR$/client/views/admin/gallery-admin.html" />
+        <option value="$PROJECT_DIR$/client/views/admin/landings-admin.html" />
+        <option value="$PROJECT_DIR$/client/views/gallery.html" />
       </list>
     </option>
   </component>
@@ -416,6 +374,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1432,7 +1408,19 @@
       <option name="project" value="LOCAL" />
       <updated>1417753668677</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="finished refactor of uploads, now includes 60,100,160px sizes saved on the db">
+      <created>1417767502649</created>
+      <option name="number" value="00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1417767502649</updated>
+    </task>
+    <task id="LOCAL-00150" summary="pretty image layouts for small eyes&#10;">
+      <created>1417769809469</created>
+      <option name="number" value="00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1417769809469</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -1447,7 +1435,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3073341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3073341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08422376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1501,7 +1489,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="seo" />
     <MESSAGE value="resolve for seo purposes" />
     <MESSAGE value="working on proper way to crawl fb data.. sucks atm" />
     <MESSAGE value="prerender and heroku stuffs" />
@@ -1526,7 +1513,8 @@
     <MESSAGE value="rethunk file upload" />
     <MESSAGE value="rethunk file upload - images stored as 100x100 on the database directly" />
     <MESSAGE value="finished refactor of uploads, now includes 60,100,160px sizes saved on the db" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished refactor of uploads, now includes 60,100,160px sizes saved on the db" />
+    <MESSAGE value="pretty image layouts for small eyes&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="pretty image layouts for small eyes&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1815,14 +1803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2083334" vertical-offset="256" max-vertical-offset="825">
-          <caret line="19" column="185" selection-start-line="19" selection-start-column="185" selection-end-line="19" selection-end-column="185" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/single/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625" vertical-offset="195" max-vertical-offset="945">
@@ -1850,22 +1830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125" vertical-offset="840" max-vertical-offset="2010">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="6660">
-          <caret line="110" column="52" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/modules/uploader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80497134" vertical-offset="3284" max-vertical-offset="4650">
@@ -1880,35 +1844,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/admin/gallery-admin.html">
+    <entry file="file://$PROJECT_DIR$/client/views/admin/media-admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="1950" max-vertical-offset="2835">
-          <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
+        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="690">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/admin/landings-admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="360" max-vertical-offset="1530">
-          <caret line="45" column="101" selection-start-line="45" selection-start-column="101" selection-end-line="45" selection-end-column="101" />
-          <folding />
+        <state vertical-scroll-proportion="0.34285715" vertical-offset="465" max-vertical-offset="1620">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="1605">
+        <state vertical-scroll-proportion="0.82857144" vertical-offset="0" max-vertical-offset="1605">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/admin/media-admin.html">
+    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1878453" vertical-offset="147" max-vertical-offset="690">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.05464481" vertical-offset="1620" max-vertical-offset="6660">
+          <caret line="110" column="52" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.34285715" vertical-offset="1215" max-vertical-offset="2010">
+          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/gallery-admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82857144" vertical-offset="90" max-vertical-offset="2895">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71270716" vertical-offset="138" max-vertical-offset="945">
+          <caret line="35" column="120" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
