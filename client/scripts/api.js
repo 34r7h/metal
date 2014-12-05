@@ -132,7 +132,6 @@ angular.module('app.services', ['firebase'])
 			};
 // Add to Content
 			api.addContentMedia = function(content, id, media){
-                console.log(content,id,media);
 				media.unshift(id);
 			};
 			api.removeContentMedia = function(media, id){
