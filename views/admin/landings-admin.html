@@ -43,7 +43,7 @@
 
                 // media
                 <div class="clearfix panel panel-default">
-                    <div class="col-xs-3 panel-body" ng-repeat="media in domain.image" ng-click="showOptions = true">
+                    <div class="col-xs-3 panel-body" ng-repeat="media in domain.image track by $index" ng-click="showOptions = true">
                         <div ng-show="showOptions" ng-click="$parent.removeContentMedia($parent.domain.image, media);">Remove Image</div>
                         <img ng-src="{{$parent.api.show.media.$getRecord(media).mediaURL}}" width="100%">
                         <div ng-if="($index+1) % 4 === 0" class="clearfix"></div>

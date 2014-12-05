@@ -11,7 +11,7 @@
                 <div ng-hide="editTitle===true">{{media.mediaTitle}}</div>
                 <input ng-show="editTitle===true" ng-model="media.mediaTitle" ng-blur="saveMedia(media.$id,media.mediaTitle, media.mediaDescription);editTitle=false;">
             </div>
-            <a ng-href="#!/media/{{media.mediaLink }}"><img class="" src="{{media.mediaThumbs['100'] || media.mediaURL}}" width="100%"></a>
+            <a ng-href="#!/media/{{media.mediaLink }}"><img class="" ng-src="{{media.mediaThumbs['100'] || media.mediaURL}}" width="100%"></a>
             <div class="panel-footer" ng-init="removeMedia = false;">
                 <a href ng-show="!removeMedia" ng-click="removeMedia = true">Remove Media</a>
                 <a href="javascript:;" ng-show="removeMedia" ng-click="api.removeMedia(media.mediaLink, media.$id)" class="btn btn-primary" role="button">Yes, remove this media.</a>
