@@ -34,10 +34,11 @@
         AWSControlProvider.supportType(imageSupportParams);
 
 
-      var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site', 'gallery'];
+      var routes, setControllers, setRoutes, routesSingles, setSingleRoutes, routesAdmin, setAdminRoutes;
+      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site', 'gallery', 'landings'];
       routesSingles = ['services','clients','articles','media','products','gallery'];
-        app.controller = function(name, constructor){
+      routesAdmin = ['home','about','services','clients','articles', 'media', 'products', 'gallery', 'landings'];
+      app.controller = function(name, constructor){
             $controllerProvider.register(name, constructor);
             return(this);
         };
@@ -87,9 +88,8 @@
                'removeContentArticles'
                ];
                angular.forEach(apiList, function(action){
-               $scope[action] = api[action];
-               return $scope;
-
+                   $scope[action] = api[action];
+                   return $scope;
                });
 
 
@@ -113,24 +113,10 @@
 	      };
 	      app.controller(name, fun);
       };
-			routes.forEach(function(route) {
-				setControllers(route);
-			});
       setRoutes = function(route) {
         var state, config;
 	    state = route;
         config = {
-
-            /*
-             resolve:{test1:'api',test:function(test1, $q, $timeout){
-             var deferred = $q.defer();
-             $timeout(function(){
-             deferred.resolve(test1);
-             }, 2000);
-             return deferred.promise;
-             }},
-             */
-
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',
 	      controller: route+'Ctrl'
@@ -138,7 +124,17 @@
         $stateProvider.state(state, config);
         return $stateProvider;
       };
-
+      setAdminRoutes = function(adminRoute) {
+          var state, config;
+          state = 'admin.'+adminRoute;
+          config = {
+              url: '/'+ adminRoute,
+              templateUrl: 'views/admin/'+ adminRoute + '-admin.html',
+              controller: adminRoute+'Ctrl'
+          };
+          $stateProvider.state(state, config);
+          return $stateProvider;
+    };
 	  setSingleRoutes = function(singleRoute) {
 		  var state, config;
 		  state = 'single-'+singleRoute;
@@ -166,14 +162,19 @@
 		  return $stateProvider;
 	  };
 
+      routes.forEach(function(route) {
+          setControllers(route);
+      });
 	  routes.forEach(function(route) {
 	      return setRoutes(route);
       });
-
+      routesAdmin.forEach(function(route) {
+	      return setAdminRoutes(route);
+      });
 	  routesSingles.forEach(function(routesSingle) {
 		  return setSingleRoutes(routesSingle);
 	  });
-                $stateProvider.state('main',{url:'/',templateUrl:'views/home.html', controller:'homeCtrl'});
+        $stateProvider.state('main',{url:'/',templateUrl:'views/home.html', controller:'homeCtrl'});
 
                /* TODO Admin Routing Start
                 $stateProvider.state('new-admin',{

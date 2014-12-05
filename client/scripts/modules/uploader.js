@@ -49,19 +49,12 @@ uploader.provider('AWSControl', function(){
          host is 'S3' for now
          */
         mimes.push(params);
-        console.log('mimes',mimes);
     };
-
-    this.setYeah = function(yeah){ this.yeah = yeah; };
-    this.setImg = function(yeah){ this.dataImg = dataImg; };
 
     this.$get = function($q, $rootScope, $firebase, api){
 
         return {
-
-            yeah: this.yeah,
             dataImg: this.dataImg,
-
             mimes: mimes,
 
             canHandle: function(fileType){
@@ -209,41 +202,46 @@ uploader.directive('uploader', function(AWSControl, $rootScope){
 
                         scope.reader = new FileReader();
                         scope.reader.onload = (function(lefile){
-
                             scope.reader.readAsDataURL(file);
 
                             setTimeout(function() {
                                 AWSControl.dataImg = scope.reader.result;
-                                console.log('dataImg',AWSControl.dataImg);
                             });
 
                             return function(e){
 
 
-                                console.log("Filereader done");
                                 console.log('-- RESULT',e.target.result, '-- NAME:', lefile.name);
 
-                                (function imageToDataUri(img, width, height)
+                                (function imageToDataUri(img)
                                 {// create an off-screen canvas
                                     var canvas = document.createElement('canvas'),
                                         ctx = canvas.getContext('2d'),
-                                        encodedImageData = img;
+                                        encodedImageData = img,
+                                        sizes = [60,100,160];
+                                    $rootScope.smallMedia = {};
+
                                     var img = new Image();
 
                                     img.src = encodedImageData;
                                     // set its dimension to target size
-                                    canvas.width = width;
-                                    canvas.height = height;
 
+                                    angular.forEach(sizes, function(size){
+                                        x = img.width / size;
+                                        canvas.width = size;
+                                        canvas.height = img.height / x;
+                                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                                        $rootScope.smallMedia[size] = canvas.toDataURL();
+                                    });
                                     // draw source image into the off-screen canvas:
-                                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                                    console.log('canvas', canvas.toDataURL());
-                                    $rootScope.smallMedia = canvas.toDataURL();
-                                    console.log('$rootScope.smallMedia',$rootScope.smallMedia);
+
+
+
+
 
                                     // encode image to data-uri with base64 version of compressed image
                                     return e.target.result;
-                                })(e.target.result, 100, 100);
+                                })(e.target.result);
 
 
 

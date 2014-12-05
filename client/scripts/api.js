@@ -86,7 +86,6 @@ angular.module('app.services', ['firebase'])
 
 
             var myMedia = api.sync.media.$asArray();
-            console.log(myMedia);
 
             setTimeout(function(){
                 angular.forEach(myMedia,function(media, key){
