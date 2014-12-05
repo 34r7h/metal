@@ -28,8 +28,12 @@
                     <h3><input ng-model="search.media" placeholder="Search Images"></h3>
 
                     <div style="max-height:700px; overflow: scroll;" ng-if="showAddMoreMedia === true">
-                        <div class="col-xs-6 panel-body" ng-repeat="image in api.show.media | filter: search.media |filterOut: gallery.media">
-                            <img ng-click="$parent.addContentMedia(api.show.media, image.$id, $parent.gallery.media)" ng-src="{{image.mediaThumbs['60'] || image.mediaURL}}" width="100%" style="float:left">
+                        <div class="col-xs-6 panel-body" ng-repeat="image in api.show.media | filter: search.media |filterOut: gallery.media track by $index">
+                            <img
+                                ng-click="$parent.addContentMedia(api.show.media, image.$id, $parent.gallery.media)"
+                                ng-src="{{image.mediaThumbs['60'] || image.mediaURL}}"
+                                width="100%"
+                                style="float:left">
                         </div>
                         <div ng-if="($index+1) % 2 === 0" class="clearfix"></div>
                     </div>

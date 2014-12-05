@@ -12,12 +12,20 @@
 
         <div class="clearfix no-padding" ng-init="imgSrc = api.show.media.$getRecord(gallery.media[0]).mediaURL; imgAlt = api.show.media.$getRecord(gallery.media[0]).mediaDescription; ">
 
-            <a class="col-xs-7  hidden-xs" ng-href="#!/gallery/{{gallery.galleryURL}}">
+            <a class="col-xs-7 hidden-xs" ng-href="#!/gallery/{{gallery.galleryURL}}">
                 <img alt="{{imgAlt || api.show.media.$getRecord(gallery.media[0]).mediaDescription}}" ng-src="{{imgSrc || api.show.media.$getRecord(gallery.media[0]).mediaURL}}" width="100%">
             </a>
-            <div class="col-xs-5 hidden-xs no-padding">
-                <div class="col-xs-3 clearfix no-padding border-right border-top" max-height="100px" width="100%" ng-repeat="media in gallery.media" style="height:50px;">
-                    <a href><img alt="{{api.show.media.$getRecord(gallery.media[$index]).mediaDescription}}" ng-src="{{ api.show.media.$getRecord(gallery.media[$index]).mediaThumbs['100'] || api.show.media.$getRecord(gallery.media[$index]).mediaURL }}" width="100%" ng-click="$parent.imgSrc = api.show.media.$getRecord(gallery.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(gallery.media[$index]).mediaDescription; "><hr></a>
+            <div class="col-xs-5 hidden-xs no-padding" style="max-height:500px; overflow-y: scroll; overflow-x: hidden;">
+                <div ng-repeat="media in gallery.media track by $index" >
+                    <a href class="col-xs-3 clearfix no-padding border-right border-top" max-height="100px" width="100%" >
+                        <img
+                            alt="{{api.show.media.$getRecord(gallery.media[$index]).mediaDescription}}"
+                            ng-src="{{ api.show.media.$getRecord(gallery.media[$index]).mediaThumbs['100'] || api.show.media.$getRecord(gallery.media[$index]).mediaURL }}"
+                            width="100%"
+                            ng-click="$parent.imgSrc = api.show.media.$getRecord(gallery.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(gallery.media[$index]).mediaDescription; ">
+                    </a>
+                    <hr ng-if="( $index + 1 ) % 4 === 0" class="col-xs-12"/>
+
                 </div>
             </div>
 
