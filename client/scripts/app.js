@@ -107,6 +107,17 @@
                       console.error("Authentication failed:", error);
                   });
               };
+              $scope.resetPass = function(email){
+                  ref.resetPassword({
+                      email : email
+                  }, function(error) {
+                      if (error === null) {
+                          console.log("Password reset email sent successfully");
+                      } else {
+                          console.log("Error sending password reset email:", error);
+                      }
+                  });
+              };
 
 
               var itemList = new Firebase("https://metal.firebaseio.com/"+route);

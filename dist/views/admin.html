@@ -9,9 +9,13 @@
     </div>
     <article ng-if="!authObj.$getAuth()">
         Please log in to save edits:
-        <div><input type="email" placeholder="E-mail" ng-model="authority.email"/></div>
-        <div><input type="password" placeholder="Password" ng-model="authority.password"/></div>
-        <button ng-click="logIn(authority.email, authority.password)">Log In</button>
+        <hr class="col-xs-12"/>
+        <h2><input class="col-xs-12" type="email" placeholder="E-mail" ng-model="authority.email"/></h2>
+        <hr class="col-xs-12"/>
+        <h2><input class="col-xs-12" type="password" placeholder="Password" ng-model="authority.password"/></h2>
+        <hr class="col-xs-12"/>
+        <button class="col-xs-3 btn btn-default" ng-show="!checkEmail" ng-disabled="!authority.email" ng-click="resetPass(authority.email); checkEmail = ' - Check your inbox to reset password.';">Reset Password {{checkEmail}}</button>{{checkEmail}}
+        <button class="btn btn-dark col-xs-9" ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
     </article>
     <article ng-if="authObj.$getAuth()"><button ng-click="authObj.$unauth()">Log Out</button></article>
 
