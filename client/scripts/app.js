@@ -46,7 +46,7 @@
 
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, api, $timeout, $rootScope, $location, $document) {
+	      fun = function($scope, $state, $firebase, api, $timeout, $rootScope, $location, $document, $firebaseAuth) {
               $rootScope.title = $location.path()+' | Masuk Metal - Serving Vancouver BC with metalwork for driveway gates, railings, fences, and home automation.';
               $document[0].title = $rootScope.title;
 
@@ -95,7 +95,21 @@
 
 		      $scope.state = $state;
 		      $scope.api = api;
-		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
+		      var ref = new Firebase("https://metal.firebaseio.com/"+route);
+              $scope.authObj = $firebaseAuth(ref);
+              $scope.logIn = function (email, password) {
+                  $scope.authObj.$authWithPassword({
+                      email: email,
+                      password: password
+                  }).then(function(authData) {
+                      console.log("Logged in as:", authData.uid);
+                  }).catch(function(error) {
+                      console.error("Authentication failed:", error);
+                  });
+              };
+
+
+              var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
 
 
@@ -109,7 +123,7 @@
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
-		      $scope.search = ['JXAr2DW0CX5iRtxd0R3'];
+		      $scope.search = [''];
 	      };
 	      app.controller(name, fun);
       };
@@ -131,6 +145,7 @@
               url: '/'+ adminRoute,
               templateUrl: 'views/admin/'+ adminRoute + '-admin.html',
               controller: adminRoute+'Ctrl'
+
           };
           $stateProvider.state(state, config);
           return $stateProvider;
