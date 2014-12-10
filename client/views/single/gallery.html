@@ -35,7 +35,7 @@
                 <hr>
             </div>
             <div class="col-xs-12 visible-xs no-padding">
-                <div class="col-xs-4 no-padding border-right" ng-repeat="media in singleData.media">
+                <div class="col-xs-4 no-padding border-right" ng-repeat="media in singleData.media track by $index">
                     <a href><img alt="{{ api.show.media.$getRecord(singleData.media[$index]).mediaDescription }}" ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaThumbs['100'] || api.show.media.$getRecord(singleData.media[$index]).mediaURL }}" ng-click="$parent.imgSrc = api.show.media.$getRecord(singleData.media[$index]).mediaURL;$parent.imgAlt = api.show.media.$getRecord(singleData.media[$index]).mediaDescription" width="100%"></a><hr/>
                 </div>
             </div>
