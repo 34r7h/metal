@@ -1,10 +1,10 @@
 angular.module('app.services', ['firebase'])
-	.factory('api', ['$firebase', '$window', '$rootScope',
-		function($firebase, $window, $rootScope) {
+	.factory('api', ['$firebase',
+		function($firebase) {
 
 // Database Setup
-			var api = {show:{},sync:{index:{}},index:{}};
-			var types = ['media','clients','services','articles', 'gallery', 'about','products','contact','site', 'domains'];
+			var api = {ob:{}, show:{},sync:{index:{}},index:{}};
+			var types = ['media','clients','services','articles', 'gallery', 'about','products','contact','site', 'domains', 'notes'];
 			var baseURL = 'https://metal.firebaseio.com/';
 			var indexURL = 'https://metal.firebaseio.com/index/';
 			angular.forEach(types, function(type){
@@ -14,9 +14,14 @@ angular.module('app.services', ['firebase'])
 				api.sync.index[type] = $firebase(api.index[type]);
 				// makes display object
 				api.show[type] = api.sync[type].$asArray();
+                api.ob[type] = api.sync[type].$asObject();
 			});
 
 // Helper Functions
+            api.saveNote = function(){
+                console.log('note');
+                api.ob.notes.$save();
+            };
             api.addToArray = function(array,item){
                 if (item && item.length > 0) {
                     if(array[0]===('No Tags Selected')){

@@ -4,9 +4,12 @@
         <section ng-style="headerStyle">
             <div class="pull-left">Admin</div>
             <div class="pull-right">
-                <input type="text"/>
-                <input type="text"/>
-                <button>!!</button>
+                <input type="email" placeholder="E-mail" ng-model="authority.email"/>
+                <input  type="password" placeholder="Password" ng-model="authority.password"/>
+                <button ng-show="!checkEmail" ng-disabled="!authority.email" ng-click="resetPass(authority.email); checkEmail = ' - Check your inbox to reset password.';">Reset Password {{checkEmail}}</button>{{checkEmail}}
+                <button ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
+                <button ng-if="authObj.$getAuth()" ng-click="authObj.$unauth()">Log Out</button>
+
             </div>
         </section>
         <section ng-style="primarySectionStyle">
@@ -16,8 +19,9 @@
         </section>
         <section
             ng-style="secondStyle">
-            <div ng-style="notesStyle">Notes / Activity</div>
-            <div ng-style="articlesStyle">Articles</div>
+            <div ng-style="notesStyle"><textarea ng-model="api.ob.notes.note" ng-change="api.saveNote()" ng-style="notesStyle"></textarea></div>
+            <div ng-style="articlesStyle">Articles
+            </div>
             <div ng-style="articlesStyle">Gallery</div>
             <div ng-style="landingStyle">Landings</div>
             <div ng-style="siteStyle">Site</div>
