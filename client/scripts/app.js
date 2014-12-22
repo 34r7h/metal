@@ -252,18 +252,19 @@
                 $rootScope.windowHeight = ($window.innerHeight - 180);
             }
             $rootScope.windowHeight = ($window.innerHeight - 60);
-            $rootScope.secondStyle = {height:($rootScope.windowHeight * .5), float:'left'};
+            $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
+            $rootScope.secondSectionStyle = {height:($rootScope.windowHeight * .5), float:'left'};
             $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
-            $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left'};
-            $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left'};
-            $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left'};
-            $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left'};
-            $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
+            $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left', display:'table', textAlign:'center'};
+            $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
+            $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
+            $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left', display:'table', textAlign:'center'};
+            $rootScope.itemStyle = {height:'100%', display:'table-cell', textAlign:'center', verticalAlign:'middle'};
+            $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)', display:'table', textAlign:'center'};
             $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
             if($rootScope.adminStyle.width < 768) {
                 $rootScope.adminStyle.top = 120;
             }
-            $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
 
             angular.element($window).bind('resize', function () {
                 $rootScope.windowWidth = $window.innerWidth;
@@ -272,18 +273,19 @@
                     $rootScope.windowWidth = $window.innerWidth;
                     $rootScope.windowHeight = ($window.innerHeight - 180);
                 }
-                $rootScope.secondStyle = {height:($rootScope.windowHeight * .5), float:'left'};
+                $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
+                $rootScope.secondSectionStyle = {height:($rootScope.windowHeight * .5), float:'left'};
                 $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
-                $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left'};
-                $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left'};
-                $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left'};
-                $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left'};
-                $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
+                $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left', display:'table', textAlign:'center'};
+                $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left',  display:'table', textAlign:'center'};
+                $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
+                $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left', display:'table', textAlign:'center'};
+                $rootScope.itemStyle = {height:'100%', display:'table-cell', textAlign:'center', verticalAlign:'middle'};
+                $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)', display:'table', textAlign:'center'};
                 $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
                 if($rootScope.adminStyle.width < 768) {
                     $rootScope.adminStyle.top = 120;
                 }
-                $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
                 $rootScope.$apply('windowWidth', 'windowHeight');
             });
         });

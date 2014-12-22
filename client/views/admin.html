@@ -2,29 +2,28 @@
     <article class="admin" ng-style="adminStyle">
         <style> .admin div {background: rgba(0,0,0,.2); border: 1px inset}</style>
         <section ng-style="headerStyle">
-            <div class="pull-left">Admin</div>
-            <div class="pull-right">
+            <div ng-style="itemStyle" ><h1 class="fa fa-4x fa-dashboard"> Admin</h1></div>
+            <div ng-style="itemStyle" style="text-align: right; font-size: 1.3em" >
                 <input type="email" placeholder="E-mail" ng-model="authority.email"/>
                 <input  type="password" placeholder="Password" ng-model="authority.password"/>
                 <button ng-show="!checkEmail" ng-disabled="!authority.email" ng-click="resetPass(authority.email); checkEmail = ' - Check your inbox to reset password.';">Reset Password {{checkEmail}}</button>{{checkEmail}}
                 <button ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
                 <button ng-if="authObj.$getAuth()" ng-click="authObj.$unauth()">Log Out</button>
-
             </div>
         </section>
+        <div ui-view></div>
         <section ng-style="primarySectionStyle">
-            <div ng-style="primaryStyle">Clients</div>
-            <div ng-style="primaryStyle">Products</div>
-            <div ng-style="primaryStyle">Services</div>
+            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-comments-o"><br/>Clients</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
+            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-cubes"><br/>Products</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
+            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-gavel"><br/>Services</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
         </section>
         <section
-            ng-style="secondStyle">
+            ng-style="secondSectionStyle">
             <div ng-style="notesStyle"><textarea ng-model="api.ob.notes.note" ng-change="api.saveNote()" ng-style="notesStyle"></textarea></div>
-            <div ng-style="articlesStyle">Articles
-            </div>
-            <div ng-style="articlesStyle">Gallery</div>
-            <div ng-style="landingStyle">Landings</div>
-            <div ng-style="siteStyle">Site</div>
+            <div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-newspaper-o"><br/>Articles</h3></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
+            <div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-th-large"><br/>Images</h3></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
+            <div ng-style="landingStyle"><i ng-style="itemStyle"> <h4 class="fa fa-2x fa-desktop"><br/>Landings</h4></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
+            <div ng-style="siteStyle"><i ng-style="itemStyle"> <h4 class="fa fa-cog"><br/>Site</h4></i></div>
 
         </section>
     </article>
@@ -56,5 +55,5 @@
 
 
 
-    <div ui-view></div>
+
 </div>
