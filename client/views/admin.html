@@ -1,4 +1,32 @@
 <div class="col-xs-12 panel" ng-init="views=['home','about','services','clients','articles', 'media', 'products', 'gallery', 'landings'];">
+    <article class="admin" ng-style="adminStyle">
+        <style> .admin div {background: rgba(0,0,0,.2); border: 1px inset}</style>
+        <section ng-style="headerStyle">
+            <div class="pull-left">Admin</div>
+            <div class="pull-right">
+                <input type="text"/>
+                <input type="text"/>
+                <button>!!</button>
+            </div>
+        </section>
+        <section ng-style="primarySectionStyle">
+            <div ng-style="primaryStyle">Clients</div>
+            <div ng-style="primaryStyle">Products</div>
+            <div ng-style="primaryStyle">Services</div>
+        </section>
+        <section
+            ng-style="secondStyle">
+            <div ng-style="notesStyle">Notes / Activity</div>
+            <div ng-style="articlesStyle">Articles</div>
+            <div ng-style="articlesStyle">Gallery</div>
+            <div ng-style="landingStyle">Landings</div>
+            <div ng-style="siteStyle">Site</div>
+
+        </section>
+    </article>
+
+    <!--
+
     <div class="">
         <h1 class="">Admin</h1>
         <div class="col-xs-12 padding">
@@ -18,6 +46,11 @@
         <button class="btn btn-dark col-xs-9" ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
     </article>
     <article ng-if="authObj.$getAuth()"><button ng-click="authObj.$unauth()">Log Out</button></article>
+
+
+-->
+
+
 
     <div ui-view></div>
 </div>

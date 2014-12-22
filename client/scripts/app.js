@@ -46,7 +46,7 @@
 
 	      var name, fun;
 	      name = route+'Ctrl';
-	      fun = function($scope, $state, $firebase, api, $timeout, $rootScope, $location, $document, $firebaseAuth) {
+	      fun = function($scope, $state, $firebase, api, $timeout, $rootScope, $location, $document, $firebaseAuth, $window) {
               $rootScope.title = $location.path()+' | Masuk Metal - Serving Vancouver BC with metalwork for driveway gates, railings, fences, and home automation.';
               $document[0].title = $rootScope.title;
 
@@ -95,6 +95,7 @@
 
 		      $scope.state = $state;
 		      $scope.api = api;
+              $scope.width = api.width;
 		      var ref = new Firebase("https://metal.firebaseio.com/"+route);
               $scope.authObj = $firebaseAuth(ref);
               $scope.logIn = function (email, password) {
@@ -242,6 +243,49 @@
                 console.log('encodedText',encodedText);
                 return encodedText;
             }
+        })
+        .run(function($rootScope, $window) {
+            $rootScope.windowWidth = $window.innerWidth;
+            $rootScope.windowHeight = ($window.innerHeight - 60);
+            if($window.innerWidth <= 768){
+                $rootScope.windowWidth = $window.innerWidth;
+                $rootScope.windowHeight = ($window.innerHeight - 180);
+            }
+            $rootScope.windowHeight = ($window.innerHeight - 60);
+            $rootScope.secondStyle = {height:($rootScope.windowHeight * .5), float:'left'};
+            $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
+            $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left'};
+            $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left'};
+            $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left'};
+            $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left'};
+            $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
+            $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
+            if($rootScope.adminStyle.width < 768) {
+                $rootScope.adminStyle.top = 120;
+            }
+            $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
+
+            angular.element($window).bind('resize', function () {
+                $rootScope.windowWidth = $window.innerWidth;
+                $rootScope.windowHeight = ($window.innerHeight - 60);
+                if($window.innerWidth <= 768){
+                    $rootScope.windowWidth = $window.innerWidth;
+                    $rootScope.windowHeight = ($window.innerHeight - 180);
+                }
+                $rootScope.secondStyle = {height:($rootScope.windowHeight * .5), float:'left'};
+                $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
+                $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left'};
+                $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left'};
+                $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left'};
+                $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left'};
+                $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
+                $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
+                if($rootScope.adminStyle.width < 768) {
+                    $rootScope.adminStyle.top = 120;
+                }
+                $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
+                $rootScope.$apply('windowWidth', 'windowHeight');
+            });
         });
 
 }).call(this);

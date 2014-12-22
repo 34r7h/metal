@@ -1,6 +1,6 @@
 angular.module('app.services', ['firebase'])
-	.factory('api', ['$firebase',
-		function($firebase) {
+	.factory('api', ['$firebase', '$window', '$rootScope',
+		function($firebase, $window, $rootScope) {
 
 // Database Setup
 			var api = {show:{},sync:{index:{}},index:{}};
