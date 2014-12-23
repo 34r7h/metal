@@ -1,9 +1,8 @@
 
 <div class="clearfix">
-<h2 class="col-xs-6" ng-init="showGalleries = true;" ng-click="showGalleries=true" ng-show="showGalleries">Edit Galleries</h2>
-<h2 class="col-xs-6" ng-click="showGalleries = false" ng-hide="showGalleries">Add Gallery</h2>
-<h4 class="col-xs-6" ng-init="showGalleries = true;" ng-click="showGalleries=true" ng-show="!showGalleries">Edit Galleries</h4>
-<h4 class="col-xs-6" ng-click="showGalleries = false" ng-hide="!showGalleries">Add Gallery</h4>
+<div class="col-xs-4"><h2>Upload New Images </h2><uploader data-ng-model="myfile"></uploader></div>
+<h2 class="col-xs-4" ng-init="showGalleries = true;" ng-click="showGalleries=true" >Edit Galleries</h2>
+<h2 class="col-xs-4" ng-click="showGalleries = false" >Add Gallery</h2>
     <hr class="col-xs-12"/>
 </div>
 

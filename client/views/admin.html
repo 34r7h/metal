@@ -1,29 +1,36 @@
 <div class="col-xs-12 panel" ng-init="views=['home','about','services','clients','articles', 'media', 'products', 'gallery', 'landings'];">
     <article class="admin" ng-style="adminStyle">
-        <style> .admin div {background: rgba(0,0,0,.2); border: 1px inset}</style>
+        <style> .admin div {border: 1px inset rgba(0,0,0,.1)}</style>
         <section ng-style="headerStyle">
-            <div ng-style="itemStyle" ><h1 class="fa fa-4x fa-dashboard"> Admin</h1></div>
+            <div ng-click="showAdminMenu = !showAdminMenu" ng-style="itemStyle" ><h1 class="fa fa-4x fa-dashboard"> Admin</h1></div>
             <div ng-style="itemStyle" style="text-align: right; font-size: 1.3em" >
-                <input type="email" placeholder="E-mail" ng-model="authority.email"/>
-                <input  type="password" placeholder="Password" ng-model="authority.password"/>
-                <button ng-show="!checkEmail" ng-disabled="!authority.email" ng-click="resetPass(authority.email); checkEmail = ' - Check your inbox to reset password.';">Reset Password {{checkEmail}}</button>{{checkEmail}}
-                <button ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
-                <button ng-if="authObj.$getAuth()" ng-click="authObj.$unauth()">Log Out</button>
+                <input ng-show="!authObj.$getAuth()" type="email" placeholder="E-mail" ng-model="authority.email"/>
+                <input ng-show="!authObj.$getAuth()" type="password" placeholder="Password" ng-model="authority.password"/>
+                <button ng-show="!authObj.$getAuth()" ng-disabled="!authority.email" ng-click="resetPass(authority.email); checkEmail = ' - Check your inbox to reset password.';">Reset Password {{checkEmail}}</button>{{checkEmail}}
+                <button ng-show="!authObj.$getAuth()" ng-disabled="!authority.email" ng-click="logIn(authority.email, authority.password)">Log In</button>
+                <button ng-show="authObj.$getAuth()" ng-click="authObj.$unauth()">Log Out</button>
             </div>
         </section>
-        <div ui-view></div>
+        <div ng-style="adminMenu" ng-show="showAdminMenu">
+            <a  class="fa fa-angle-double-right padding" ng-click="showAdminMenu = false" ui-sref="admin"><b>Admin</b></a>
+            <span ng-click="$parent.showAdminMenu = false;" ng-repeat="view in views">
+                <a class="fa fa-angle-double-right padding" ng-click="$parent.showAdminMenu = false;" ui-sref="admin.{{view}}" > {{view | uppercase}} </a>
+            </span>
+        </div>
+
+        <div ng-style="adminView" ui-view></div>
         <section ng-style="primarySectionStyle">
-            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-comments-o"><br/>Clients</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
-            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-cubes"><br/>Products</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
-            <div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-gavel"><br/>Services</h2></i><i style="position: relative; width:0px; top:20px; right:60px" class="fa fa-3x fa-plus"></i></div>
+            <a ui-sref="admin.clients"><div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-comments-o"><br/>Clients</h2></i></div></a>
+            <a ui-sref="admin.products"><div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-cubes"><br/>Products</h2></i></div></a>
+            <a ui-sref="admin.services"><div ng-style="primaryStyle"><i ng-style="itemStyle"> <h2 class="fa fa-3x fa-gavel"><br/>Services</h2></i></div></a>
         </section>
         <section
             ng-style="secondSectionStyle">
-            <div ng-style="notesStyle"><textarea ng-model="api.ob.notes.note" ng-change="api.saveNote()" ng-style="notesStyle"></textarea></div>
-            <div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-newspaper-o"><br/>Articles</h3></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
-            <div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-th-large"><br/>Images</h3></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
-            <div ng-style="landingStyle"><i ng-style="itemStyle"> <h4 class="fa fa-2x fa-desktop"><br/>Landings</h4></i><i style="position: relative; width:0px; top:20px; right:50px" class="fa fa-2x fa-plus"></i></div>
-            <div ng-style="siteStyle"><i ng-style="itemStyle"> <h4 class="fa fa-cog"><br/>Site</h4></i></div>
+            <div ng-style="notesStyle"><textarea ng-show="!showNotes" ng-model="api.ob.notes.note" ng-change="api.saveNote()" ng-style="notesStyleZ"></textarea></div><div style="position: absolute; z-index:11002; bottom:0; left:0; padding: 1em; background: #FFFFCC" ng-click="showNotes = !showNotes" class="fa fa-edit"> Toggle Notepad</div>
+            <a ui-sref="admin.articles"><div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-newspaper-o"><br/>Articles</h3></i></div></a>
+            <a ui-sref="admin.gallery"><div ng-style="articlesStyle"><i ng-style="itemStyle"> <h3 class="fa fa-2x fa-th-large"><br/>Images</h3></i></div></a>
+            <a ui-sref="admin.landings"><div ng-style="landingStyle"><i ng-style="itemStyle"> <h4 class="fa fa-2x fa-desktop"><br/>Landings</h4></i></div></a>
+            <a ui-sref="admin.home"><div ng-style="siteStyle"><i ng-style="itemStyle"> <h4 class="fa fa-2x fa-cog"><br/>Site</h4></i></div></a>
 
         </section>
     </article>

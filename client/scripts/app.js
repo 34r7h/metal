@@ -245,47 +245,38 @@
             }
         })
         .run(function($rootScope, $window) {
-            $rootScope.windowWidth = $window.innerWidth;
-            $rootScope.windowHeight = ($window.innerHeight - 60);
-            if($window.innerWidth <= 768){
-                $rootScope.windowWidth = $window.innerWidth;
-                $rootScope.windowHeight = ($window.innerHeight - 180);
-            }
-            $rootScope.windowHeight = ($window.innerHeight - 60);
-            $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'}
-            $rootScope.secondSectionStyle = {height:($rootScope.windowHeight * .5), float:'left'};
-            $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
-            $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left', display:'table', textAlign:'center'};
-            $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
-            $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
-            $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left', display:'table', textAlign:'center'};
-            $rootScope.itemStyle = {height:'100%', display:'table-cell', textAlign:'center', verticalAlign:'middle'};
-            $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)', display:'table', textAlign:'center'};
-            $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
-            if($rootScope.adminStyle.width < 768) {
-                $rootScope.adminStyle.top = 120;
-            }
 
-            angular.element($window).bind('resize', function () {
-                $rootScope.windowWidth = $window.innerWidth;
-                $rootScope.windowHeight = ($window.innerHeight - 60);
+            var adminUI = function(){
+                var width = $window.innerWidth,
+                    height = ($window.innerHeight - 60);
                 if($window.innerWidth <= 768){
-                    $rootScope.windowWidth = $window.innerWidth;
-                    $rootScope.windowHeight = ($window.innerHeight - 180);
+                    height = (height - 180);
                 }
-                $rootScope.primarySectionStyle = {height: ($rootScope.windowHeight * 0.4), width:$rootScope.windowWidth, background: 'rgba(0,0,0,.2)'};
-                $rootScope.secondSectionStyle = {height:($rootScope.windowHeight * .5), float:'left'};
-                $rootScope.notesStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .5), float:'left'};
-                $rootScope.articlesStyle = {width:($rootScope.windowWidth * .3), height: ($rootScope.windowHeight * .3), float:'left', display:'table', textAlign:'center'};
-                $rootScope.landingStyle = {width:($rootScope.windowWidth * .4), height: ($rootScope.windowHeight * .2), float:'left',  display:'table', textAlign:'center'};
-                $rootScope.siteStyle = {width:($rootScope.windowWidth * .2), height: ($rootScope.windowHeight * .2), float:'left', display:'table', textAlign:'center'};
-                $rootScope.primaryStyle = {height:($rootScope.windowHeight*.4),minWidth:($rootScope.windowWidth/3), float:'left', display:'table', textAlign:'center'};
+                $rootScope.windowWidth = width;
+                $rootScope.windowHeight = height;
+
+                $rootScope.adminMenu = {background:'#777', color:'#333', position:'absolute', left:0, top:0,  zIndex: 11001, padding: (width *.01) };
+                $rootScope.adminView = {maxWidth:width, maxHeight:(height *.9), overflowY: 'scroll', overflowX: 'hidden', position:'absolute', bottom: 0, top: (height *.1), right: 0, zIndex: 11000, background:'rgba(255,255,255,.97)', boxShadow:'2px 2px 2px rgba(0,0,0,.5)', margin:'1em'};
+                $rootScope.primarySectionStyle = {height: (height * 0.4), width:width, background: 'rgba(0,0,0,.2)'};
+                $rootScope.secondSectionStyle = {height:(height * .5), float:'left'};
+                $rootScope.notesStyle = {width:(width * .4), height: (height * .5), float:'left'};
+                $rootScope.notesStyleZ = {position:'absolute', zIndex:11001, width:(width * .4), height: (height * .5), bottom:0, left:0, background: '#FFFFCC', padding:'1em'};
+                $rootScope.articlesStyle = {width:(width * .3), height: (height * .3), float:'left', display:'table', textAlign:'center'};
+                $rootScope.landingStyle = {width:(width * .4), height: (height * .2), float:'left', display:'table', textAlign:'center'};
+                $rootScope.siteStyle = {width:(width * .2), height: (height * .2), float:'left', display:'table', textAlign:'center'};
+                $rootScope.primaryStyle = {height:(height * 0.4),minWidth:(width/3), float:'left', display:'table', textAlign:'center'};
                 $rootScope.itemStyle = {height:'100%', display:'table-cell', textAlign:'center', verticalAlign:'middle'};
-                $rootScope.headerStyle = {height: ($rootScope.windowHeight*0.1), width: $rootScope.windowWidth, background: 'rgba(0,0,0,.2)', display:'table', textAlign:'center'};
-                $rootScope.adminStyle = {height:$rootScope.windowHeight,width:$rootScope.windowWidth, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
+                $rootScope.headerStyle = {height: (height * 0.1), width: width, background: 'rgba(0,0,0,.2)', display:'table', textAlign:'center'};
+                $rootScope.adminStyle = {height:height,width:width, background:'#fff', position:'fixed', left: 0, top: 60, zIndex:10000};
                 if($rootScope.adminStyle.width < 768) {
                     $rootScope.adminStyle.top = 120;
                 }
+            };
+            adminUI();
+
+
+            angular.element($window).bind('resize', function () {
+                adminUI();
                 $rootScope.$apply('windowWidth', 'windowHeight');
             });
         });
