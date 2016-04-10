@@ -2,130 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/font/weathericons-regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/font/weathericons-regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/font/weathericons-regular-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/Hot_metalwork.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/assets/600_400-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/assets/600_400-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/assets/600_400-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/b1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/b1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/background/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/bg-pattern/bg-pattern9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/g1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/masuk-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/images/metal-footer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/img/checkmark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/ui/images/Flags PNG.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/ui/images/flags-s9e6bfd0b60.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/ui/images/flags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/metalspiral.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/spiralstairs.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/CNAME" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/css/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/css/weather-icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/css/weather-icons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/bower_components/weather-icons/font/weathericons-regular-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/i18n/resources-locale_zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/scripts/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/scripts/ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/scripts/vendor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/sitemap.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/bootstrap/bootstrap/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/styles/ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/about-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/articles-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/clients-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/gallery-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/home-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/landings-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/media-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/products-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/services-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/admin/uploader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/articles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/clients.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/fold.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/gallery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/media.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/products.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/services.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/articles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/clients.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/gallery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/media.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/products.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist-old/views/single/services.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/images/metalspiral.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/images/spiralstairs.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/app.js" afterPath="$PROJECT_DIR$/client/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/styles/main.scss" afterPath="$PROJECT_DIR$/client/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/fold.html" afterPath="$PROJECT_DIR$/client/views/fold.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/header.html" afterPath="$PROJECT_DIR$/client/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/nav.html" afterPath="$PROJECT_DIR$/client/views/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/products.html" afterPath="$PROJECT_DIR$/client/views/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/services.html" afterPath="$PROJECT_DIR$/client/views/services.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="$PROJECT_DIR$/dist/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/ui.js" afterPath="$PROJECT_DIR$/dist/scripts/ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/vendor.js" afterPath="$PROJECT_DIR$/dist/scripts/vendor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/bootstrap.css" afterPath="$PROJECT_DIR$/dist/styles/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/main.css" afterPath="$PROJECT_DIR$/dist/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/fold.html" afterPath="$PROJECT_DIR$/dist/views/fold.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/header.html" afterPath="$PROJECT_DIR$/dist/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/nav.html" afterPath="$PROJECT_DIR$/dist/views/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/products.html" afterPath="$PROJECT_DIR$/dist/views/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/services.html" afterPath="$PROJECT_DIR$/dist/views/services.html" />
     </list>
     <ignored path="rainbow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,21 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
+            <state relative-caret-position="120">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -177,6 +48,16 @@
                 <element signature="e#8920#9192#0" expanded="false" />
                 <element signature="e#9234#9475#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,7 +90,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="135">
               <caret line="40" column="38" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -273,10 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="77">
               <caret line="27" column="68" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -324,7 +205,6 @@
         <option value="$PROJECT_DIR$/client/views/admin/gallery-admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin/clients-admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/views/services.html" />
         <option value="$PROJECT_DIR$/client/views/products.html" />
@@ -332,6 +212,7 @@
         <option value="$PROJECT_DIR$/client/styles/main.scss" />
         <option value="$PROJECT_DIR$/client/views/fold.html" />
         <option value="$PROJECT_DIR$/client/views/header.html" />
+        <option value="$PROJECT_DIR$/client/index.html" />
       </list>
     </option>
   </component>
@@ -640,7 +521,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dist-old" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist-old" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -790,14 +769,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1410231125332</updated>
-      <workItem from="1460229652545" duration="9485000" />
-    </task>
-    <task id="LOCAL-00114" summary="enhancement: gradients and text shadows">
-      <created>1414808674001</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1414808674001</updated>
+      <workItem from="1460229652545" duration="9740000" />
     </task>
     <task id="LOCAL-00115" summary="enhancement: gradients and text shadows">
       <created>1414808780904</created>
@@ -1135,12 +1107,19 @@
       <option name="project" value="LOCAL" />
       <updated>1420702313453</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="new work to freshen up an old site">
+      <created>1460247905435</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1460247905442</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9485000" />
+    <option name="totallyTimeSpent" value="9740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1321" height="768" extended-state="6" />
@@ -1152,7 +1131,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24693252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32808024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32515338" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32615384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08422376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25460124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1206,7 +1185,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="newly unfucked" />
     <MESSAGE value="analytics&#10;" />
     <MESSAGE value="landing page admin wired up" />
     <MESSAGE value="fix: img sizing in layouts&#10;" />
@@ -1231,7 +1209,8 @@
     <MESSAGE value="working on xmas gift, revamped admin section.. got notes section working" />
     <MESSAGE value="working on xmas gift, revamped admin section.. centered and iconed" />
     <MESSAGE value="fixed seo bug from homepage for performant loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed seo bug from homepage for performant loading" />
+    <MESSAGE value="new work to freshen up an old site" />
+    <option name="LAST_COMMIT_MESSAGE" value="new work to freshen up an old site" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1240,13 +1219,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/articles.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1525,14 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -1540,16 +1504,6 @@
           <folding>
             <element signature="e#8920#9192#0" expanded="false" />
             <element signature="e#9234#9475#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1626,12 +1580,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="77">
           <caret line="27" column="68" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#button#0;n#a#0;n#div#2;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
