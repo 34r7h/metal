@@ -45,6 +45,7 @@
     "bootstrap-sass-official": "~3.2.0"
   },
   "resolutions": {
-    "firebase": "2.0.x"
+    "firebase": "2.0.x",
+    "jquery": "~2.1.0"
   }
 }

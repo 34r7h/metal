@@ -1,0 +1,96 @@
+<!doctype html>
+<!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <base href="/#!">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Masuk Metal - Serving Vancouver, BC with metalwork for driveway gates, railings, fences, and home automation.</title>
+        <meta name="description" content="Forging, metalwork, and home automation services in Vancouver, BC">
+        <meta name="fragment" content="!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="google-site-verification" content="85lWHEZfbQrR9PfTjnqCV5Btkif070bzLz6n4-ulaOw">
+        <meta name="google-site-verification" content="9aX0YvaC8wiZClbfiH7lqo3cmWZawtbM8B8DxnF_pPA">
+        <!--meta name="prerender-status-code" content="404"-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+        <!-- Needs images, font... therefore can not be part of main.css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+        <!-- end Needs images -->
+
+
+            <link rel="stylesheet" href="styles/main.css"/>
+
+    </head>
+    <body data-ng-app="app" id="app" class="app" data-custom-page="" data-off-canvas-nav="" nav-collapsed-min="" data-ng-controller="AppCtrl" data-ng-class=" {'layout-boxed': admin.layout === 'boxed' } ">
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <section data-ng-include=" 'views/header.html' " id="header" class="header-container" data-ng-class=" {'header-fixed': admin.fixedHeader} " data-ng-controller="HeaderCtrl"></section>
+
+        <div class="main-container dark-gradient">
+            <aside data-ng-include=" 'views/nav.html' " id="nav-container" class="nav-container" data-ng-class=" {'nav-fixed': admin.fixedSidebar, 'nav-horizontal': admin.menu === 'horizontal', 'nav-vertical': admin.menu === 'vertical'}">
+            </aside>
+
+            <section ui-view="" id="content" class="content-container test {{admin.pageTransition.class}}"></section>
+            <div style="height:300px; overflow: hidden">
+                <div class="footer-text text-shadow-strong" style="background-image: url({{api.show.site.$getRecord('footerImage').$value}}); background-position: center">
+
+                    <p>"It may be as many sing,
+                    Gold is over all men king.</p>
+                    <p>Yet if truth be told,
+                    'Tis with iron men win gold."</p>
+                    <p>Author unknown - "Elementary Metalwork" </p>
+
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default navbar-fixed-bottom visible-xs list-unstyled" role="navigation">
+                <div class="container">
+                    <li class="well-sm line col-xs-6">
+                        <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
+                    </li>
+                    <li class="well-sm line col-xs-6">
+                        <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a></div>
+                    </li>
+                </div>
+            </nav>
+        </div>
+
+
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.5.min.js"></script>
+        <script type="text/javascript">
+            (function(d){
+                var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+                p.type = 'text/javascript';
+                p.async = true;
+                p.src = '//assets.pinterest.com/js/pinit.js';
+                f.parentNode.insertBefore(p, f);
+            }(document));
+        </script>
+        <!-- prerender.io considerations -->
+        <script>
+            window.prerenderReady = false;
+
+        </script>
+
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/ui.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-40176514-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+    </body>
+</html>

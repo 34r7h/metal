@@ -1,50 +1,17 @@
-
 // Shared variables and mixins
-@import
-    "global/var"                        // global variables
-,   "bootstrap/bootstrap/mixins"        // Bootstrap mixins
-,   "bourbon/bourbon"                   // mixins
+@import "global/var" // global variables
+, "bootstrap/bootstrap/mixins" // Bootstrap mixins
+, "bourbon/bourbon" // mixins
 ;
-
-
-@import
-    // Plugins, overrides plugins' style
-    "plugins/bootstrap-slider"
-,   "plugins/responsive-tables"
-,   "plugins/easypiecharts"
-,   "plugins/toastr"
-,   "plugins/sparkline"
-,   "plugins/jquery-steps"
-,   "plugins/angular-ui-tree"
-,   "plugins/morris"
-,   "plugins/jqvmap"
-,   "plugins/ng-tags-input"
-
-    // Pages
-,   "global/var-pages"
-,   "pages/dashboard"
-,   "pages/pages"
-,   "pages/err"
-,   "pages/lock-screen"
-,   "pages/tasks"
-,   "pages/auth"
-,   "pages/profile"
-,   "pages/ui"
-,   "pages/invoice"
-,   "pages/demo"
-
-    // sections
-,   "sections/layouts"
-,   "sections/shared"
-,   "sections/nav"
-,   "sections/nav-off-canvas"
-,   "sections/nav-horizontal"
-,   "sections/nav-min"
-,   "sections/header"
-,   "sections/body"
-;
+@import // Plugins, overrides plugins' style
+"plugins/bootstrap-slider", "plugins/responsive-tables", "plugins/easypiecharts", "plugins/toastr", "plugins/sparkline", "plugins/jquery-steps", "plugins/angular-ui-tree", "plugins/morris", "plugins/jqvmap", "plugins/ng-tags-input" // Pages
+, "global/var-pages", "pages/dashboard", "pages/pages", "pages/err", "pages/lock-screen", "pages/tasks", "pages/auth", "pages/profile", "pages/ui", "pages/invoice", "pages/demo" // sections
+, "sections/layouts", "sections/shared", "sections/nav", "sections/nav-off-canvas", "sections/nav-horizontal", "sections/nav-min", "sections/header", "sections/body";
 // Centers navbar text and links
-.line {line-height: 42px}
+.line {
+  line-height: 50px
+}
+
 .deckgrid[deckgrid]::before {
   /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
   content: '4 .column.column-1-2';
@@ -58,15 +25,15 @@
 
 .deckgrid .column-1-4 {
   width: 24%;
-  margin-right:1%;
+  margin-right: 1%;
 }
 
 .deckgrid .column-1-2 {
   width: 48%;
-  margin-right:1%;
+  margin-right: 1%;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .deckgrid[deckgrid]::before {
     content: '1 .column.column-1-1';
   }
@@ -85,44 +52,170 @@
   font-size: 1.6em;
   padding: 2.6em;
   text-align: right;
-  text-shadow: 1px 1px 10px rgba(0,0,0,.95);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, .95);
 }
 
-.padding {padding:1em;}
-.margins {margin: 1em;}
-.no-padding {padding:0!important}
-.no-margins {margin:0!important;}
-.border-right {border-right: inset #fff 1px}
-.border-top {border-top: inset #fff 2px}
-.more {font-size: 1em}
-.white-bg {background: #fff;}
-.red-bg {background: #b20815; color:#f5f5f5;}
-.orange-bg {background: #d75d04; color:#f5f5f5;}
-.blue-bg {background: #2a9388; color:#f5f5f5;}
-a {text-decoration: none!important;}
+body {
+  font-size: 18px;
+}
 
-.text-shadow-strong {text-shadow:1px 1px 1px rgba(0,0,0,.9)}
-.text-shadow-weak {text-shadow:1px 1px 1px rgba(0,0,0,.3)}
+.btn-primary {
+  color: #fff;
+  background-color: #ec4f5c;
+  border-color: #ed0a1c;
+}
 
-.dark-gradient {background: -moz-linear-gradient(45deg, rgba(0,0,0,0.37) 0%, rgba(0,0,0,0) 38%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.37)), color-stop(38%,rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
-    background: -o-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
-    background: -ms-linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
-    background: linear-gradient(45deg, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 38%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );}
+.btn-primary:hover, .btn-primary:active {
+  background-color: #ec2e42 !important;
+  border-color: #ff0a1d !important;
+}
+
+.btn-behance {
+  color: #fff;
+  background-color: #ffb56b;
+  border-color: #dd9d5f;
+}
+
+.btn-behance:hover, .btn-behance:active {
+  background-color: #ff9d40 !important;
+  border-color: #ffbe86 !important;
+}
+
+.cta-btn {
+  background-color: #3cdb8e !important;
+  border: 2px solid rgba(60, 219, 142, 0.62);
+  box-shadow: 0px 0px 5px white;
+}
+
+.cta-btn:hover {
+  background-color: #1fe88e !important;
+  border: 2px solid rgba(72, 196, 135, 0.62);
+  box-shadow: 0px 0px 5px white;
+}
+
+header {
+  border-bottom: 1px solid white;
+}
+
+.header-container > .top-header .logo {
+  background-color: #ec4f5c;
+  color: #fafafa;
+  height: 70px;
+}
+
+.nav-container .nav > li > a:focus {
+  background: #64626a;
+}
+
+.header-container > .top-header .top-nav {
+  height: 70px;
+}
+
+.flex-container-horizontal {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-container > .top-header a {
+  color: #f2f2f2 !important;
+}
+
+@media (min-width: 768px) {
+  .app > .main-container > .nav-container.nav-fixed {
+    top: 70px;
+  }
+}
+
+.padding {
+  padding: 1em;
+}
+
+.margins {
+  margin: 1em;
+}
+
+.no-padding {
+  padding: 0 !important
+}
+
+.no-margins {
+  margin: 0 !important;
+}
+
+.border-right {
+  border-right: inset #fff 1px
+}
+
+.border-top {
+  border-top: inset #fff 2px
+}
+
+.more {
+  font-size: 1em
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.red-bg {
+  background: #ec4f5c;
+  color: #f5f5f5;
+}
+
+.orange-bg {
+  background: #ffb56b;
+  color: #f5f5f5;
+}
+
+.blue-bg {
+  background: #3cdb8e;
+  color: #f5f5f5;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.white {
+  color: white;
+}
+
+.text-shadow-strong {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .9)
+}
+
+.text-shadow-weak {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3)
+}
+
+.dark-gradient {
+  background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 38%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 0, 0, 0.37)), color-stop(38%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 38%);
+  background: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 38%);
+  background: -ms-linear-gradient(45deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 38%);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 38%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+}
 
 .light-gradient {
-    background: -moz-linear-gradient(45deg,  rgba(255,255,255,0) 0%, rgba(255,255,255,.1) 62%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,.1)));
-    background: -webkit-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
-    background: -o-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
-    background: -ms-linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 62%);
-    background: linear-gradient(45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 62%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 62%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, .1)));
+  background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 62%);
+  background: -o-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 62%);
+  background: -ms-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 62%);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 62%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
 
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
+  display: none !important;
+}
+
+h1, h2, h3, h4, h5, button {
+  font-family: 'Raleway', sans-serif !important;
 }

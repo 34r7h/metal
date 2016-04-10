@@ -61,9 +61,9 @@
                   //console.log("waitTime", waitTime);
                   if(value !== 0){
                       $timeout(function(){
-                          //console.log(value, key);
+                          //console  .log(value, key);
                           $scope.loadedSections.push(key);
-                          //var thenTime = Date.now() - nowTime;
+                          var thenTime = Date.now() - nowTime;
                           console.log(thenTime);
                       },waitTime);
                   }
