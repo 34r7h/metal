@@ -219,3 +219,18 @@ a {
 h1, h2, h3, h4, h5, button {
   font-family: 'Raleway', sans-serif !important;
 }
+
+.sample-show-hide {
+  padding:10px;
+  border:1px solid black;
+  background:white;
+}
+
+.sample-show-hide {
+  -webkit-transition:all linear 1.5s;
+  transition:all linear 1.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity:0;
+}

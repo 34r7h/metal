@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
-    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll','$document',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll, $document) {
+    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', '$location','$anchorScroll','$document',function($scope, $rootScope, $firebase, api, $http, AWSControl, $location, $anchorScroll) {
 
           var foldText = api.sync.site.$asArray();
 		  $scope.foldText = foldText;
@@ -39,7 +39,7 @@
       $scope.pageTransitionOpts = [
         {
           name: 'Scale up',
-          "class": 'ainmate-scale-up'
+          "class": 'animate-scale-up'
         }, {
           name: 'Fade up',
           "class": 'animate-fade-up'

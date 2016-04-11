@@ -1,19 +1,14 @@
-<div scroll-section-load class="" data-ng-controller="DashboardCtrl" >
-    <!-- Please call pinit.js only once per page -->
-<div ng-repeat="section in $parent.loadedSections track by $index"
-     ng-init="sectionExtras=[
+<div scroll-section-load class="" data-ng-controller="DashboardCtrl" ng-init="sectionExtras=[
      {type:'services', title:'Our Process', color:'red', icon:'check'},
      {type:'products', title:'Product Line', color:'orange', icon:'search-plus'},
      {type:'clients', title:'Past Work', color:'blue', icon:'bullhorn'}]">
+    <!-- Please call pinit.js only once per page -->
 
-    <div
-    ng-include="section+'.html'"
-    scroll-section-load
-    sections="sections"
-    loaded-sections="loadedSections">
-    </div>
+<div ng-repeat="section in $parent.loadedSections track by $index">
 
-    <div ng-show="sectionExtras[$index].type" class="row {{sectionExtras[$index].color}}-bg ">
+    <div ng-include="section+'.html'"></div>
+
+    <div ng-if="sectionExtras[$index].type" class="row {{sectionExtras[$index].color}}-bg ">
         <div class="col-xs-12 padding dark-gradient" >
             <div class="col-xs-12 col-sm-3 text-center padding text-shadow-weak">
                 <i class="fa fa-{{sectionExtras[$index].icon}} fa-5x"></i>
@@ -22,39 +17,6 @@
             <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding text-shadow-strong">{{ api.show.site.$getRecord(sectionExtras[$index].type+'Text').$value }}</b>
         </div>
     </div>
-
-
-
-</div>
-
-
-
-    <!--div class="row red-bg ">
-
-
-
-    <br>
-    <div class="clearfix">
-        <div class="row blue-bg">
-            <div class="col-xs-12 padding dark-gradient" style="display: table">
-                <div class="col-xs-12 col-sm-3 text-center padding text-shadow-weak">
-                    <i class="fa fa-bullhorn fa-5x"></i>
-                    <p style="font-size: 1.6em;">Past Work</p>
-                </div>
-                <b style="font-size: 1.6em;" class="col-xs-12 col-sm-8 padding text-shadow-strong">{{ api.show.site.$getRecord('clientsText').$value }}</b>
-            </div>
-        </div>
-
-    </div>
-    <p class="padding" style="color:white">
-        <b class=""></b></p>
-
-    <div class="col-xs-12">
-        <div ng-include="'views/clients.html'"></div>
-    </div-->
-    <br>
-<div class="padding" style="text-align: center; max-width: 100%">
-    <a data-pin-do="embedBoard" href="http://www.pinterest.com/masukmetal/masuk-metal-design/" data-pin-scale-width="200" data-pin-scale-height="300" data-pin-board-width="1200">Follow Masuk Metal Design's board Masuk Metal Design on Pinterest.</a>
 </div>
 
 

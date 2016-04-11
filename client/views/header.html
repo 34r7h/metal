@@ -26,23 +26,21 @@
 
         </ul>
 
-        <ul class="nav-right pull-right list-unstyled col-xs-12 flex-container-horizontal">
+        <ul class="nav-right pull-right list-unstyled col-xs-12">
 
-            <li class="well-sm line  col-sm-3 col-xs-6  hidden-xs white">
-                <div class="text-center white"><a target="_blank" href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
+
+            <li class="well-sm line  col-sm-3 col-xs-6  hidden-xs">
+                <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>
             </li>
-            <li class="well-sm line col-sm-4 col-xs-6 hidden-xs white">
-                <div class="text-center">
-                    <span class="glyphicon glyphicon-phone-alt white"> </span>
-                    <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a>
-                </div>
+            <li class="well-sm line col-sm-4 col-xs-6 hidden-xs">
+                <div class="text-center"><span class="glyphicon glyphicon-phone-alt"> </span> <a href="tel:+1{{ api.show.contact.$getRecord('Phone').$value }}">1+{{ api.show.contact.$getRecord('Phone').$value }}</a></div>
             </li>
 
             <li class="btn col-sm-5 col-xs-12" style="background: #3c3a42">
                 <div class="btn-group col-xs-12" dropdown="" is-open="status.isopen4">
                     <button type="button" class="cta-btn btn btn-info btn-lg dropdown-toggle col-xs-12 light-gradient text-shadow-strong" style=";
 " aria-expanded="false"><i class="fa fa-plug"> </i> Let's Connect</button>
-                    <ul ng-click="$parent.$parent.preventClose($event)" class="dropdown-menu col-xs-12" role="menu">
+                    <ul ng-click="$parent.$parent.preventClose($event)" class="dropdown-menu col-xs-12 fx-fade-normal" role="menu">
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Send an E-mail </strong></div>
                             <div class="panel-body">
@@ -61,7 +59,7 @@
                                                 <label for="message">Describe details of request</label>
                                                 <textarea ng-model="mail.body" class="form-control" id="message" placeholder="The details of this job include…"></textarea>
                                             </div>
-                                            <a target="_blank" class="light-gradient text-shadow-weak" href="mailto:masukmetaldesign@gmail.com?subject={{ mail.subject }}&body={{ mail.body + '\n - ' +mail.name }}">
+                                            <a class="light-gradient text-shadow-weak" href="mailto:masukmetaldesign@gmail.com?subject={{ mail.subject }}&body={{ mail.body + '\n - ' +mail.name }}">
                                                 <button type="submit" class="btn btn-primary btn-w-md col-xs-12 more text-shadow-weak">
                                                     <i class="glyphicon glyphicon-envelope"></i>
                                                     <span>Send Message</span>
