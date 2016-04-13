@@ -236,11 +236,11 @@ h1, h2, h3, h4, h5, button {
 }
 
 .flash-add {
-  transition: 0.5s ease-out all;
+  transition: 0.5s linear all;
   opacity: 0;
 }
 .flash-add.flash-add-active {
-  transition: 0.5s ease-in all;
+  transition: 0.5s linear all;
   opacity: 1;
 }
 

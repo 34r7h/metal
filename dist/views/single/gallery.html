@@ -11,7 +11,7 @@
     </div>
     <div class="col-xs-12 " ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL;imgAlt = api.show.media.$getRecord(singleData.media[0]).mediaDescription">
 
-        <div class="panel panel-default" ng-click="enlarge = false;" ng-show="enlarge===true" style="position:absolute; background: rgba(0,0,0,.38); z-index:800; width:100%; height:auto" class="sample-show-hide">
+        <div class="panel panel-default sample-show-hide" ng-click="enlarge = false;" ng-show="enlarge===true" style="position:absolute; background: rgba(0,0,0,.38); z-index:800; width:100%; height:auto">
             <div class="col-xs-12 panel-heading"><p class="text-center"><b>Touch or click to close.</b></p></div>
             <img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
             {{api.show.media.$getRecord(gallery.media[0]).mediaURL}}

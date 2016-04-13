@@ -35,7 +35,8 @@
             <hr class="col-xs-12">
 
             <div>
-                <a animate-change="imgSrc" change-class="flash" ng-click="enlarge = true;" href><img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(services.media[0]).mediaURL}}</a>
+                <a ng-click="enlarge = true;" href>
+                    <img animate-change="imgSrc" change-class="flash" alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(services.media[0]).mediaURL}}</a>
             </div>
             <!--<div class="no-padding" style="display: flex; flex-wrap: wrap">
                 <div ng-repeat="media in singleData.media" style="flex: 1 0 100px">
