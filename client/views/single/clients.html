@@ -17,6 +17,7 @@
                  style="flex: 1 0 100px; max-height:100px; width:100px; overflow: hidden; padding:2px">
                 <a href>
                     <img
+                            animate-change="imgSrc" change-class="flash"
                             alt="{{api.show.media.$getRecord(singleData.media[$index]).mediaDescription}}"
                             ng-src="{{ api.show.media.$getRecord(singleData.media[$index]).mediaURL }}"
                             width="100%"

@@ -221,16 +221,39 @@ h1, h2, h3, h4, h5, button {
 }
 
 .sample-show-hide {
-  padding:10px;
-  border:1px solid black;
-  background:white;
-}
-
-.sample-show-hide {
-  -webkit-transition:all linear 1.5s;
-  transition:all linear 1.5s;
+  -webkit-transition:all linear .5s;
+  transition:all linear .5s;
 }
 
 .sample-show-hide.ng-hide {
   opacity:0;
+}
+.sample-show-hide.ng-show {
+  opacity:1;
+}
+.sample-show-hide.ng-show {
+  opacity:1;
+}
+
+.flash-add {
+  transition: 0.5s ease-out all;
+  opacity: 0;
+}
+.flash-add.flash-add-active {
+  transition: 0.5s ease-in all;
+  opacity: 1;
+}
+
+.app > .header-container.header-fixed + .main-container {
+  padding-top: 70px !important;
+}
+
+@media (max-width: 767px) {
+  .on-canvas #nav-container {
+    display: block;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    float: none;
+  }
 }

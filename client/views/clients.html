@@ -19,7 +19,12 @@
             </a>
             <div class="col-xs-12 no-padding" ng-init="imgSrc = api.show.media.$getRecord(client.media[0]).mediaURL; imgAlt = api.show.media.$getRecord(client.media[0]).mediaDescription">
                 <a ng-href="#!/clients/{{client.clientURL}}">
-                    <img alt="{{imgAlt}}" ng-src="{{imgSrc}}" width="100%">
+                    <img
+                            animate-change="imgSrc"
+                            change-class="flash"
+                            alt="{{imgAlt}}"
+                            ng-src="{{imgSrc}}"
+                            width="100%">
                 </a>
                 <hr/>
                 <div class="col-xs-12 no-padding"

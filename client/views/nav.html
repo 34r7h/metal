@@ -1,66 +1,25 @@
-<div class="nav-wrapper dark-gradient" style="height: 100%">
+<div class="nav-wrapper dark-gradient" ng-style="{height: $root.windowWidth < 767 ? '88%' : '100%'}" ng-init="navLinks = {about:{icon:'group'}, services:{icon:'gavel'}, products:{icon:'cubes'}, clients:{icon:'comments-o'}, gallery:{icon:'image'}}">
     <ul id="nav"
-        class="nav"
+        class="nav "
         style="height: 100%; display: flex; flex-direction: column;"
         data-ng-controller="NavCtrl"
         data-slim-scroll
         data-collapse-nav
         data-highlight-active>
-        <li class="light-gradient text-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
-            <a href="#!/about"
-               ng-click="scrollToTop()"
-               style="width:100%; height:100%;"class="text-center">
-                <div style="color:#e4e4e4"><i class="fa fa-group fa-3x"></i></div>
-                <h4 style="font-size: 1.5em; color:#f2f2f2" data-i18n="ABOUT"></h4>
-            </a>
-        </li>
-        <li>
-        <li class="light-gradient tex t-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
-            <a href="#!/services"
-               ng-click="scrollToTop()"
-               style="width:100%; height:100%;"class="text-center">
-                <div style="color:#e4e4e4"><i class="fa fa-gavel fa-3x"></i></div>
-                <h4 style="font-size: 1.5em; color:#f2f2f2" data-i18n="SERVICES"></h4>
-            </a>
-        </li>
-        <li>
-        <li class="light-gradient text-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
-            <a href="#!/products"
-               ng-click="scrollToTop()"
-               style="width:100%; height:100%;"class="text-center">
-                <div style="color:#e4e4e4"><i class="fa fa-cubes fa-3x"></i></div>
-                <h4 style="font-size: 1.5em; color:#f2f2f2" data-i18n="PRODUCTS"></h4>
-            </a>
-        </li>
-        <li>
-        <li class="light-gradient text-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
-            <a href="#!/clients"
-               ng-click="scrollToTop()"
-               style="width:100%; height:100%;"class="text-center">
-                <div style="color:#e4e4e4"><i class="fa fa-comments-o fa-3x"></i></div>
-                <h4 style="font-size: 1.5em; color:#f2f2f2" data-i18n="CLIENTS"></h4>
-            </a>
-        </li>
-        <li>
-        <li class="light-gradient text-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
-            <a href="#!/gallery"
-               ng-click="scrollToTop()"
-               class="text-center"
-            style="width:100%; height:100%;">
-                <div style="color:#e4e4e4"><i class="fa fa-image fa-3x"></i></div>
-                <h4 style="font-size: 1.5em; color:#f2f2f2" data-i18n="GALLERY"></h4>
-            </a>
-        </li>
-        <li>
 
-            <!--li toggle-off-canvas><a href="#!/articles" ng-click="scrollToTop()"> <i class="fa fa-book"></i><span data-i18n="Articles"></span> </a></li>
-            <li>
-            <li toggle-off-canvas><a href="#!/media" ng-click="scrollToTop()"> <i class="fa fa-video-camera"></i><span data-i18n="Media"></span> </a></li>
-            <li>
-            <li>
-            <li toggle-off-canvas><a href="#!/admin" ng-click="scrollToTop()"> <i class="fa fa-dashboard"></i><span data-i18n="Admin"></span> </a></li>
-            <li -->
+        <li style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center; padding:1em" ng-show="$root.windowWidth <= 767" ng-click="$root.show.dropdown = !$root.show.dropdown">
+            <a class="cta-btn btn btn-info" style="width:100%; height:100%; color:white!important">
+                <h4><i class="fa fa-plug"></i> Connect</h4>
+            </a>
+        </li>
 
-
+        <li ng-repeat="(linkKey, link) in navLinks track by $index" class="light-gradient text-shadow-weak" style="flex: 1 1 100px; display: flex; align-items: center; justify-content: center;" toggle-off-canvas>
+            <a ng-href="#!/{{linkKey}}"
+               ng-click="scrollToTop()"
+               style="width:100%; height:100%;"class="text-center">
+                <div style="color:#e4e4e4" ng-show="$root.windowWidth > 767 && $root.windowHeight > 600"><i class="fa fa-{{link.icon}} fa-3x"></i></div>
+                <h4 style="font-size: 1.5em; color:#f2f2f2"><i class="fa fa-{{link.icon}}" ng-show="$root.windowWidth <= 767 || $root.windowHeight <= 600"> </i> {{linkKey | uppercase}}</h4>
+            </a>
+        </li>
     </ul>
 </div>

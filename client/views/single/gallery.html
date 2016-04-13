@@ -11,7 +11,7 @@
     </div>
     <div class="col-xs-12 " ng-init="imgSrc = api.show.media.$getRecord(singleData.media[0]).mediaURL;imgAlt = api.show.media.$getRecord(singleData.media[0]).mediaDescription">
 
-        <div class="panel panel-default" ng-click="enlarge = false;" ng-show="enlarge===true" style="position:absolute; background: rgba(0,0,0,.38); z-index:800; width:100%; height:auto">
+        <div class="panel panel-default" ng-click="enlarge = false;" ng-show="enlarge===true" style="position:absolute; background: rgba(0,0,0,.38); z-index:800; width:100%; height:auto" class="sample-show-hide">
             <div class="col-xs-12 panel-heading"><p class="text-center"><b>Touch or click to close.</b></p></div>
             <img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
             {{api.show.media.$getRecord(gallery.media[0]).mediaURL}}
@@ -21,7 +21,7 @@
         <div class="panel-body col-xs-12 col-sm-12" >
 
             <div class="col-xs-10 hidden-xs">
-                <a ng-click="enlarge = true;" href><img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(gallery.media[0]).mediaURL}}</a>
+                <a animate-change="imgSrc" change-class="flash" ng-click="enlarge = true;" href><img alt="imgAlt || api.show.media.$getRecord(singleData.media[0]).mediaDescription" ng-src="{{imgSrc || api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(gallery.media[0]).mediaURL}}</a>
             </div>
             <div class="col-xs-2 hidden-xs no-padding" style="max-height:700px; overflow: scroll">
                 <p ng-if="singleData.media.length > 4">Scroll for more images</p>
@@ -47,7 +47,9 @@
                     <h4 class="col-xs-12" ng-show="singleData.articles[1]"><i class="fa fa-newspaper-o"></i> Related Articles</h4>
                     <div class="col-xs-12" ng-repeat="article in singleData.articles" ng-show="singleData.articles[0]!=='No Articles'">
                         <a ng-href="#!/articles/{{ api.show.articles.$getRecord(article).articleURL }}" ng-show="article.length > 0">
-                            <img class="col-xs-12" alt="api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaDescription" ng-src="{{ api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaThumbs['100']}}">
+                            <img
+                                    class="col-xs-12" alt="api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaDescription"
+                                    ng-src="{{ api.show.media.$getRecord(api.show.articles.$getRecord(article).media[0]).mediaThumbs['100']}}">
                             <b><em class="col-xs-12" >{{ api.show.articles.$getRecord(article).title }}</em></b></a>
                     </div>
                 </div>

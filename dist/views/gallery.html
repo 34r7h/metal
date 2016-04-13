@@ -30,7 +30,8 @@
             </div>
 
             <a class="col-xs-12 visible-xs no-padding" ng-href="#!/gallery/{{gallery.galleryURL}}">
-                <img alt="{{imgAlt || api.show.media.$getRecord(gallery.media[0]).mediaDescription}}" ng-src="{{ imgSrc || api.show.media.$getRecord(gallery.media[0]).mediaURL}}" width="100%">
+                <img
+                        animate-change="imgSrc" change-class="flash" alt="{{imgAlt || api.show.media.$getRecord(gallery.media[0]).mediaDescription}}" ng-src="{{ imgSrc || api.show.media.$getRecord(gallery.media[0]).mediaURL}}" width="100%">
             </a>
             <hr class="col-xs-12">
             <div class="col-xs-12 visible-xs no-padding" style="max-height: 200px; overflow-y:scroll; overflow-x: hidden">

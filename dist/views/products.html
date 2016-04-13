@@ -16,20 +16,23 @@
 
             <a ng-href="#!/products/{{product.productURL}}">
                 <img
+                        animate-change="imgSrc" change-class="flash"
                         alt="{{imgAlt || api.show.media.$getRecord(product.media[0]).mediaDescription}}"
-                        ng-src="{{imgSrc || api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%">
+                        ng-src="{{imgSrc || api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%"
+                        class="">
             </a>
             <hr>
             <div class="col-xs-12 no-padding"
                  style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start">
-                <div ng-repeat="media in product.media"
+                <div ng-repeat="(mediaKey, media) in product.media"
                      style="flex: 1 0 150px; max-height:150px; width:150px; overflow: hidden; padding:2px">
                     <a href>
                         <img
                                 alt="{{api.show.media.$getRecord(product.media[$index]).mediaDescription}}"
                                 ng-src="{{ api.show.media.$getRecord(product.media[$index]).mediaURL }}"
                                 width="100%"
-                                ng-click="$parent.imgSrc = api.show.media.$getRecord(product.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(product.media[$index]).mediaDescription; ">
+                                ng-click="$parent.imgSrc = api.show.media.$getRecord(product.media[$index]).mediaURL; $parent.imgAlt = api.show.media.$getRecord(product.media[$index]).mediaDescription; $parent.show.media[api.show.media.$getRecord(product.media[$index]).mediaURL] = true; "
+                                >
                     </a>
                 </div>
                 <hr>

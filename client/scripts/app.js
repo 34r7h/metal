@@ -16,7 +16,8 @@
 		'app.nav',
 		// 'scrollSectionLoader',
 		'akoenig.deckgrid',
-		'uploader']);
+		'uploader',
+		'animate-change']);
 	app
 		.config([
 			'$controllerProvider', '$stateProvider', '$urlRouterProvider', 'AWSControlProvider', '$locationProvider', function ($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider, $locationProvider) {
@@ -64,10 +65,10 @@
 							var nowTime = Date.now();
 							var waitTime = value * 1000;
 							// console.log("waitTime", waitTime);
-							if(value === 3){
+							if (value === 3) {
 								$timeout(function () {
 									$scope.pintrest = true;
-
+									
 								}, 5000);
 							}
 							if (value !== 0) {
