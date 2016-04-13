@@ -28,6 +28,7 @@
 
     </head>
     <body data-ng-app="app"
+          ng-cloak
           id="app"
           class="app"
           data-custom-page
@@ -42,6 +43,7 @@
 
         <section data-ng-include=" 'views/header.html' "
                  id="header"
+                 ng-cloak
                  class="header-container "
                  data-ng-class=" {'header-fixed': admin.fixedHeader} "
                  data-ng-controller="HeaderCtrl"></section>
@@ -49,6 +51,7 @@
         <div class="main-container dark-gradient">
             <aside data-ng-include=" 'views/nav.html' "
                    id="nav-container"
+                   ng-cloak
                    class="nav-container"
                    data-ng-class=" {'nav-fixed': admin.fixedSidebar, 'nav-horizontal': admin.menu === 'horizontal', 'nav-vertical': admin.menu === 'vertical'}">
             </aside>
@@ -68,7 +71,7 @@
                 </div>
             </div>
 
-            <nav class="navbar navbar-default navbar-fixed-bottom visible-xs list-unstyled " role="navigation">
+            <nav ng-cloak class="navbar navbar-default navbar-fixed-bottom visible-xs list-unstyled " role="navigation">
                 <div class="container">
                     <li class="well-sm line col-xs-6">
                         <div class="text-center"><a href="mailto:{{ api.show.contact.$getRecord('Email').$value }}"> <span class="glyphicon glyphicon-envelope"> </span> Email Us</a></div>

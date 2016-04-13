@@ -1,4 +1,4 @@
-<header class="top-header clearfix">
+<header class="top-header clearfix" ng-cloak>
 
     <!-- Logo -->
     <div class="logo dark-gradient border-right">
@@ -30,7 +30,7 @@
 
         </ul>
 
-        <ul class="nav-right pull-right list-unstyled col-xs-12">
+        <ul class="nav-right pull-right list-unstyled col-xs-12" ng-style="{display:'flex', justifyContent:'space-around'}">
 
 
             <li class="well-sm line  col-sm-3 col-xs-6  hidden-xs">
@@ -57,7 +57,7 @@
             ng-show="$root.show.dropdown">
         <section ng-style="{flex:'1 1 50%'}" class="well">
             <h4 class=""><strong class="pull-left"><span class="glyphicon glyphicon-th"></span> Send an
-                E-mail </strong> <i class="fa fa-close pull-right" ng-click="$root.show.dropdown = false"></i></h4>
+                E-mail </strong> <i class="fa fa-close pull-right" ng-click="$root.show.dropdown = false"> Close</i></h4>
             <hr>
             <div class="panel-body">
                 <form>
@@ -85,12 +85,12 @@
             </div>
         </section>
         <section
-                ng-style="{flex:'1 1 50%', display:'flex', flexDirection:'column', justifyContent:'spaceAround', alignItems:'center', height:'100%'}"
+                ng-style="{flex:'1 1 50%', display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', height:'100%'}"
                 class="panel panel-box"
                 ng-init="socialLinks = {facebook:{icon:'facebook', link:'Facebook', class:'bg-facebook'}, google:{icon:'google-plus', link:'Google', class:'bg-google-plus'}}">
 
             <h4>Connect with us on your preferred social network</h4>
-            <div class="text-shadow-strong" ng-style="{display:'flex', justifyContent:'spaceBetween', alignItems:'center'}">
+            <div class="text-shadow-strong" ng-style="{display:'flex', justifyContent:'space-between', alignItems:'center'}">
                 <a ng-repeat="(socialLinkKey, socialLink) in socialLinks" ng-style="{flex:'1 1 100px', margin:'2px', maxHeight:'40px', display:'flex', justifyContent:'center', alignItems:'center'}" style="color:#fff; background:#3c3a42" class="panel-item"
                    ng-href="{{ api.show.contact.$getRecord(socialLink.link).$value }}">
                         <i class="fa fa-2x fa-{{socialLink.icon}}"></i>

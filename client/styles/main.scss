@@ -247,6 +247,9 @@ h1, h2, h3, h4, h5, button {
 .app > .header-container.header-fixed + .main-container {
   padding-top: 70px !important;
 }
+.header-container>.top-header .top-nav .nav-right>li:last-child {
+  border-right: 0px solid #e9e9e9;
+}
 
 @media (max-width: 767px) {
   .on-canvas #nav-container {
